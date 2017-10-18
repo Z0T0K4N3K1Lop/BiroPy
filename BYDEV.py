@@ -47,7 +47,7 @@ helpMessage =""" ZeusBot  􀔃􀄆red check mark􏿿
 [Mid ZB]   Cek All mid Bot
 [ZB 1/2/3/4] Cek Mid Bot
 [Respon]   Cek Respon Bot
-[Speedbot] Cek Kecepatan Bot
+[Speed] Cek Kecepatan Bot
 [Up]       Fungsi Spam Chat
 [Banlist]  Cek List Akun Banned
 [Gn namagroup] Ganti Nama Group
@@ -59,11 +59,11 @@ helpMessage =""" ZeusBot  􀔃􀄆red check mark􏿿
 
 􀔃􀅕red arrow right􏿿 Command Private
 [SetGroup] Menggatur Privasi Grup
-[Banned @] Bann Target
+[Ban @] Bann Target
 [Unban @]  Unbann Target
 [Kill @] Kick Target Bann
 [Nk @]   Kick Target User
-[All join] Invite Semua Bot
+[Join] Invite Semua Bot
 [_namabot join] Invite Bot
 [Bye _namabot]  Leave Bot
 SSH BY MR.j line.me/ti/p/joshuasiregaar
@@ -308,7 +308,7 @@ def bot(op):
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
                         except:
-                            print ("clientが蹴り規制orグループに存在しない為、\n["+op.param1+"]\nの\n["+op.param2+"]\nを蹴る事ができませんでした。\nブラックリストに追加します。")
+                            print ("clientReally Nigga?\n["+op.param1+"]\nの\n["+op.param2+"]\nNay nigga\nYey Nigga")
                         if op.param2 in wait["blacklist"]:
                             pass
                         if op.param2 in wait["whitelist"]:
@@ -343,7 +343,7 @@ def bot(op):
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
                         except:
-                            print ("clientが蹴り規制orグループに存在しない為、\n["+op.param1+"]\nの\n["+op.param2+"]\nを蹴る事ができませんでした。\nブラックリストに追加します。")
+                            print ("clientReally Nigga?\n["+op.param1+"]\nの\n["+op.param2+"]\nNay Nigga?\nYey Nigga?")
                         if op.param2 in wait["blacklist"]:
                             pass
                         if op.param2 in wait["whitelist"]:
@@ -380,7 +380,7 @@ def bot(op):
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
                         except:
-                            print ("clientが蹴り規制orグループに存在しない為、\n["+op.param1+"]\nの\n["+op.param2+"]\nを蹴る事ができませんでした。\nブラックリストに追加します。")
+                            print ("clientReally Nigga?\n["+op.param1+"]\nの\n["+op.param2+"]\nNay Nigga?\nYey Nigga?")
                         if op.param2 in wait["blacklist"]:
                             pass
                         if op.param2 in wait["whitelist"]:
@@ -1477,7 +1477,7 @@ def bot(op):
 
 #-----------------------------------------------
          #----------------Fungsi Join Group Start-----------------------#
-            elif msg.text in ["All Join","All join","Ayo masuk"]:
+            elif msg.text in ["All Join","All join","Ikkeh Senpai"]:
               if msg.from_ in admin:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
@@ -1552,7 +1552,7 @@ def bot(op):
     #----------------------Fungsi Join Group Finish---------------#
 
     #-------------Fungsi Leave Group Start---------------#
-            elif msg.text in ["Bye all"]:
+            elif msg.text in ["Bye Anjing"]:
               if msg.from_ in admin:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
@@ -1635,8 +1635,8 @@ def bot(op):
                     for tag in wait["blacklist"]:
                         matched_list+=filter(lambda str: str == tag, gMembMids)
                     if matched_list == []:
-                        kk.sendText(msg.to,"Selamat tinggal")
-                        kc.sendText(msg.to,"Jangan masuk lagi􀨁􀆷devil smile􏿿")
+                        kk.sendText(msg.to,"Babay")
+                        kc.sendText(msg.to,"Cem macem 􀨁􀆷devil smile􏿿")
                         return
                     for jj in matched_list:
                         try:
@@ -1702,7 +1702,7 @@ def bot(op):
                                     kicker.kickoutFromGroup(msg.to,[target])
                                     print (msg.to,[g.mid])
                                 except:
-                                    ki.sendText(msg.to,"Kasian Di Kick....")
+                                    ki.sendText(msg.to,"Mampus ngentot....")
                                     kc.sendText(msg.to,"Hehehe")
         #----------------Fungsi Kick User Target Finish----------------------#      
             elif "Blacklist @ " in msg.text:
@@ -1751,7 +1751,7 @@ def bot(op):
                                 wait["blacklist"][target] = True
                                 f=codecs.open('st2__b.json','w','utf-8')
                                 json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-                                cl.sendText(msg.to,"Akun telah sukses di banned")
+                                cl.sendText(msg.to,"succes")
                             except:
                                 ki.sendText(msg.to,"Error")
             #----------------Fungsi Banned User Target Finish-----------------------# 
@@ -1782,7 +1782,7 @@ def bot(op):
                                 del wait["blacklist"][target]
                                 f=codecs.open('st2__b.json','w','utf-8')
                                 json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-                                cl.sendText(msg.to,"Akun Bersih Kembali")
+                                cl.sendText(msg.to,"Clear")
                             except:
                                 ki.sendText(msg.to,"Error")
            #----------------Fungsi Unbanned User Target Finish-----------------------#
@@ -1829,41 +1829,41 @@ def bot(op):
 #-----------------------------------------------
 
             elif msg.text in ["Cv say hi"]:
-                ki.sendText(msg.to,"Hi buddy 􀜁􀅔Har Har􏿿")
-                kk.sendText(msg.to,"Hi buddy 􀜁􀅔Har Har􏿿")
-                kc.sendText(msg.to,"Hi buddy 􀜁􀅔Har Har􏿿")
+                ki.sendText(msg.to,"Hi tot 􀜁􀅔Har Har􏿿")
+                kk.sendText(msg.to,"Hi tot 􀜁􀅔Har Har􏿿")
+                kc.sendText(msg.to,"Hi tot 􀜁􀅔Har Har􏿿")
 
 #-----------------------------------------------
 
-            elif msg.text in ["Cv say hinata pekok"]:
-                ki.sendText(msg.to,"Hinata pekok 􀜁􀅔Har Har􏿿")
-                kk.sendText(msg.to,"Hinata pekok 􀜁􀅔Har Har􏿿")
-                kc.sendText(msg.to,"Hinata pekok 􀜁􀅔Har Har􏿿")
-            elif msg.text in ["Cv say didik pekok"]:
-                ki.sendText(msg.to,"Didik pekok 􀜁􀅔Har Har􏿿")
-                kk.sendText(msg.to,"Didik pekok 􀜁􀅔Har Har􏿿")
-                kc.sendText(msg.to,"Didik pekok 􀜁􀅔Har Har􏿿")
+            elif msg.text in ["Cv say jimmy ngentot"]:
+                ki.sendText(msg.to,"jimmy ngentot 􀜁􀅔Har Har􏿿")
+                kk.sendText(msg.to,"jimmy ngentot 􀜁􀅔Har Har􏿿")
+                kc.sendText(msg.to,"jimmy ngentot 􀜁􀅔Har Har􏿿")
+            elif msg.text in ["Cv say babi kelen"]:
+                ki.sendText(msg.to,"Babi kelen 􀜁􀅔Har Har􏿿")
+                kk.sendText(msg.to,"Babi Kelen 􀜁􀅔Har Har􏿿")
+                kc.sendText(msg.to,"Babi kelen 􀜁􀅔Har Har􏿿")
             elif msg.text in ["Cv say bobo ah","Bobo dulu ah"]:
                 ki.sendText(msg.to,"Have a nice dream Cv 􀜁􀅔Har Har􏿿")
                 kk.sendText(msg.to,"Have a nice dream Cv 􀜁􀅔Har Har􏿿")
                 kc.sendText(msg.to,"Have a nice dream Cv 􀜁􀅔Har Har􏿿")
-            elif msg.text in ["Cv say chomel pekok"]:
-                ki.sendText(msg.to,"Chomel pekok 􀜁􀅔Har Har􏿿")
-                kk.sendText(msg.to,"Chomel pekok 􀜁􀅔Har Har􏿿")
-                kc.sendText(msg.to,"Chomel pekok 􀜁􀅔Har Har􏿿")
+            elif msg.text in ["Cv say quro cantik"]:
+                ki.sendText(msg.to,"quro cantik banget 􀜁􀅔Har Har􏿿")
+                kk.sendText(msg.to,"quro cantik banget 􀜁􀅔Har Har􏿿")
+                kc.sendText(msg.to,"quro cantik banget 􀜁􀅔Har Har􏿿")
             elif msg.text in ["#welcome"]:
-                ki.sendText(msg.to,"Selamat datang di Chivas Family Room")
+                ki.sendText(msg.to,"Selamat datang di ena ena grupXD")
                 kk.sendText(msg.to,"Jangan nakal ok!")
 #-----------------------------------------------
             elif msg.text in ["PING","Ping","ping"]:
-                ki.sendText(msg.to,"PONG 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
-                kk.sendText(msg.to,"PONG 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
-                kc.sendText(msg.to,"PONG 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
+                ki.sendText(msg.to,"PONG sepong 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
+                kk.sendText(msg.to,"PONG sepong 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
+                kc.sendText(msg.to,"PONG sepong 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
 #-----------------------------------------------
 
        #-------------Fungsi Respon Start---------------------#
             elif msg.text in ["Respon","respon","Respon Dong","respon dong"]:
-                cl.sendText(msg.to,"Online, Dengan Respon Cepat")
+                cl.sendText(msg.to,"Online, Ngakak onlen")
                 ki.sendText(msg.to,"Yg penting gk lemot")
                 kk.sendText(msg.to,"Sama dong....")
                 kc.sendText(msg.to,".............")
@@ -1945,10 +1945,10 @@ def bot(op):
                         ki.kickoutFromGroup(msg.to,[jj])
                         kk.kickoutFromGroup(msg.to,[jj])
                         kc.kickoutFromGroup(msg.to,[jj])
-                    cl.sendText(msg.to,"Blacklist emang pantas tuk di usir")
-                    ki.sendText(msg.to,"Blacklist emang pantas tuk di usir")
-                    kk.sendText(msg.to,"Blacklist emang pantas tuk di usir")
-                    kc.sendText(msg.to,"Blacklist emang pantas tuk di usir")
+                    cl.sendText(msg.to,"Dasar anak jaman now")
+                    ki.sendText(msg.to,"Dasar anak jaman now")
+                    kk.sendText(msg.to,"Dasar anak jaman now")
+                    kc.sendText(msg.to,"Dasar anak jaman now")
             elif msg.text in ["Clear"]:
                 if msg.toType == 2:
                     group = cl.getGroup(msg.to)
