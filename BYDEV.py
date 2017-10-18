@@ -66,7 +66,8 @@ helpMessage =""" ZeusBot  􀔃􀄆red check mark􏿿
 [Join] Invite Semua Bot
 [_namabot join] Invite Bot
 [Bye _namabot]  Leave Bot
-SSH BY MR.j line.me/ti/p/joshuasiregaar
+SSH BY mr.Z line.me/ti/p/joshuasiregaar
+SSH BY mr.Z line.me/ti/p/Jimmyking10
 """
 
 Setgroup =""" ZeusBot Privasi 􀔃􀄆red check mark􏿿
