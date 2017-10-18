@@ -37,15 +37,15 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" [R.A] BOT Menu V.2  􀔃􀄆red check mark􏿿
+helpMessage =""" ZeusBot  􀔃􀄆red check mark􏿿
 
 􀔃􀅕red arrow right􏿿 Command Public
-[Bot?]     Cek Akun Bot
+[Bot]     Cek Akun Bot
 [Jam Update] Update jam Bot
 [Id Group] Cek Id Group
 [Ginfo]    Group Info
-[Mid RA]   Cek All mid Bot
-[RA 1/2/3/4] Cek Mid Bot
+[Mid ZB]   Cek All mid Bot
+[ZB 1/2/3/4] Cek Mid Bot
 [Respon]   Cek Respon Bot
 [Speedbot] Cek Kecepatan Bot
 [Up]       Fungsi Spam Chat
@@ -66,15 +66,15 @@ helpMessage =""" [R.A] BOT Menu V.2  􀔃􀄆red check mark􏿿
 [All join] Invite Semua Bot
 [_namabot join] Invite Bot
 [Bye _namabot]  Leave Bot
-SSH BY DEVAABN line.me/ti/p/~devaabn
+SSH BY MR.j line.me/ti/p/joshuasiregaar
 """
 
-Setgroup =""" Privasi Menu V.1 􀔃􀄆red check mark􏿿
+Setgroup =""" ZeusBot Privasi 􀔃􀄆red check mark􏿿
 
 [Protect QR -- Qr on / off]
 [Mid Via Contact -- Contact On / Off]
 [Reject Invite -- Guest On / Off]
-SSH BY DEVAABN line.me/ti/p/~devaabn
+SSH BY MR.J line.me/ti/p/joshuasiregaar
 """
 KAC=[cl,ki,kk,kc]
 mid = cl.getProfile().mid
@@ -82,7 +82,7 @@ Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 
-Bots=[mid,Amid,Bmid,Cmid,"u33d60593ad472ed11e7907fb1daee6ae"]
+Bots=[mid,Amid,Bmid,Cmid,"u880ee16541e4a34cd0f0dfc6a7e64833","u2b457b1ef8391ee451c9a22c835e1e33"]
 admin=["ADMIN_MIDS"]
 wait = {
     'contact':True,
@@ -99,10 +99,10 @@ wait = {
     "wblack":False,
     "dblack":False,
     "clock":True,
-    "cName":"[R.A]-First ",
-    "cName2":"[R.A]-Second ",
-    "cName3":"[R.A]-third ",
-    "cName4":"[R.A]-Fourth ",
+    "cName":"ZB-First ",
+    "cName2":"ZB-Second ",
+    "cName3":"ZB-third ",
+    "cName4":"ZB-Fourth ",
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
