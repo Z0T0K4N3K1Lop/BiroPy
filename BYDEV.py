@@ -1836,11 +1836,11 @@ def bot(op):
 
 #-----------------------------------------------
 
-            elif msg.text in ["Cv say jimmy ngentot"]:
-                ki.sendText(msg.to,"jimmy ngentot 􀜁􀅔Har Har􏿿")
-                kk.sendText(msg.to,"jimmy ngentot 􀜁􀅔Har Har􏿿")
-                kc.sendText(msg.to,"jimmy ngentot 􀜁􀅔Har Har􏿿")
-            elif msg.text in ["Cv say babi kelen"]:
+            elif msg.text in ["Cv say Joshua"]:
+                ki.sendText(msg.to,"Joshua Ganteng 􀜁􀅔Har Har􏿿")
+                kk.sendText(msg.to,"Joshua Ganteng 􀜁􀅔Har Har􏿿")
+                kc.sendText(msg.to,"Joshua Ganteng 􀜁􀅔Har Har􏿿")
+            elif msg.text in ["Cv say babi"]:
                 ki.sendText(msg.to,"Babi kelen 􀜁􀅔Har Har􏿿")
                 kk.sendText(msg.to,"Babi Kelen 􀜁􀅔Har Har􏿿")
                 kc.sendText(msg.to,"Babi kelen 􀜁􀅔Har Har􏿿")
@@ -1848,7 +1848,7 @@ def bot(op):
                 ki.sendText(msg.to,"Have a nice dream Cv 􀜁􀅔Har Har􏿿")
                 kk.sendText(msg.to,"Have a nice dream Cv 􀜁􀅔Har Har􏿿")
                 kc.sendText(msg.to,"Have a nice dream Cv 􀜁􀅔Har Har􏿿")
-            elif msg.text in ["Cv say quro cantik"]:
+            elif msg.text in ["Cv say quro"]:
                 ki.sendText(msg.to,"quro cantik banget 􀜁􀅔Har Har􏿿")
                 kk.sendText(msg.to,"quro cantik banget 􀜁􀅔Har Har􏿿")
                 kc.sendText(msg.to,"quro cantik banget 􀜁􀅔Har Har􏿿")
