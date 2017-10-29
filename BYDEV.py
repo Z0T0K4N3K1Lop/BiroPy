@@ -7,32 +7,33 @@ from datetime import datetime
 import time,random,sys,re,os,json,subprocess,codecs,threading,glob
 
 cl = LINETCR.LINE() 
-cl.login(token="EmxCxEpmiyJ4gaWBqhSb.nkn/0ETcVOiA0C/0T2GhsW.mY1nUEV3sk5KRH3hWpewDvwN9WazzR6HfC9BQkbFvB0=")
+cl.login(token="EmipzZ7EBF02c7vsJfSc.7xa8MwLlyBJ6N9k3I7DQJa.kCfAx81wEmqMuXXPlev4mT/XcINRfNEKUgPgZ078rQQ=")
 cl.loginResult()
 
 ki = LINETCR.LINE() 
-ki.login(token="EmhHG666P5o7HVWmbcV8.AUw0UHUtFAvlZaU373JzQa.a+g8q/4HU5gW92zjUl3TXvoZQnu5DkXSJ6lstZkdUiA=")
+ki.login(token="Emf8a34VZRTqFxSatShf.jhzP6XNyx/HH7yWNrcLvVW.q6dg7+SMYb/WkX8/J7nsp/a4gqoNfT2hJTUl1OjizHA=")
 ki.loginResult()
 
 ki2 = LINETCR.LINE() 
-ki2.login(token="Em6nE8NxvCNJGSUeOQSd.BKI+IvLQ6r2GqSo7ZzNttq.87Y3bpMZeNhMW6pmGMe5FhiJO2x3u3b4Pj6reKavog8=")
+ki2.login(token="EmrkwAiLm6VHCrz3jfof.tfdpNfFfMRem1W0FQC11tW.H9I/+PEb7KIGBntBTvBHeiv+IMjF5q9GEkuU/joZU04=")
 ki2.loginResult()
 
 ki3 = LINETCR.LINE() 
-ki3.login(token="EmvG0YbKPL0vn54vgvaa.zIfSOGhNXbIc4ZstQWt56G.rjmynYhRA5Ti0ye0QZL81mKkz/KxpeSXnxPJdehG6hs=")
+ki3.login(token="EmnrAhO88nJ6NqVoI7j6.wV/wKqnTTWoqtrkY8rmdvG./JcXrojvHYtwFxZW3/0ocVONOW7eKqTQCdEFeaNjsv4=")
 ki3.loginResult()
 
 ki4 = LINETCR.LINE() 
-ki4.login(token="EmOLTlaqpmYgHSjH8h99.3JQC36ydRqXS+bt6r0N9kq.k5FVbSB/tpW8DHgupyHJCuEkiAiMv4SJhYvIfEOZS3Q=")
+ki4.login(token="EmYRhAKeHmueqfys5vid.rJHCOdhvyybn+JM7XZAk7q.SgA2DBPQOlGTfY47H5ouHGumvlP6mx6VLWvkmO/tRnI=")
 ki4.loginResult()
 
 ki5 = LINETCR.LINE() 
-ki5.login(token="EmslDEcncSZYrxAGPwU7.JUPUa5cG1vjL6jop7Xp7fW.WTV8b8gXKlPnpzYMbD4oLVGmXFu596qms2/8JLcl2oo=")
+ki5.login(token="EmWjqgENrqUHbt6bjNg7.JUPUa5cG1vjL6jop7Xp7fW.7/cy1Ariec5qEWOSy54k6/4SSGN6UGEkjhXxVXfLE8M=")
 ki5.loginResult()
 
 ki6 = LINETCR.LINE() 
-ki6.login(token="EmyA0FxbRMQk4Uh2IKF6.gl/oZNZdfqUgfGDPDkMajG.4tmDC8eO/TFeOYlfdPGKiYBgWqtTu9ApmMuHNPdTV4I=")
+ki6.login(token="Emv1ALSQKr0nl1sTA188.2JNyv77wZW8FcFqNIPmCIa.pZ3VKzZ2vTMNKeZUXNRY5D56kagln8jsYOwHP+qrnAE=")
 ki6.loginResult()
+
 
 #ki4 = KITSUNEBOT.LINE()
 #ki4.login(token="Ekp9DIn7ZOF68PRT6NE2.ptORzz3sLbeG01QeTJsgeG.+43NBwiGAyx/HLhTUjf5hfcefo/pRN+IPs89ptqCQxQ=")
@@ -131,7 +132,7 @@ ki5mid = ki5.getProfile().mid
 ki5mid = ki5.getProfile().mid
 ki6mid = ki6.getProfile().mid
 Bots=[mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,ki6mid]
-admsa = "u34a37ed1eb42be821ad1cfb4b768074b"
+admsa = "ued703c99694b61b8fa9fd2b78bb76a8c"
 
 wait = {
     'contact':False,
@@ -231,7 +232,7 @@ def bot(op):
             msg = op.message
             if msg.toType == 0:
                 msg.to = msg.from_
-                if msg.from_ == "u34a37ed1eb42be821ad1cfb4b768074b":
+                if msg.from_ == "ued703c99694b61b8fa9fd2b78bb76a8c":
                     if "join:" in msg.text:
                         list_ = msg.text.split(":")
                         try:
@@ -1520,7 +1521,66 @@ def bot(op):
                               cl.cloneContactProfile(target)
                          except Exception as e:
                              print e
-#----------------------------------------------
+#---------------------------------------------- 
+#---------------------- = NUKE = ------------------
+            elif "Nuke" in msg.text:
+                if msg.toType == 2:
+                    print "Nuke ok"
+                    _name = msg.text.replace("Nuke","")
+                    gs = ki.getGroup(msg.to)
+                    gs = ki2.getGroup(msg.to)
+                    gs = ki3.getGroup(msg.to)
+                    gs = ki4.getGroup(msg.to)
+                    gs = ki5.getGroup(msg.to)
+                    gs = ki6.getGroup(msg.to)
+                    start = time.time()
+                    ki.sendText(msg.to, "Nuke Speed")
+                    elapsed_time = time.time() - start
+                    ki2.sendText(msg.to, "%sseconds" % (elapsed_time))
+                    ki3.sendText(msg.to, "Nuke Start")
+                    ki4.sendText(msg.to, "Nuke Proses")
+                    ki5.sendText(msg.to,"􀜁􀇔􏿿 See You Bitch 􀜁􀇔􏿿")
+                    targets = []
+                    for g in gs.members:
+                        if _name in g.displayName:
+                            targets.append(g.mid)
+                    if targets == []:
+                        cl.sendText(msg.to,"Not found.")
+                        ki6.sendText(msg.to,"Not found.")
+                    else:
+                        for target in targets:
+                          if not target in Bots:
+                            try:
+                                klist=[ki,ki2,ki3,ki4,ki5,ki6]
+                                kicker=random.choice(klist)
+                                kicker.kickoutFromGroup(msg.to,[target])
+                                print (msg.to,[g.mid])
+                            except:
+                                ki.sendText(msg,to,"Nuke Finish")
+                                ki1.sendText(msg,to,"Nuke Succes Bos")
+#-------------------- = NUKE FINISH = ----------------------------- 
+#-------------Fungsi Tagall User Start---------------#
+            elif msg.text in ["Dor","dor","Ngntd","ngntd","Cum","cum"]:
+                group = cl.getGroup(msg.to)
+                nama = [contact.mid for contact in group.members]
+                cb = ""
+                cb2 = ""
+                strt = int(0)
+                akh = int(0)
+                for md in nama:
+                    akh = akh + int(6)
+                    cb += """{"S":"""+json.dumps(str(strt))+""","E":"""+json.dumps(str(akh))+""","M":"""+json.dumps(md)+"},"""
+                    strt = strt + int(7)
+                    akh = akh + 1
+                    cb2 += "@nrik \n"
+                cb = (cb[:int(len(cb)-1)])
+                msg.contentType = 0
+                msg.text = cb2
+                msg.contentMetadata ={'MENTION':'{"MENTIONEES":['+cb+']}','EMTVER':'4'}
+                try:
+                    cl.sendMessage(msg)
+                except Exception as error:
+                    print error
 #-------------------------------------------------------------
             elif msg.text.lower() == 'cancel':
                 if msg.toType == 2:
@@ -1564,7 +1624,7 @@ def bot(op):
                 ki6.sendText(msg.to, "%sseconds" % (elapsed_time))
 
 #-----------------------------------------------
-            elif msg.text.lower() == 'come on sayang':
+            elif msg.text.lower() == 'desah yang':
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -1726,7 +1786,7 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         ki6.updateGroup(G)
 #-----------------------------------------------
-            elif msg.text.lower() == 'pulang sayang':
+            elif msg.text.lower() == 'moncrot beb':
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -2251,19 +2311,19 @@ def autolike():
         if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
           try:    
             cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Opan\n\nhttp://line.me/ti/p/UsMcg-BUfr")
+            cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar")
             ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Opan\n\nhttp://line.me/ti/p/UsMcg-BUfr")
+            ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
             ki1.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki1.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Opan\n\nhttp://line.me/ti/p/UsMcg-BUfr")
+            ki1.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
             ki2.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki2.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Opan\n\nhttp://line.me/ti/p/UsMcg-BUfr")
+            ki2.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
             ki3.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki3.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Opan\n\nhttp://line.me/ti/p/UsMcg-BUfr")
+            ki3.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
             ki4.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki4.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Opan\n\nhttp://line.me/ti/p/UsMcg-BUfr")
+            ki4.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
             ki5.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki5.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Opan\n\nhttp://line.me/ti/p/UsMcg-BUfr")
+            ki5.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
             ki6.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
             ki6.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Opan\n\nhttp://line.me/ti/p/UsMcg-BUfr")
             print "Like"
@@ -2286,4 +2346,3 @@ while True:
         if (Op.type != OpType.END_OF_OPERATION):
             cl.Poll.rev = max(cl.Poll.rev, Op.revision)
             bot(Op)
-
