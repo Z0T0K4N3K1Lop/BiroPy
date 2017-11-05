@@ -1,38 +1,38 @@
 # -*- coding: utf-8 -*-
 
+
 import LINETCR
 from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
 import time,random,sys,re,os,json,subprocess,codecs,threading,glob
 
 cl = LINETCR.LINE() 
-cl.login(token="EmLQzid3XcImeG7mPLTb.nkn/0ETcVOiA0C/0T2GhsW.mDQw3tRLteeS8TIOt3srQKRXCO8Fgp3+ji1iIT+bJG4=")
+cl.login(token="EmdYp7TbgMAyUaCt2CD0.tlH3lU7rpqNrhn2HEmj6Sa.D8WCsFlbz5jdZCnm+wT9UHKXmd14r+ccSkO2eNQNmFI=")
 cl.loginResult()
 
 ki = LINETCR.LINE() 
-ki.login(token="EmGcdgbDLfOojcpKYeod.C+MFC79WVq9BfuPWioOHpq.ktI0//WhXc27btOtcAvgiZ+spTbFBxDu7WpJRrLyYnQ=")
+ki.login(token="EmfE481Fa86QYS8kWci5.U0KuMU7MQ9vf4RHUlpgzvq.1m2NKWr9dFaaEJepZS6ml/fIMKXERQHH8QkUwlfFCzc=")
 ki.loginResult()
 
 ki2 = LINETCR.LINE() 
-ki2.login(token="EmFD0eA0eihi9BxtrlX9.a/2QBlBhEOWYul9WorSFgq.Q8H3exQh8zdk+P/g2CbFvOcEHVz6SBHYqcvb3L1JaK8=")
+ki2.login(token="EmvZBdatmHpRT81lezp7.+ZXYUb89NY9ooD+DH8l1DW./PcsXb9XYWS271nBK7O61/iofU15vRkA2xE2Yu0D7d4=")
 ki2.loginResult()
 
 ki3 = LINETCR.LINE() 
-ki3.login(token="EmHoNvlzUViEnK0x2X9c.Il6AYz5UtjH4IswasOmIla.0blmQbnUyqlweqvArELGWY8yqb6f5Wxk4lyxgF7xKoQ=")
+ki3.login(token="EmXjv8q8sGxBQsuC4xF5.cZfmFvhB79PWZ2ZULOtg5q.8zYh3W1gd7bhbZIiXCOeUCvS0cdylNbXt/OJ33R9yuk=")
 ki3.loginResult()
 
 ki4 = LINETCR.LINE() 
-ki4.login(token="Emq0NRf2w4OTCA68aX69.B4ChjRD/2ZA58Ul4TXCfsq.xc6bt4ZFAMpRKz3SHP2BE0n38QIoaa5jK5zQ200acSc=")
+ki4.login(token="EmYRhAKeHmueqfys5vid.rJHCOdhvyybn+JM7XZAk7q.SgA2DBPQOlGTfY47H5ouHGumvlP6mx6VLWvkmO/tRnI=")
 ki4.loginResult()
 
 ki5 = LINETCR.LINE() 
-ki5.login(token="Emq3aPdotfpkdSHUdvub.W2F2Lgj2Rki8e6vGK6H1cW.E28mxdyA21W/UN9g2vVA5sCpXNaVAI3jbX7i2RsV5ms=")
+ki5.login(token="EmWjqgENrqUHbt6bjNg7.JUPUa5cG1vjL6jop7Xp7fW.7/cy1Ariec5qEWOSy54k6/4SSGN6UGEkjhXxVXfLE8M=")
 ki5.loginResult()
 
 ki6 = LINETCR.LINE() 
-ki6.login(token="EmIKqYY26q0BQsjAOGu4.N4ivJ9c9U4dEBktpIMMg9a.z7tkoy2tBlMUaBQsItbL3DIFP8iBlCZN2++50D3Aq9k=")
+ki6.login(token="Emv1ALSQKr0nl1sTA188.2JNyv77wZW8FcFqNIPmCIa.pZ3VKzZ2vTMNKeZUXNRY5D56kagln8jsYOwHP+qrnAE=")
 ki6.loginResult()
-
 
 #ki4 = KITSUNEBOT.LINE()
 #ki4.login(token="Ekp9DIn7ZOF68PRT6NE2.ptORzz3sLbeG01QeTJsgeG.+43NBwiGAyx/HLhTUjf5hfcefo/pRN+IPs89ptqCQxQ=")
@@ -45,12 +45,10 @@ ki6.loginResult()
 #ki6 = KITSUNEBOT.LINE()
 #ki6.login(token="EkJ5l49Apx6J60DHyfU4.tWI+bgToteDmanSLf3rEza.HEEAt8Hc5NEThS7g7tKGBL89uHYdJGZSOIc6N5deibQ=")
 #ki6.loginResult()
-
-print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage ="""       Self Bots Command:『JOSHUA™』
+helpMessage ="""       Self Bots Command:『ғʟᴏᴡ ɪɴsᴘᴇᴄᴛʙᴏᴛ™』
   [C̶̲̅ᴏ̶̲̅ᴍ̶̲̅ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅ᴅ̶̲̅]
 🔯[Id]􀜁􀇔􏿿
 🔯[Mid]
@@ -119,7 +117,7 @@ helpMessage ="""       Self Bots Command:『JOSHUA™』
 🌀 Bye all        
   
           ☆ F̧͈̤̱͎̱̤̞̭̐͒́̀͗͞Ḷ̵̻̝̘͍̏̃͊̉͠Ŏ̩͖͎̹̫͈̏́̑́W ̤̲̯̤̹̲̲̘̈́̿͒ͅĮ̶̼̲̺̣̬̔̿͐̾̾Ṇ̶̨̛̲̭̝̲̝̪̎̾̈́͘͢͜͞S͎̱̺̜̀̿͘̕̕͢P̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠EC̸̡̩̣̲̣̜̊̾͊̃͜ͅT B̵̧͔̟̫̰̮̺̟̥̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ T̶͖̜̻̰͍̮̼́̐̑͒́̕ͅ ☆
-          http://line.me/ti/p/~joshuasiregaar
+          http://line.me/ti/p/UsMcg-BUfr
 """
 helo=""
 
@@ -133,7 +131,7 @@ ki5mid = ki5.getProfile().mid
 ki5mid = ki5.getProfile().mid
 ki6mid = ki6.getProfile().mid
 Bots=[mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,ki6mid]
-admsa = "u34a37ed1eb42be821ad1cfb4b768074b"
+admsa = "u4cb8772eeed13d09d11cdda178c27ab0"
 
 wait = {
     'contact':False,
@@ -143,7 +141,7 @@ wait = {
     'timeline':False,
     'autoAdd':True,
     'message':"""THX FOR ADD : 
-🐺 hhttp://line.me/ti/p/~joshuasiregaar
+🐺 hhttp://line.me/ti/p/UsMcg-BUfr🛡
 """,
     "lang":"JP",
     "comment":"Thanks For Add Me",
@@ -152,7 +150,7 @@ wait = {
     "wblack":False,
     "dblack":False,
     "clock":False,
-    "cName":"Chaichin",
+    "cName":"RUDI",
     "cNames":"",
     "blacklist":{},
     "wblacklist":False,
@@ -233,7 +231,7 @@ def bot(op):
             msg = op.message
             if msg.toType == 0:
                 msg.to = msg.from_
-                if msg.from_ == "u34a37ed1eb42be821ad1cfb4b768074b":
+                if msg.from_ == "u4cb8772eeed13d09d11cdda178c27ab0":
                     if "join:" in msg.text:
                         list_ = msg.text.split(":")
                         try:
@@ -879,7 +877,7 @@ def bot(op):
                 else: md+= "􀜁􀇔􏿿 Group cancel:off 􀜁􀄰􏿿\n"
                 if wait["leaveRoom"] == True: md+="􀜁􀇔􏿿 Auto leave:on 􀜁􀄯􏿿\n"
                 else: md+="􀜁􀇔􏿿 Auto leave:off 􀜁􀄰􏿿\n"
-                if wait["timeline"] == True: md+="􀜁􀇔􏿿 Share:on 􀜁��􏿿\n"
+                if wait["timeline"] == True: md+="􀜁􀇔􏿿 Share:on 􀜁􀄯􏿿\n"
                 else:md+="􀜁􀇔􏿿 Share:off 􀜁􀄰􏿿\n"
                 if wait["autoAdd"] == True: md+="􀜁􀇔􏿿 Auto add:on 􀜁􀄯􏿿\n"
                 else:md+="􀜁􀇔􏿿 Auto add:off 􀜁􀄰􏿿\n"
@@ -1625,7 +1623,7 @@ def bot(op):
                 ki6.sendText(msg.to, "%sseconds" % (elapsed_time))
 
 #-----------------------------------------------
-            elif msg.text.lower() == 'sakit sayang':
+            elif msg.text.lower() == 'sakit beb':
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -1787,7 +1785,7 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         ki6.updateGroup(G)
 #-----------------------------------------------
-            elif msg.text.lower() == 'enak sayang':
+            elif msg.text.lower() == 'uh crot':
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -1891,7 +1889,7 @@ def bot(op):
 
 
 """)
-                ki6.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿 KITSUNE BOT [KB] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[Kb6 in]\n􀜁􀇔􏿿[6Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[Kb6 Gift]\n􀜁􀇔􏿿[Kb6 bye]\n\n     
+                ki6.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿 KITSUNE BOT [KB] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[Kb6 in]\n􀜁􀇔􏿿[6Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔��[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[Kb6 Gift]\n􀜁􀇔􏿿[Kb6 bye]\n\n     
         
   
 ☆ Ķ͈̤̱͎̱̤̞̭͂̐͒́̀͗͞Ị̵̻̝̘͍͛̏̃͊̉͠ T̩͖͎̹̫͈̿̆̏́̑́S̤̲̯̤̹̲̲̘̏̋̈́̿͒ͅŲ̶̼̲̺̣̬̔̿͐̾̾͘Ṇ̶̨̛̲̭̝̲̝̪̎̾̈́͘͢͜͞É͎̱̺̜̐̀̿͘̕̕͢  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅT Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆
@@ -2312,21 +2310,21 @@ def autolike():
         if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
           try:    
             cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar")
+            cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by mr.J\n\nhttp://line.me/ti/p/~joshuasiregaar")
             ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
+            ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by mr.j\n\nhttp://line.me/ti/p/~joshuasiregaar")
             ki1.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki1.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
+            ki1.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by mr.j\n\nhttp://line.me/ti/p/~joshuasiregaar")
             ki2.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki2.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
+            ki2.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by mr.j\n\nhttp://line.me/ti/p/~joshuasiregaar")
             ki3.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki3.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
+            ki3.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by mr.j\n\nhttp://line.me/ti/p/~joshuasiregaar")
             ki4.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki4.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
+            ki4.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by mr.j\n\nhttp://line.me/ti/p/~joshuasiregaar")
             ki5.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki5.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
+            ki5.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by mr.j\n\nhttp://line.me/ti/p/~joshuasiregaar")
             ki6.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki6.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Opan\n\nhttp://line.me/ti/p/UsMcg-BUfr")
+            ki6.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by mr.j\n\nhttp://line.me/ti/p/~joshuasiregaar")
             print "Like"
           except:
             pass
@@ -2347,3 +2345,4 @@ while True:
         if (Op.type != OpType.END_OF_OPERATION):
             cl.Poll.rev = max(cl.Poll.rev, Op.revision)
             bot(Op)
+
