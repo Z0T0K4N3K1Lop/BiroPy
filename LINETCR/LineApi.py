@@ -66,6 +66,21 @@ class LINE:
     return self.Talk.client.updateSettings(0, settingObject)
 
 
+  """Personal"""
+
+  def cloneContactProfile(self, mid):
+       contact = self.getContact(mid)
+       profile = self.getProfile()
+       profile.displayName = contact.displayName
+       profile.statusMessage = contact.statusMessage
+       profile.pictureStatus = contact.pictureStatus
+       self.updateDisplayPicture(profile.pictureStatus)
+       return self.updateProfile(profile)
+
+  def updateDisplayPicture(self, hash_id):
+        return self.Talk.client.updateProfileAttribute(0, 8, hash_id)
+
+
   """Operation"""
 
   def fetchOperation(self, revision, count):
@@ -193,9 +208,6 @@ class LINE:
 
   """Group"""
 
-  def findGroupByTicket(self, ticketId):
-        return self.Talk.client.findGroupByTicket(ticketId)
-
   def acceptGroupInvitation(self, groupId):
         return self.Talk.client.acceptGroupInvitation(0, groupId)
 
@@ -316,3 +328,5 @@ class LINE:
       print("name -> " + prof.displayName)
       print("authToken -> " + self.authToken)
       print("cert -> " + self.cert if self.cert is not None else "")
+
+
