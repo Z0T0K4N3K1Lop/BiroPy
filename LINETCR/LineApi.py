@@ -328,5 +328,3 @@ class LINE:
       print("name -> " + prof.displayName)
       print("authToken -> " + self.authToken)
       print("cert -> " + self.cert if self.cert is not None else "")
-
-
