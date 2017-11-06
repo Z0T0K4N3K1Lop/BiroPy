@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
+
 import LINETCR
 from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
 import time,random,sys,re,os,json,subprocess,codecs,threading,glob
 
 cl = LINETCR.LINE() 
-cl.login(token="EmpAswqmvUnJvSPri532.WhrF12EBlcFB00pUUL7CmG.zSBsrcciJW3Pm+JutW2cp6//poHl3Frh1A4JGuXZONk=")
+cl.login(qr=True)
 cl.loginResult()
 
 ki = LINETCR.LINE() 
@@ -45,8 +46,6 @@ ki6.loginResult()
 #ki6 = KITSUNEBOT.LINE()
 #ki6.login(token="EkJ5l49Apx6J60DHyfU4.tWI+bgToteDmanSLf3rEza.HEEAt8Hc5NEThS7g7tKGBL89uHYdJGZSOIc6N5deibQ=")
 #ki6.loginResult()
-
-print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -118,7 +117,7 @@ helpMessage ="""       Self Bots Command:『⨎ℓõ∂ŧɨɲĝ ჩõŧ™』
 🌀 Respons
 🌀 Bye all        
   
-          ☆ ⨎ℓõ∂ŧɨɲĝ ჩõŧ
+          ☆ ⨎ℓõ∂ŧɨɲĝ ჩõŧ ☆
           http://line.me/ti/p/~joshuasiregaar
 """
 helo=""
@@ -879,7 +878,7 @@ def bot(op):
                 else: md+= "􀜁􀇔􏿿 Group cancel:off 􀜁􀄰􏿿\n"
                 if wait["leaveRoom"] == True: md+="􀜁􀇔􏿿 Auto leave:on 􀜁􀄯􏿿\n"
                 else: md+="􀜁􀇔􏿿 Auto leave:off 􀜁􀄰􏿿\n"
-                if wait["timeline"] == True: md+="􀜁􀇔􏿿 Share:on 􀜁��􏿿\n"
+                if wait["timeline"] == True: md+="􀜁􀇔􏿿 Share:on 􀜁􀄯􏿿\n"
                 else:md+="􀜁􀇔􏿿 Share:off 􀜁􀄰􏿿\n"
                 if wait["autoAdd"] == True: md+="􀜁􀇔􏿿 Auto add:on 􀜁􀄯􏿿\n"
                 else:md+="􀜁􀇔􏿿 Auto add:off 􀜁􀄰􏿿\n"
@@ -1625,7 +1624,7 @@ def bot(op):
                 ki6.sendText(msg.to, "%sseconds" % (elapsed_time))
 
 #-----------------------------------------------
-            elif msg.text.lower() == 'sakit sayang':
+            elif msg.text.lower() == 'come on sayang':
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -1787,7 +1786,7 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         ki6.updateGroup(G)
 #-----------------------------------------------
-            elif msg.text.lower() == 'enak sayang':
+            elif msg.text.lower() == 'pulang sayang':
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -2311,7 +2310,6 @@ def autolike():
         hasil = cl.activity(limit=1000)
         if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
           try:    
-            cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
             cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar")
             ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
             ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
@@ -2326,7 +2324,7 @@ def autolike():
             ki5.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
             ki5.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
             ki6.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki6.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Opan\n\nhttp://line.me/ti/p/UsMcg-BUfr")
+            ki6.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by mr.j\n\nhttp://line.me/ti/p/~joshuasiregaar")
             print "Like"
           except:
             pass
@@ -2347,6 +2345,7 @@ while True:
         if (Op.type != OpType.END_OF_OPERATION):
             cl.Poll.rev = max(cl.Poll.rev, Op.revision)
             bot(Op)
+
 
 
 
