@@ -50,7 +50,7 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage ="""       Self Bots Command:『⨎ℓõ∂ŧɨɲĝ ჩõŧ ™』
+helpMessage ="""       Self Bots Command:『JOSHUA™』
   [C̶̲̅ᴏ̶̲̅ᴍ̶̲̅ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅ᴅ̶̲̅]
 🔯[Id]􀜁􀇔􏿿
 🔯[Mid]
@@ -118,7 +118,7 @@ helpMessage ="""       Self Bots Command:『⨎ℓõ∂ŧɨɲĝ ჩõŧ ™』
 🌀 Respons
 🌀 Bye all        
   
-          ☆⨎ℓõ∂ŧɨɲĝ ჩõŧ ☆
+          ☆ F̧͈̤̱͎̱̤̞̭̐͒́̀͗͞Ḷ̵̻̝̘͍̏̃͊̉͠Ŏ̩͖͎̹̫͈̏́̑́W ̤̲̯̤̹̲̲̘̈́̿͒ͅĮ̶̼̲̺̣̬̔̿͐̾̾Ṇ̶̨̛̲̭̝̲̝̪̎̾̈́͘͢͜͞S͎̱̺̜̀̿͘̕̕͢P̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠EC̸̡̩̣̲̣̜̊̾͊̃͜ͅT B̵̧͔̟̫̰̮̺̟̥̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ T̶͖̜̻̰͍̮̼́̐̑͒́̕ͅ ☆
           http://line.me/ti/p/~joshuasiregaar
 """
 helo=""
@@ -142,7 +142,7 @@ wait = {
     'leaveRoom':True,
     'timeline':False,
     'autoAdd':True,
-    'message':"""FUCK OFF : 
+    'message':"""THX FOR ADD : 
 🐺 hhttp://line.me/ti/p/~joshuasiregaar
 """,
     "lang":"JP",
@@ -152,7 +152,7 @@ wait = {
     "wblack":False,
     "dblack":False,
     "clock":False,
-    "cName":"しりちゃん追加保護ボット26",
+    "cName":"Chaichin",
     "cNames":"",
     "blacklist":{},
     "wblacklist":False,
@@ -690,7 +690,7 @@ def bot(op):
                 else:
                     wait["linkprotect"] = True
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Link Protect Enable􀜁��􏿿")
+                        cl.sendText(msg.to,"Link Protect Enable􀜁􀇔􏿿")
                     else:
                         cl.sendText(msg.to,"It is already On ô€¨")
             elif msg.text in ['invite on']:
@@ -879,10 +879,10 @@ def bot(op):
                 else: md+= "􀜁􀇔􏿿 Group cancel:off 􀜁􀄰􏿿\n"
                 if wait["leaveRoom"] == True: md+="􀜁􀇔􏿿 Auto leave:on 􀜁􀄯􏿿\n"
                 else: md+="􀜁􀇔􏿿 Auto leave:off 􀜁􀄰􏿿\n"
-                if wait["timeline"] == True: md+="􀜁􀇔􏿿 Share:on 􀜁􀄯􏿿\n"
+                if wait["timeline"] == True: md+="􀜁􀇔􏿿 Share:on 􀜁��􏿿\n"
                 else:md+="􀜁􀇔􏿿 Share:off 􀜁􀄰􏿿\n"
                 if wait["autoAdd"] == True: md+="􀜁􀇔􏿿 Auto add:on 􀜁􀄯􏿿\n"
-                else:md+="􀜁􀇔􏿿 Auto add:off 􀜁��􏿿\n"
+                else:md+="􀜁􀇔􏿿 Auto add:off 􀜁􀄰􏿿\n"
                 if wait["commentOn"] == True: md+="􀜁􀇔􏿿 Auto komentar:on 􀜁􀄯􏿿\n"
                 else:md+="􀜁􀇔􏿿 Auto komentar:off 􀜁􀄰􏿿\n"
                 if wait["protect"] == True: md+="􀜁􀇔􏿿 Protect:on 🔓\n"
@@ -1423,19 +1423,7 @@ def bot(op):
                         cl.sendText(msg.to, tulisan)
                     else:
                         cl.sendText(msg.to, "Out Of Range!")
-# ----------------- NOTIFED MEMBER OUT GROUP
-        if op.type == 15:
-            if op.param2 in Bots:
-                return
-            cl.sendText(op.param1,cl.getContact(op.param2).displayName + "\nGood Bye Honey\n～(^з^)-♡")
-            print ("MEMBER HAS LEFT THE GROUP")
-# ----------------- NOTIFED MEMBER JOIN GROUP
-        if op.type == 17:
-            if op.param2 in Bots:
-                return
-            cl.sendText(op.param1,cl.getContact(op.param2).displayName + "\nWelcome Honey\n( ˘ ³˘)♥")
-            print ("MEMBER HAS JOIN THE GROUP")
-       #-----------------NOTIFED MEMBER JOIN GROUP
+
 #-----------------------------------------------------------
             elif msg.text.lower() == 'respon':
                 profile = ki.getProfile()
@@ -1622,228 +1610,7 @@ def bot(op):
                         cl.sendText(msg.to,str(e))
                     except:
                         pass
-#---------------------------------------------------                        
-            elif msg.text == "sayang":
-                    cl.sendText(msg.to,"3")
-                    cl.sendText(msg.to,"2")
-                    cl.sendText(msg.to,"1")
-                    cl.sendText(msg.to,"Fuck Off")
-                    cl.sendText(msg.to,"Ku mengejar bus yang mulai berjalan")
-                    cl.sendText(msg.to,"Ku ingin ungkapkan kepada dirimu")
-                    cl.sendText(msg.to,"Kabut dalam hatiku telah menghilang")
-                    cl.sendText(msg.to,"Dan hal yang penting bagiku pun terlihat")
-                    cl.sendText(msg.to,"Walaupun jawaban itu sebenarnya begitu mudah")
-                    cl.sendText(msg.to,"Tetapi entah mengapa diriku melewatkannya")
-                    cl.sendText(msg.to,"Untukku menjadi diri sendiri")
-                    cl.sendText(msg.to,"Ku harus jujur, pada perasaanku")
-                    cl.sendText(msg.to,"Ku suka dirimu ku suka")
-                    cl.sendText(msg.to,"Ku berlari sekuat tenaga")
-                    cl.sendText(msg.to,"Ku suka selalu ku suka")
-                    cl.sendText(msg.to,"Ku teriak sebisa suaraku")
-                    cl.sendText(msg.to,"Ku suka dirimu ku suka")
-                    cl.sendText(msg.to,"Walau susah untukku bernapas")
-                    cl.sendText(msg.to,"Tak akan ku sembunyikan")
-                    cl.sendText(msg.to,"Oogoe daiyamondo~")
-                    cl.sendText(msg.to,"Saat ku sadari sesuatu menghilang")
-                    cl.sendText(msg.to,"Hati ini pun resah tidak tertahankan")
-                    cl.sendText(msg.to,"Sekarang juga yang bisa ku lakukan")
-                    cl.sendText(msg.to,"Merubah perasaan ke dalam kata kata")
-                    cl.sendText(msg.to,"Mengapa sedari tadi")
-                    cl.sendText(msg.to,"Aku hanya menatap langit")
-                    cl.sendText(msg.to,"Mataku berkaca kaca")
-                    cl.sendText(msg.to,"Berlinang tak bisa berhenti")
-                    cl.sendText(msg.to,"Di tempat kita tinggal, didunia ini")
-                    cl.sendText(msg.to,"Dipenuhi cinta, kepada seseorang")
-                    cl.sendText(msg.to,"Ku yakin ooo ku yakin")
-                    cl.sendText(msg.to,"Janji tak lepas dirimu lagi")
-                    cl.sendText(msg.to,"Ku yakin ooo ku yakin")
-                    cl.sendText(msg.to,"Akhirnya kita bisa bertemu")
-                    cl.sendText(msg.to,"Ku yakin ooo ku yakin")
-                    cl.sendText(msg.to,"Ku akan bahagiakan dirimu")
-                    cl.sendText(msg.to,"Ku ingin kau mendengarkan")
-                    cl.sendText(msg.to,"Oogoe daiyamondo~")
-                    cl.sendText(msg.to,"Jika jika kamu ragu")
-                    cl.sendText(msg.to,"Takkan bisa memulai apapun")
-                    cl.sendText(msg.to,"Ungkapkan perasaanmu")
-                    cl.sendText(msg.to,"Jujurlah dari sekarang juga")
-                    cl.sendText(msg.to,"Jika kau bersuar")
-                    cl.sendText(msg.to,"Cahaya kan bersinar")
-                    cl.sendText(msg.to,"Ku suka dirimu ku suka")
-                    cl.sendText(msg.to,"Ku berlari sekuat tenaga")
-                    cl.sendText(msg.to,"Ku suka selalu ku suka")
-                    cl.sendText(msg.to,"Ku teriak sebisa suaraku")
-                    cl.sendText(msg.to,"Ku suka dirimu ku suka")
-                    cl.sendText(msg.to,"Sampaikan rasa sayangku ini")
-                    cl.sendText(msg.to,"Ku suka selalu ku suka")
-                    cl.sendText(msg.to,"Ku teriakkan ditengah angin")
-                    cl.sendText(msg.to,"Ku suka dirimu ku suka")
-                    cl.sendText(msg.to,"Walau susah untuk ku bernapas")
-                    cl.sendText(msg.to,"Tak akan ku sembunyikan")
-                    cl.sendText(msg.to,"Oogoe daiyamondo~")
-                    cl.sendText(msg.to,"Katakan dengan berani")
-                    cl.sendText(msg.to,"Jika kau diam kan tetap sama")
-                    cl.sendText(msg.to,"Janganlah kau merasa malu")
-                    cl.sendText(msg.to,"“Suka” itu kata paling hebat!")
-                    cl.sendText(msg.to,"“Suka” itu kata paling hebat!")
-                    cl.sendText(msg.to,"“Suka” itu kata paling hebat!")
-                    cl.sendText(msg.to,"Ungkapkan perasaanmu")
-                    cl.sendText(msg.to,"Jujurlah dari sekarang juga..")
-                    cl.sendText(msg.to,"Anugerah terindah adalah ketika kita masih diberikan waktu untuk berkumpul bersama orang-orang yang kita sayangi.")
-                    cl.sendText(msg.to,"Cuma dirimu seorang yang bisa meluluhkan hati ini. Kamulah yang terindah dalam hidupku.")
-                    cl.sendText(msg.to,"Aku ingin meraih kembali cintamu menjadi kenyataan. Saat diriku dalam siksaan cinta, dirimu melenggang pergi tanpa pernah memikirkan aku.")
-                    cl.sendText(msg.to,"Tak ada yang salah dengan CINTA. Karena ia hanyalah sebuah kata dan kita sendirilah yang memaknainya.")
-                    cl.sendText(msg.to,"Mencintaimu adalah inginku. memilikimu adalah dambaku. meski jarak jadi pemisah, hati tak akan bisa terpisah.")
-                    cl.sendText(msg.to,"Dalam cinta ada bahagia, canda, tawa, sedih, kecewa, terluka, semua itu tidak akan terlupakan dalam hal cinta, itu yang artinya cinta.")
-                    cl.sendText(msg.to,"Seseorang yang berarti, tak akan dengan mudah kamu miliki. Jika kamu sungguh mencintai, jangan pernah berhenti berusaha untuk hati.")
-                    cl.sendText(msg.to,"Jika esok pagi menjelang, akan aku tantang matahari yang terbangun dari tidur lelap nya.")
-                    cl.sendText(msg.to,"Ketulusan cinta hanya dapat dirasakan mereka yang benar-benar mempunyai hati tulus dalam cinta.")
-                    cl.sendText(msg.to,"Kamu tak perlu menjadikan dirimu cantik/ganteng untuk bisa memilikiku, kamu hanya perlu menunjukkan bahwa aku membutuhkanmu.")
-                    cl.sendText(msg.to,"Ada seribu hal yang bisa membuatku berpikir ununtuk meninggalkanmu, namun ada satu kata yang membuatku tetap disini. Aku Cinta Kamu.")
-                    cl.sendText(msg.to,"Aku pernah jatuhkan setetes air mata di selat Sunda. Di hari aku bisa menemukannya lagi, itulah waktunya aku berhenti mencintaimu.")
-                    cl.sendText(msg.to,"Cinta adalah caraku bercerita tentang dirimu, caraku menatap kepergian mu dan caraku tersenyum, saat menatap indah wajahmu.")
-                    cl.sendText(msg.to,"Datang dan pergi seperti angin tidak beraturan dan arah merasakan cinta dalam kehidupan kadang ku bahagia kadang ku bersedih.")
-                    cl.sendText(msg.to,"Cinta adalah caraku bercerita tentang dirimu, caraku menatap kepergian mu dan caraku tersenyum, saat menatap indah wajahmu.")
-                    cl.sendText(msg.to,"Saat jarak memisahkan, satu yang harus kamu ketahui. Akan aku jaga cinta ini ununtukmu.")
-                    cl.sendText(msg.to,"Bersandarlah di pundaku sampai kau merasakan kenyamanan, karena sudah keharusan bagiku ununtuk memberikanmu rasa nyaman.")
-                    cl.sendText(msg.to,"Air mata merupakan satu-satunya cara bagimana mata berbicara ketika bibir tidak mampu menjelaskan apa yang membuatmu terluka.")
-                    cl.sendText(msg.to,"Hidup tidak bisa lebih baik tanpa ada cinta, tapi cinta dengan cara yang salah akan membuat hidupmu lebih buruk.")
-                    cl.sendText(msg.to,"Mencintaimu hanya butuh waktu beberapa detik, namun untuk melupakanmu butuh waktu seumur hidupku.")
-                    cl.sendText(msg.to,"Hidup tidak bisa lebih baik tanpa ada cinta, tapi cinta dengan cara yang salah akan membuat hidupmu lebih buruk.")
-                    cl.sendText(msg.to,"Mencintaimu hanya butuh waktu beberapa detik, namun ununtuk melupakanmu butuh waktu seumur hidupku.")
-                    cl.sendText(msg.to,"Cinta merupakan keteguhan hati yang ditambatkan pada kemanusiaan yang menghubungkan masa lalu, masa kini dan masa depan.")
-                    cl.sendText(msg.to,"Ketika mencintai seseorang, cintailah apa adanya. Jangan berharap dia yang sempurna, karena kesempurnaan adalah ketika mencinta tanpa syarat.")
-                    cl.sendText(msg.to,"Cinta bukanlah tentang berapa lama kamu mengenal seseorang, tapi tentang seseorang yang membuatmu tersenyum sejak kamu mengenalnya.")
-                    cl.sendText(msg.to,"Ketika mereka bertanya tentang kelemahanku, aku ingin mengatidakan bahwa kelemahanku itul adalah kamu. Aku merindukanmu di mana-mana dan aku sanagat mencintaimu.")
-                    cl.sendText(msg.to,"Kehadiranmu dalam hidupku, aku tahu bahwa aku bisa menghadapi setiap tantangan yang ada di hadapanku, terima kasih telah menjadi kekuatanku.")
-                    cl.sendText(msg.to,"Meneriakkan namamu di deras hujan, memandangmu dari kejauhan, dan berdo’a di hening malam. Cinta dalam diam ini lah yang mampu kupertahankan.")
-                    cl.sendText(msg.to,"Perempuan selalu menjaga hati orang yang dia sayangsehingga hati dia sendiri tersiksa. inilah pengorbanan perempuan ununtuk lelaki yang tidak pernah sadar.")
-                    cl.sendText(msg.to,"Ketika kau belum bisa mengambil keputusan ununtuk tetap bertahan dengan perasaan itu, sabarlah, cinta yang akan menguatkanmu.")
-                    cl.sendText(msg.to,"Aku tidak akan pernah menjajikan ununtuk sebuah perasaan, tapi aku bisa menjanjikan ununtuk sebuah kesetiaan.")
-                    cl.sendText(msg.to,"Cinta yang sebenarnya tidak buta, cinta yaitu adalah hal yang murni, luhur serta diharapkan. Yang buta itu jika cinta itu menguasai dirimu tanpa adanya suatu pertimbangan.")
-                    cl.sendText(msg.to,"Aku tercipta dalam waktu, ununtuk mengisi waktu, selalu memperbaiki diri di setiap waktu, dan semua waktu ku adalah ununtuk mencintai kamu.")
-                    cl.sendText(msg.to,"Cinta akan indah jika berpondasikan dengan kasih sang pencipta. Karena sesungguhnya Cinta berasal dari-Nya Dan cinta yang paling utama adalah cinta kepada Yang Kuasa.")
-                    cl.sendText(msg.to,"Bagi aku, dalam hidup ini, hidup hanya sekali, cinta sekali dan matipun juga sekali. Maka tidak ada yang namanya mendua.")
-                    cl.sendText(msg.to,"Tuhan..jagalah ia yang jauh disana, lindungi tiap detik hidup yang ia lewati,sayangi dia melebihi engkau menyayangiku.")
-                    cl.sendText(msg.to,"Kapan kau akan berhenti menyakitiku, lelah ku hadapi semua ini tapi aku tidak bisa memungkiri aku sangat mencintaimu.")
-                    cl.sendText(msg.to,"Ketidakutan terbesar dalam hidupku bukan kehilanganmu, tapi melihat dirimu kehilangan kebahagiaanmu.")
-                    cl.sendText(msg.to,"Cinta yang sesungguhnya akan mengatidakan aku butuh kamu karna aku siap ununtuk mencintaimu dan menjalani suka duka bersamamu")
-                    cl.sendText(msg.to,"Seseorang pacar yang baik adalah dia yang JUJUR dan tidak pernah membuat kamu selalu bertanya-tanya atau selalu mencurigai dia")
-                    cl.sendText(msg.to,"Cinta bukanlah sebuah kata cinta, yang sebenarnya adalah cinta yang menyentuh hati dan perasaan")
-                    cl.sendText(msg.to,"Kau datang di saat ke egoisan akan cinta tengah mendera. Membawa cahaya dan kedamaian, membuatku tidak mudah menyerah ununtuk merengkuh kisah cinta bersamamu")
-                    cl.sendText(msg.to,"Aku sangat menyukai kebersamaan karena kebersamaan mengajarkan kita tentang suka dan duka di lalui bersama")
-                    cl.sendText(msg.to,"Mungkin Tuhan sengaja memberi kita berjumpa dengan orang yang salah sebelum menemui insan yang betul supaya apabila kita akhirnya menemui insan yang betul, kita akan tahu bagaimana ununtuk bersyukur dengan pemberian dan hikmah di balik pemberian tersebut.")
-                    cl.sendText(msg.to,"Getaran di hatiku yang lama haus akan belaianmu seperti saat dulu dan kau bisikan kata ‘aku cinta padamu’ aku merindukannya")
-                    cl.sendText(msg.to,"Terkadang air mata adalah tanda kebahagiaan yang tidak terucapkan. Dan senyuman adalah tanda sakit yang mencoba ununtuk kuat")
-                    cl.sendText(msg.to,"Dicintai dan disayangi kamu adalah anugerah terindah yang tuhan berikan padaku.")
-                    cl.sendText(msg.to,"Mencintai kamu butuh waktu beberapa detik, Namun melupakanmu butuh waktu ku seumur hidup.")
-                    cl.sendText(msg.to,"Datang dan pergi seperti angin tidak beraturan dan arah merasakan cinta dalam kehidupan kadang aku bahagia dan juga kadang aku bersedih.")
-                    cl.sendText(msg.to,"Air mata merupakan satu-satunya cara bagimana mata berbicara ketika bibir tidak mampu lagi menjelaskan apa yang membuatmu terluka.")
-                    cl.sendText(msg.to,"Jauh sebelum bertemu denganmu, aku telah mengenalmu dalam doaku.")
-                    cl.sendText(msg.to,"Mungkin dia tidak sadar bahwa aku itu cemburu dan mungkin juga dia tidak merasa bahwa aku sangat terluka, tidak mendengar bahwa hatiku sedang menangis.")
-                    cl.sendText(msg.to,"Kehadirmu membawa cinta, memberi bahagia, dan juga rasa rindu yang tiada pernah ada akhirnya.")
-                    cl.sendText(msg.to,"Aku nngak mau jadi wakil rakyat, aku maunya jadi wali murid yang ngambil raport anak kita besok.")
-                    cl.sendText(msg.to,"Seperti hujan yang turun di tanah yang tandus, seperti itulah arti hadirmu dengan cinta dan kasih sayang untukku.")
-                    cl.sendText(msg.to,"Tanda-tanda cinta adalah ketika anda merasa bahwa kebahagiaan orang tersebut lebih penting daripada kebahagiaanmu sendiri.")
-                    cl.sendText(msg.to,"Cinta tidak hanya apa yang anda rasakan, tetapi apa yang harus anda lakukan.")
-                    cl.sendText(msg.to,"Cinta adalah sebuah kekuatan untuk melihat kesamaan dan tidak kesamaan.")
-                    cl.sendText(msg.to,"Cinta adalah pengalaman penuh emosi yang dirasakan banyak orang tetapi hanya beberapa orang saja yang bisa menikmatinya.")
-                    cl.sendText(msg.to,"Cinta adalah berbagi. Karena walau ada di dua raga yang berbeda, setiap pasangan hanya memiliki satu hati.")
-                    cl.sendText(msg.to,"Saat kita berjauhan, sebenarnya hanya raga kitalah yang jauh. Namun hati kita selalu dekat, karena hatiku ada di hatimu.")
-                    cl.sendText(msg.to,"Cinta datang dengan pengorbanan yang akan memberikan petunjuk siapa diri kita yang sebenarnya.")
-                    cl.sendText(msg.to,"Cinta begitu lembut dan merdu, namun jangan kau gunankan untuk merayu. Karena rayuan hanyalah akan mengosongkan makna kecintaan yang sesungguhnya.")
-                    cl.sendText(msg.to,"Cinta bukanlah penuntutan, penguasaan, pemaksaan, dan pengintimidasian. Tak lain itu hanyalah cara manusia mendefinisikannya. Karena cinta adalah perjuangan, pengorbanan, tanggungjawab, kejujuran, dan keikhlasan.")
-                    cl.sendText(msg.to,"Derajat cinta hanya bisa diukur dengan seberapa besar “Pemberian” yang kita korbankan.")
-                    
-            elif "Unban all" in msg.text:
-		if msg.toType == 2:
-                    print "ok"
-   	            _name = msg.text.replace("Unban all","")
-                    gs = cl.getGroup(msg.to)
-      	            cl.sendText(msg.to,"Semua Telah Di Hapus")
-                    targets = []
-	            for g in gs.members:
-                        if _name in g.displayName:
-			    targets.append(g.mid)
-   	            if targets == []:
-		        cl.sendText(msg.to,"Maaf")
-	            else:
-	                for target in targets:
-		            try:
-			        del wait["blacklist"][target]
-		                f=codecs.open('st2__b.json','w','utf-8')
-			        json.dump(wait["blacklist"],f, sort_keys=True,indent=4,ensure_ascii=False)
-		            except:
-		                cl.sentText(msg.to,"Berhasil Dihapus")
-#----------------------------------------------------------
-            elif "Allname:" in msg.text:
-                string = msg.text.replace("All:","")
-                if len(string.decode('utf-8')) <= 60000000:
-                    profile = ki.getProfile()
-                    profile.displayName = string
-                    ki.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 60000000:
-                    profile = ki2.getProfile()
-                    profile.displayName = string
-                    ki2.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 60000000:
-                    profile = ki3.getProfile()
-                    profile.displayName = string
-                    ki3.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 60000000:
-                    profile = ki4.getProfile()
-                    profile.displayName = string
-                    ki4.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 60000000:
-                    profile = ki5.getProfile()
-                    profile.displayName = string
-                    ki5.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 60000000:
-                    profile = ki6.getProfile()
-                    profile.displayName = string
-                    ki6.updateProfile(profile)
-            elif "Allbio:" in msg.text:
-                string = msg.text.replace("Allbio:","")
-                if len(string.decode('utf-8')) <= 6000000000:
-                    profile = ki.getProfile()
-                    profile.statusMessage = string
-                    ki.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 6000000000:
-                    profile = ki2.getProfile()
-                    profile.statusMessage = string
-                    ki2.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 6000000000:
-                    profile = ki3.getProfile()
-                    profile.statusMessage = string
-                    ki3.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 6000000000:
-                    profile = ki4.getProfile()
-                    profile.statusMessage = string
-                    ki4.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 6000000000:
-                    profile = ki5.getProfile()
-                    profile.statusMessage = string
-                    ki5.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 6000000000:
-                    profile = ki6.getProfile()
-                    profile.statusMessage = string
-                    ki6.updateProfile(profile)
-#----------------------------------------------------------
-# ----------------- BAN MEMBER BY TAG 2TAG ATAU 10TAG MEMBER
-            elif ("Ban " in msg.text):
-                key = eval(msg.contentMetadata["MENTION"])
-                key["MENTIONEES"][0]["M"]
-                targets = []
-                for x in key["MENTIONEES"]:
-                    targets.append(x["M"])
-                for target in targets:
-                   try:
-                      wait["blacklist"][target] = True
-                      f=codecs.open('st2__b.json','w','utf-8')
-                      json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-                      cl.sendText(msg.to,"Succes Banned")
-                   except:
-                      pass
-#---------------------------------------------------
+
 #-----------------------------------------------
             elif msg.text in ["Sp","Speed","speed"]:
                 start = time.time()
@@ -1858,7 +1625,7 @@ def bot(op):
                 ki6.sendText(msg.to, "%sseconds" % (elapsed_time))
 
 #-----------------------------------------------
-            elif msg.text.lower() == 'ah yang':
+            elif msg.text.lower() == 'sakit sayang':
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -2020,7 +1787,7 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         ki6.updateGroup(G)
 #-----------------------------------------------
-            elif msg.text.lower() == 'uh yang':
+            elif msg.text.lower() == 'enak sayang':
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -2116,7 +1883,7 @@ def bot(op):
 
 
 """)
-                ki5.sendText(msg.to,"""     􀜁􀇔􏿿􀜁��􏿿 KITSUNE BOT [KB] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[Kb5 in]\n􀜁􀇔􏿿[5Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[Kb5 Gift]\n􀜁􀇔􏿿[Kb5 bye]\n\n     
+                ki5.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿 KITSUNE BOT [KB] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[Kb5 in]\n􀜁􀇔􏿿[5Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[Kb5 Gift]\n􀜁􀇔􏿿[Kb5 bye]\n\n     
         
   
 ☆ Ķ͈̤̱͎̱̤̞̭͂̐͒́̀͗͞Ị̵̻̝̘͍͛̏̃͊̉͠ T̩͖͎̹̫͈̿̆̏́̑́S̤̲̯̤̹̲̲̘̏̋̈́̿͒ͅŲ̶̼̲̺̣̬̔̿͐̾̾͘Ṇ̶̨̛̲̭̝̲̝̪̎̾̈́͘͢͜͞É͎̱̺̜̐̀̿͘̕̕͢  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅT Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆
@@ -2155,7 +1922,6 @@ def bot(op):
                 ki4.sendText(msg.to,"Ping 􀜁􀇔􏿿")
                 ki5.sendText(msg.to,"Ping 􀜁􀇔􏿿")
                 ki6.sendText(msg.to,"Ping 􀜁􀇔􏿿")
-            
 #----------------------------------------------- 
 #-----------------------------------------------
         if op.type == 19:
@@ -2560,7 +2326,7 @@ def autolike():
             ki5.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
             ki5.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
             ki6.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki6.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Mr.j\n\nhttp://line.me/ti/p/~joshuasiregaar")
+            ki6.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Opan\n\nhttp://line.me/ti/p/UsMcg-BUfr")
             print "Like"
           except:
             pass
