@@ -10,27 +10,27 @@ cl.login(qr=True)
 cl.loginResult()
 
 ki = LINETCR.LINE() 
-ki.login(token="EmOYUW04NjdwQ0Egp0yc.rhpLr3SAdszTXVT7mquhFa.S5do2/SexV13vqqlLxZu2YGa7nMQrXAHWAA741Qkr6w=")
+ki.login(token="EmFZmDrLbIZrG5sCQiP0.SWEV3AJcExmC7L36B9xJSa.6dUYLVLR03C20MlRQJ5rFhPaJr3shndDFVOsccdE9fQ=")
 ki.loginResult()
 
 ki2 = LINETCR.LINE() 
-ki2.login(token="EmqhkSjjanO3TZybM5ic.ak/Sv6i97NA4kP02HPjppa.1FCJ0IfHD+s2Z09n0zCcCzimmonhEdGVib7uvByAsEg=")
+ki2.login(token="EmvSL1a0KejLB5bzCU1a.cjzZ0o31qXxxgbJcFo0CcG.n5SEu2FGRNvP1dhBsCcBRMkKkduYvCVPMjHf6KeUKHo=")
 ki2.loginResult()
 
 ki3 = LINETCR.LINE() 
-ki3.login(token="Em08TaEXHe0F19o0wCyb.Ya5qlGguSAMcSJXarn/32W.gxg7+9NTcAX38/06Up7TdjDhGNoQLLU+JB9JDeiQx/A=")
+ki3.login(token="EmSJs66QAaMiM4cWhgr4.0BB50po2fJPNUOQ97hlWva.GYWOs0a/dL5aPUPVPlJEVIVlmeEO/icoKSSLOW1ofF0=")
 ki3.loginResult()
 
 ki4 = LINETCR.LINE() 
-ki4.login(token="EmUdQL0Zlff06r9Ni2rd.5KRnz72PA/njFcuaZfZ8Vq.Wv+WgeHrua7c3eGKu+iL8dUqq32e6vBUaNMB/qK2uKQ=")
+ki4.login(token="EmZeNljRZ0tCkGMSr2M8.rx1oTNdbbjp2FsJ2/fH62a./fbeCF3v6/2KDdwOSmu7YTFqR5Ck7TkS6ts0xwy+4Tc=")
 ki4.loginResult()
 
 ki5 = LINETCR.LINE() 
-ki5.login(token="EmISor3xLZKGj4hVRTZd.8EAJfZKSWnu+UKVyoveEFq.jnHC7WzGMsE81zIK4yXycEiQ1tDCcCekVh1+7Q8jOFE=")
+ki5.login(token="EmBe57VTwSUQlFXvfzm1.dgdqY974FEWgwEuRALmyqq.wA0TJ3mcyWfVCuvN6jtguVkECgsnBGkPL0xA2V6diJ8=")
 ki5.loginResult()
 
 ki6 = LINETCR.LINE() 
-ki6.login(token="EmMMuNRe83yPuj6q6p8b.APMuxn4klNQaVTkmpnh3IW.RDN2hliFiDG1mf8sApBCB5ferK+9ga3FE1i+Wxk8Kdw=")
+ki6.login(token="EmTMCFQWdYVvFSa2V7Cd.MNfixDwFOfBlX5lWazDXlq.mT5WsBE7KeJhhcG+azSeCiY+cenQ8AxNNiaoJG4qxmE=")
 ki6.loginResult()
 
 
@@ -147,7 +147,7 @@ ki5mid = ki5.getProfile().mid
 ki5mid = ki5.getProfile().mid
 ki6mid = ki6.getProfile().mid
 Bots=[mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,ki6mid]
-admsa = "u2b457b1ef8391ee451c9a22c835e1e33"
+admsa = "uc0745fd7679b2c27dbd343eeba5edc32"
 
 wait = {
     'contact':False,
@@ -247,7 +247,7 @@ def bot(op):
             msg = op.message
             if msg.toType == 0:
                 msg.to = msg.from_
-                if msg.from_ == "u2b457b1ef8391ee451c9a22c835e1e33":
+                if msg.from_ == "uc0745fd7679b2c27dbd343eeba5edc32":
                     if "join:" in msg.text:
                         list_ = msg.text.split(":")
                         try:
