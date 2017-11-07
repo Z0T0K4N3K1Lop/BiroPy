@@ -1,92 +1,125 @@
 # -*- coding: utf-8 -*-
 
-
-import LINETCR 
-from LINETCR.lib.curve.ttypes import * 
+import LINETCR
+from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
-import time,random,sys,json,codecs,threading,glob,re,urllib
+import time,random,sys,re,os,json,subprocess,codecs,threading,glob
 
-cl = LINETCR.LINE()
-cl.login(token="EmyuZBHHsL96LRnfHaRf.aIzggwcnTnzO2dpEdfI9VW.VgAzEqGuFRGfUDi+xE1WRWedlnuncuIfaU6Fmkjqs60=")
+cl = LINETCR.LINE() 
+cl.login(token="EmLQzid3XcImeG7mPLTb.nkn/0ETcVOiA0C/0T2GhsW.mDQw3tRLteeS8TIOt3srQKRXCO8Fgp3+ji1iIT+bJG4=")
 cl.loginResult()
 
-ki = LINETCR.LINE()
-ki.login(token="EmPeQGmTyUrTl6w8CVja.UP+QwRs4dxnadklQ1TM6IG.88bCC7PFuEX0GGo3oD4KBG0cGFQFtI9+xj5TLZa4ra4=")
+ki = LINETCR.LINE() 
+ki.login(token="EmGcdgbDLfOojcpKYeod.C+MFC79WVq9BfuPWioOHpq.ktI0//WhXc27btOtcAvgiZ+spTbFBxDu7WpJRrLyYnQ=")
 ki.loginResult()
 
-ki2 = LINETCR.LINE()
-ki2.login(token="EmBgC7ZtWZuDitpegN28.UALtoVW0z90Rqt/uajEfga.AH2bAZVJFFnca6wC+N6T3UbKOEL6W/KcExysVz3Mvmo=")
+ki2 = LINETCR.LINE() 
+ki2.login(token="EmFD0eA0eihi9BxtrlX9.a/2QBlBhEOWYul9WorSFgq.Q8H3exQh8zdk+P/g2CbFvOcEHVz6SBHYqcvb3L1JaK8=")
 ki2.loginResult()
 
-ki3 = LINETCR.LINE()
-ki3.login(token="Em2VhecjyUvHEujTte24.RvLY25BTord+1gEZrU4fja.AdPN3Cgg54h1in80dlMA3kY1S0Sa57mljz577bYHQ6M=")
+ki3 = LINETCR.LINE() 
+ki3.login(token="EmHoNvlzUViEnK0x2X9c.Il6AYz5UtjH4IswasOmIla.0blmQbnUyqlweqvArELGWY8yqb6f5Wxk4lyxgF7xKoQ=")
 ki3.loginResult()
 
-ki4 = LINETCR.LINE()
-ki4.login(token="EmfETLkxuJgMfrFcGQDa.oAjahOppc3SVjoOSwjsJUG.N7SgC/DsXzLxOqbO0BOn1e2ilklU8Bl6JghIWP98EH0=")
+ki4 = LINETCR.LINE() 
+ki4.login(token="Emq0NRf2w4OTCA68aX69.B4ChjRD/2ZA58Ul4TXCfsq.xc6bt4ZFAMpRKz3SHP2BE0n38QIoaa5jK5zQ200acSc=")
 ki4.loginResult()
 
-ki5 = LINETCR.LINE()
-ki5.login(token="Em5JhV1b4TSJhyKgziF7.vpy4ApI3/FMOQ5YtGXPhXW.1VToxSfIKh/3HDQo+IWpfRBRM3c61Ls9cOVYUicSlVY=")
+ki5 = LINETCR.LINE() 
+ki5.login(token="Emq3aPdotfpkdSHUdvub.W2F2Lgj2Rki8e6vGK6H1cW.E28mxdyA21W/UN9g2vVA5sCpXNaVAI3jbX7i2RsV5ms=")
 ki5.loginResult()
 
-ki6 = LINETCR.LINE()
-ki6.login(token="EmWzTjeVPFIvxyIPN6cb.rRHpiJm5HNZbEGOqt/2uYW.nAFN/PN6sXoGOt/NXBHvchqY/hBzgQo1V5k4GaarGm4=")
+ki6 = LINETCR.LINE() 
+ki6.login(token="EmIKqYY26q0BQsjAOGu4.N4ivJ9c9U4dEBktpIMMg9a.z7tkoy2tBlMUaBQsItbL3DIFP8iBlCZN2++50D3Aq9k=")
 ki6.loginResult()
 
-helpMessage =""" Dewa
+#ki4 = KITSUNEBOT.LINE()
+#ki4.login(token="Ekp9DIn7ZOF68PRT6NE2.ptORzz3sLbeG01QeTJsgeG.+43NBwiGAyx/HLhTUjf5hfcefo/pRN+IPs89ptqCQxQ=")
+#ki4.loginResult()
 
- ▶[Id]
- ▶[Mid]
- ▶[Me] 
- ▶[TL 「Text」
- ▶[MyName]
- ▶[I Gift]
- ▶[Mid 「mid」
- ▶[Group id]
- ▶[Group cancel]
- ▶[album 「id」]
- ▶[Hapus album 「id」
- ▶[Contact on] 
- ▶[Contact off] 
- ▶[Auto join on] 
- ▶[Auto join off] 
- ▶[Group cancel]
- ▶[Auto leave on] 
- ▶[Auto leave off]
- ▶[Auto add on/off] 
- ▶[Banlist]
- ▶[Com on]
- ▶[Com set]
- ▶[Message Confirmation] 
- ▶[Mybio: 「Isi Bio」]  
- ▶[Allbio: 「Isi Bio bot」] 
- 
- Perintah Ini Untuk didalam Group
+#ki5 = KITSUNEBOT.LINE()
+#ki5.login(token="EkZI8XiCp5ZTkYU29tC5.zNVivIokyd1dCo0dpANHvq.0LNZCi0tmVpGnI+hRRRA5P0wfU4xDv+PpBNcGYD0sY4=")
+#ki5.loginResult()
 
- ▶[Link on]
- ▶[Link off] 
- ▶[Invite「mid」] 
- ▶[Kmid: Kick by mid] 
- ▶[Ginfo] 
- ▶[Cancel]
- ▶[Backup]
- ▶[Gn 「Nama grup」
- ▶[Gurl]
- ▶[gurl「kelompok ID
- ▶[Nk「nama」]
- ▶[NK:]
- ▶[Ban:]
- ▶[Unban:]
- ▶[Protect on]
- ▶[qrprotect on/off]
- ▶[Inviteprotect on]
- ▶[Cancelprotect on]
- ▶[Spam]
- →[Cctv]←Set Sider
- →[Ciduk]←Lihat Sider
+#ki6 = KITSUNEBOT.LINE()
+#ki6.login(token="EkJ5l49Apx6J60DHyfU4.tWI+bgToteDmanSLf3rEza.HEEAt8Hc5NEThS7g7tKGBL89uHYdJGZSOIc6N5deibQ=")
+#ki6.loginResult()
 
-☞ http://line.me/ti/p/~joshuasiregaar"""
+print "login success"
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
+helpMessage ="""       Self Bots Command:『⨎ℓõ∂ŧɨɲĝ ჩõŧ™』
+  [C̶̲̅ᴏ̶̲̅ᴍ̶̲̅ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅ᴅ̶̲̅]
+🔯[Id]􀜁􀇔􏿿
+🔯[Mid]
+🔯[Me] 
+🔯[TL 「Text」
+🔯[MyName]
+🔯[I Gift]
+🔯[Mid 「mid」
+🔯[Group id]
+🔯[Group cancel]
+🔯[album 「id」]
+🔯[Hapus album 「id」
+🔯[Contact on] 
+🔯[Contact off] 
+🔯[Auto join on] 
+🔯[Auto join off] 
+🔯[Group cancel]
+🔯[Auto leave on] 
+🔯[Auto leave off]
+🔯[Auto add on/off] 
+🔯[Jam on]]
+🔯[Jam off]
+🔯[Jam say]
+🔯[Up]
+🔯[Ban:on] 
+🔯[Unban:on]
+🔯[Banlist]
+🔯[Com on]
+🔯[Com set]
+🔯[Mcheck] 
+🔯[Message Confirmation] 
+🔯[Mybio: 「Isi Bio」]  
+🔯[Allbio: 「Isi Bio bot」] 
+  
+  [C̶̲̅ᴏ̶̲̅ᴍ̶̲̅ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅ᴅ̶̲̅ ̶̲̅ɪ̶̲̅ɴ̶̲̅ ̶̲̅G̶̲̅ʀ̶̲̅ᴏ̶̲̅ᴜ̶̲̅ᴘ̶̲̅]
+
+🎲 [Link on]
+🎲 [Link off] 
+🎲 [Invite「mid」]
+🎲􀜁[Kmid: Kick by mid] 
+🎲 [Ginfo] 
+🎲 [Cancel] 
+🎲 [Backup]
+🎲 [Gn 「Nama grup」 
+🎲 [Gurl]
+🎲􀜁 [gurl「kelompok ID]
+🎲 [Nk「nama」] 
+🎲 [Bye ]
+🎲 [Ban:] 
+🎲 [Unban:]
+🎲 [Protect on] 
+🎲 [Qr on/off] 
+🎲 [Invite on] 
+🎲 [Cancel on] 
+🎲 [Copy @] 
+🎲 [Kembali]
+🎲 [Ccopy @]
+
+􀜁􀇔􏿿 COMMAND Protect 􀜁􀇔􏿿
+
+🌀 Bot all
+🌀 Bot Key
+🌀􀜁Bot1-6 in
+🌀 Bot1-6 bye
+🌀 Respons
+🌀 Bye all        
+  
+          ☆ ⨎ℓõ∂ŧɨɲĝ ჩõŧ
+          http://line.me/ti/p/~joshuasiregaar
+"""
 helo=""
 
 KAC=[cl,ki,ki2,ki3,ki4,ki5,ki6]
@@ -96,67 +129,67 @@ ki2mid = ki2.getProfile().mid
 ki3mid = ki3.getProfile().mid
 ki4mid = ki4.getProfile().mid
 ki5mid = ki5.getProfile().mid
+ki5mid = ki5.getProfile().mid
 ki6mid = ki6.getProfile().mid
 Bots=[mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,ki6mid]
-admin = "u02264619608db4d668d833de0c58bdbf"
+admsa = "u34a37ed1eb42be821ad1cfb4b768074b"
 
 wait = {
     'contact':False,
-    'autoJoin':True,
+    'autoJoin':False,
     'autoCancel':{"on":True,"members":1},
     'leaveRoom':True,
     'timeline':False,
     'autoAdd':True,
-    'message':"""THX FOR ADD : 
-
-
-
-✍T҉̶̘̟̼̉̈́͐͋͌̊Σ̶Δ̶M҉̶̘͈̺̪͓̺ͩ͂̾ͪ̀̋ ̶̶̶D̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎S̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎T̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎O̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎Y̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎Sβ̶Ω̶T҉̶̘̟̼̉̈́͐͋͌̊✈""",
-
-
+    'message':"""FUCK U : 
+🐺 hhttp://line.me/ti/p/~joshuasiregaar
+""",
     "lang":"JP",
     "comment":"Thanks For Add Me",
-    "commentOn":True,
+    "commentOn":False,
     "commentBlack":{},
     "wblack":False,
     "dblack":False,
     "clock":False,
-    "cName":"Dewa 19XD",
-    "cNames":"Dewa 19XD",
+    "cName":"ONCOM",
+    "cNames":"",
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
-    "protect":False,
+    "protect":True,
     "cancelprotect":False,
     "inviteprotect":False,
     "linkprotect":False,
-}
+    "copy":True,
+    "copy2":"target",
+    "target":{}
+    }
 
 wait2 = {
     'readPoint':{},
     'readMember':{},
     'setTime':{},
-    'ROM':{},
-    'copy':False,
-    'target':{},
-    'midsTarget':{},
-}
+    'ROM':{}
+    }
 
 setTime = {}
 setTime = wait2['setTime']
 
-contact = cl.getProfile() 
-backup = cl.getProfile() 
-backup.dispalyName = contact.displayName 
+
+contact = cl.getProfile()
+backup = cl.getProfile()
+backup.displayName = contact.displayName
 backup.statusMessage = contact.statusMessage
 backup.pictureStatus = contact.pictureStatus
 
+
 def cms(string, commands): #/XXX, >XXX, ;XXX, ^XXX, %XXX, $XXX...
-    tex = ["+","@","/",">",";","^","%","$","＾","サテラ:","サテラ:","サテラ：","サテラ："] 
-    for tex in tex:
+    tex = ["+","@","/",">",";","^","%","$","＾","サテラ:","サテラ:","サテラ：","サテラ："]
+    for texX in tex:
         for command in commands:
             if string ==command:
                 return True
+    return False
 
 def bot(op):
     try:
@@ -177,7 +210,7 @@ def bot(op):
                     if len(G.members) <= wait["autoCancel"]["members"]:
                         cl.rejectGroupInvitation(op.param1)
             else:
-                Inviter = op.param3.replace("",',')
+                Inviter = op.param3.replace(" ",',')
                 InviterX = Inviter.split(",")
                 matched_list = []
                 for tag in wait["blacklist"]:
@@ -186,209 +219,20 @@ def bot(op):
                     pass
                 else:
                     cl.cancelGroupInvitation(op.param1, matched_list)
-# ----------------- NOTIFED MEMBER OUT GROUP
-        if op.type == 15:
-            if op.param2 in Bots:
-                return
-            cl.sendText(op.param1,cl.getContact(op.param2).displayName + "\nGood Bye Honey\n～(^з^)-♡")
-            print ("MEMBER HAS LEFT THE GROUP")
-# ----------------- NOTIFED MEMBER JOIN GROUP
-        if op.type == 17:
-            if op.param2 in Bots:
-                return
-            cl.sendText(op.param1,cl.getContact(op.param2).displayName + "\nWelcome Honey\n( ˘ ³˘)♥")
-            print ("MEMBER HAS JOIN THE GROUP")
-       #-----------------NOTIFED MEMBER JOIN GROUP
         if op.type == 19:
-           if op.param2 not in Bots:
-              random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
-              random.choice(KAC).inviteIntoGroup(op.param1,[op.param3])
-           else: 
-              pass
-
-        if op.type == 19:
-           if op.param3 in admin:
-              random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
-              random.choice(KAC).inviteIntoGroup(op.param1,admin)
-           else:
-               pass
-
-        if op.type == 19:
-                if mid in op.param3:
-                    if op.param2 in Bots:
-                        pass
-                    try:
-                        ki.kickoutFromGroup(op.param1,[op.param2])
-                        ki2.kickoutFromGroup(op.param1,[op.param2])
-                        ki3.kickoutFromGroup(op.param1,[op.param2])
-                    except:
-                        try:
-                            random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
-                        except:
-                            print ("client Kick regulation or Because it does not exist in the group、\n["+op.param1+"]\nの\n["+op.param2+"]\nを蹴る事ができませんでした。\nブラックリストに追加します。")
-                        if op.param2 in wait["blacklist"]:
-                            pass
-                        if op.param2 in wait["whitelist"]:
-                            pass
-                        else:
-                            wait["blacklist"][op.param2] = True
-                    G = random.choice(KAC).getGroup(op.param1)
-                    G.preventJoinByTicket = False
-                    random.choice(KAC).updateGroup(G)
-                    Ti = random.choice(KAC).reissueGroupTicket(op.param1)
-                    cl.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki2.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki3.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki4.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki5.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki6.acceptGroupInvitationByTicket(op.param1,Ti)
-                    X = cl.getGroup(op.param1)
-                    X.preventJoinByTicket = True
-                    cl.updateGroup(X)
-                    Ti = cl.reissueGroupTicket(op.param1)
-                    if op.param2 in wait["blacklist"]:
-                        pass
-                    if op.param2 in wait["whitelist"]:
-                        pass
-                    else:
-                        wait["blacklist"][op.param2] = True
- 
-                if kimid in op.param3:
-                    if op.param2 in Bots:
-                        pass
-                    try:
-                        cl.kickoutFromGroup(op.param1,[op.param2])
-                        ki2.kickoutFromGroup(op.param1,[op.param2])
-                        ki3.kickoutFromGroup(op.param1,[op.param2])
-                    except:
-                        try:
-                            random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
-                            random.choice(KAC).inviteIntoGroup(op.param1,[op.param3])
-                        except:
-                            print ("clientが蹴り規制orグループに存在しない為、\n["+op.param1+"]\nの\n["+op.param2+"]\nを蹴る事ができませんでした。\nブラックリストに追加します。")
-                        if op.param2 in wait["blacklist"]:
-                            pass
-                        if op.param2 in wait["whitelist"]:
-                            pass
-                        else:
-                            wait["blacklist"][op.param2] = True
-
-                    X = random.choice(KAC).getGroup(op.param1)
-                    X.preventJoinByTicket = False
-                    random.choice(KAC).updateGroup(X)
-                    Ti = random.choice(KAC).reissueGroupTicket(op.param1)
-                    cl.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki2.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki3.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki4.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki5.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki6.acceptGroupInvitationByTicket(op.param1,Ti)
-                    G = ki.getGroup(op.param1)
-                    G.preventJoinByTicket = True
-                    ki.updateGroup(G)
-                    Ticket = ki.reissueGroupTicket(op.param1)
-                    if op.param2 in wait["blacklist"]:
-                        pass
-                    if op.param2 in wait["whitelist"]:
-                        pass
-                    else:
-                        wait["blacklist"][op.param2] = True
-
-                if ki2mid in op.param3:
-                    if op.param2 in Bots:
-                        pass
-                    try:
-                        cl.kickoutFromGroup(op.param1,[op.param2])
-                        ki.kickoutFromGroup(op.param1,[op.param2])
-                        ki3.kickoutFromGroup(op.param1,[op.param2])
-                    except:
-                        try:
-                            random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
-                            random.choice(KAC).inviteIntoGroup(op.param1,[op.param3])
-                        except:
-                            print ("clientが蹴り規制orグループに存在しない為、\n["+op.param1+"]\nの\n["+op.param2+"]\nを蹴る事ができませんでした。\nブラックリストに追加します。")
-                        if op.param2 in wait["blacklist"]:
-                            pass
-                        if op.param2 in wait["whitelist"]:
-                            pass
-                        else:
-                            wait["blacklist"][op.param2] = True
-
-                    X = random.choice(KAC).getGroup(op.param1)
-                    X.preventJoinByTicket = False
-                    random.choice(KAC).updateGroup(X)
-                    Ti = random.choice(KAC).reissueGroupTicket(op.param1)
-                    cl.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki2.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki3.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki4.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki5.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki6.acceptGroupInvitationByTicket(op.param1,Ti)
-                    G = ki2.getGroup(op.param1)
-                    G.preventJoinByTicket = True
-                    ki2.updateGroup(G)
-                    Ticket = ki2.reissueGroupTicket(op.param1)
-                    if op.param2 in wait["blacklist"]:
-                        pass
-                    if op.param2 in wait["whitelist"]:
-                        pass
-                    else:
-                        wait["blacklist"][op.param2] = True
-
-                if ki3mid in op.param3:
-                    if op.param2 in Bots:
-                        pass
-                    try:
-                        cl.kickoutFromGroup(op.param1,[op.param2])
-                        ki2.kickoutFromGroup(op.param1,[op.param2])
-                    except:
-                        try:
-                            random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
-                            random.choice(KAC).inviteIntoGroup(op.param1,[op.param3])
-                        except:
-                            print ("clientが蹴り規制orグループに存在しない為、\n["+op.param1+"]\nの\n["+op.param2+"]\nを蹴る事ができませんでした。\nブラックリストに追加します。")
-                        if op.param2 in wait["blacklist"]:
-                            pass
-                        if op.param2 in wait["whitelist"]:
-                            pass
-                        else:
-                            wait["blacklist"][op.param2] = True
-
-                    X = random.choice(KAC).getGroup(op.param1)
-                    X.preventJoinByTicket = False
-                    random.choice(KAC).updateGroup(X)
-                    Ti = random.choice(KAC).reissueGroupTicket(op.param1)
-                    cl.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki2.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki3.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki4.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki5.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki6.acceptGroupInvitationByTicket(op.param1,Ti)
-                    G = ki3.getGroup(op.param1)
-                    G.preventJoinByTicket = True
-                    ki3.updateGroup(G)
-                    Ticket = ki3.reissueGroupTicket(op.param1)
-                    if op.param2 in wait["blacklist"]:
-                        pass
-                    if op.param2 in wait["whitelist"]:
-                        pass
-                    else:
-                        wait["blacklist"][op.param2] = True           
+            if mid in op.param3:
+                wait["blacklist"][op.param2] = True
         if op.type == 22:
             if wait["leaveRoom"] == True:
                 cl.leaveRoom(op.param1)
         if op.type == 24:
             if wait["leaveRoom"] == True:
                 cl.leaveRoom(op.param1)
-        if op.type == 25:
+        if op.type == 26:
             msg = op.message
             if msg.toType == 0:
                 msg.to = msg.from_
-            if msg.from_ == "u02264619608db4d668d833de0c58bdbf":
+                if msg.from_ == "u34a37ed1eb42be821ad1cfb4b768074b":
                     if "join:" in msg.text:
                         list_ = msg.text.split(":")
                         try:
@@ -414,9 +258,8 @@ def bot(op):
                     else:
                         wait["commentBlack"][msg.contentMetadata["mid"]] = True
                         wait["wblack"] = False
-                        cl.sendText(msg.to,"Done􀜁􀆻􏿿")
+                        cl.sendText(msg.to,"Itu tidak berkomentar👈")
                 elif wait["dblack"] == True:
-		  if msg.from_ in admin:
                     if msg.contentMetadata["mid"] in wait["commentBlack"]:
                         del wait["commentBlack"][msg.contentMetadata["mid"]]
                         cl.sendText(msg.to,"Done")
@@ -425,7 +268,6 @@ def bot(op):
                         wait["dblack"] = False
                         cl.sendText(msg.to,"Tidak ada dalam daftar hitam👈")
                 elif wait["wblacklist"] == True:
-		  if msg.from_ in admin:
                     if msg.contentMetadata["mid"] in wait["blacklist"]:
                         cl.sendText(msg.to,"sudah masuk daftar hitam")
                         wait["wblacklist"] = False
@@ -434,7 +276,6 @@ def bot(op):
                         wait["wblacklist"] = False
                         cl.sendText(msg.to,"Done👈")
                 elif wait["dblacklist"] == True:
-		  if msg.from_ in admin:
                     if msg.contentMetadata["mid"] in wait["blacklist"]:
                         del wait["blacklist"][msg.contentMetadata["mid"]]
                         cl.sendText(msg.to,"Done👈")
@@ -491,40 +332,11 @@ def bot(op):
             elif "Kick:" in msg.text:
                 midd = msg.text.replace("Kick:","")
                 cl.kickoutFromGroup(msg.to,[midd])
-	    elif "Mayhem" in msg.text:
-              if msg.from_ in admin:
-                if msg.toType == 2:
-                    print "ok"
-                    _name = msg.text.replace("Mayhem","")
-                    gs = ki.getGroup(msg.to)
-                    gs = ki2.getGroup(msg.to)
-                    gs = ki3.getGroup(msg.to)
-                    gs = ki4.getGroup(msg.to)
-                    gs = ki.getGroup(msg.to)
-                    ki.sendText(msg.to,"「 Mayhem 」\nMayhem is STARTING♪\n ' abort' to abort♪") 
-                    ki.sendText(msg.to,"「 Mayhem 」\n 46 victims shall yell hul·la·ba·loo♪\n /ˌhələbəˈlo͞o,ˈhələbəˌlo͞o/")
-                    targets = []
-                    for g in gs.members:
-                        if _name in g.displayName:
-                            targets.append(g.mid)
-                    if targets == []:
-                        ki4.sendText(msg.to,"Tidak ditemukan")
-                    else:
-                        for target in targets:
-                            if not target in Bots:
-                                try:
-                                   klist=[ki,ki2,ki3,ki4]
-                                   kicker=random.choice(klist)
-                                   kicker.kickoutFromGroup(msg.to,[target])
-                                   print (msg.to,[g.mid])
-                                except:
-                                   ki3.sendText(msg.to,"Mayhem done")
-                                   
             elif "Invite:" in msg.text:
                 midd = msg.text.replace("Invite:","")
-                ki.findAndAddContactsByMid(midd)
-                ki.inviteIntoGroup(msg.to,[midd])
-            elif "Mabot" == msg.text:
+                cl.findAndAddContactsByMid(midd)
+                cl.inviteIntoGroup(msg.to,[midd])
+            elif "Mybot" == msg.text:
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': kimid}
                 cl.sendMessage(msg) 
@@ -605,21 +417,6 @@ def bot(op):
                 msg.text = None
                 ki4.sendMessage(msg)
             
-            elif msg.text in ["Bot5 Gift","Bot5 gift"]:
-                msg.contentType = 9
-                msg.contentMetadata={'PRDID': '3b92ccf5-54d3-4765-848f-c9ffdc1da020',
-                                    'PRDTYPE': 'THEME',
-                                    'MSGTPL': '6'}
-                msg.text = None
-                ki5.sendMessage(msg)
-            elif msg.text in ["Bot6 Gift","Bot6 gift"]:
-                msg.contentType = 9
-                msg.contentMetadata={'PRDID': '3b92ccf5-54d3-4765-848f-c9ffdc1da020',
-                                    'PRDTYPE': 'THEME',
-                                    'MSGTPL': '7'}
-                msg.text = None
-                ki6.sendMessage(msg)   
-               
             elif msg.text in ["B Cancel","Cancel dong","B cancel"]:
                 if msg.toType == 2:
                     group = ki.getGroup(msg.to)
@@ -662,28 +459,28 @@ def bot(op):
                     group.preventJoinByTicket = False
                     cl.updateGroup(group)
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"URL open")
+                        cl.sendText(msg.to,"URL open ô€¨ô€„Œ")
                     else:
-                        cl.sendText(msg.to,"URL open")
+                        cl.sendText(msg.to,"URL open ô€¨ô€„Œ")
                 else:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"It can not be used outside the group👈")
+                        cl.sendText(msg.to,"It can not be used outside the group ô€œô€„‰👈")
                     else:
-                        cl.sendText(msg.to,"Can not be used for groups other than")
+                        cl.sendText(msg.to,"Can not be used for groups other than ô€œô€„‰")
             elif msg.text in ["Link off"]:
                 if msg.toType == 2:
                     group = cl.getGroup(msg.to)
                     group.preventJoinByTicket = True
                     cl.updateGroup(group)
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"URL close👈")
+                        cl.sendText(msg.to,"URL close ô€¨👈")
                     else:
-                        cl.sendText(msg.to,"URL close👈")
+                        cl.sendText(msg.to,"URL close ô€¨👈")
                 else:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"It can not be used outside the group  👈")
                     else:
-                        cl.sendText(msg.to,"Can not be used for groups other than")
+                        cl.sendText(msg.to,"Can not be used for groups other than ô€œ")
             elif "Ginfo" == msg.text:
                 ginfo = cl.getGroup(msg.to)
                 try:
@@ -710,78 +507,78 @@ def bot(op):
             elif "kb2 mid" == msg.text:
                 ki2.sendText(msg.to,ki2mid)
             elif "kb3 mid" == msg.text:
-                ki3.sendText(msg.to,ki3mid)
+                ki3.sendText(msg.to,kimid)
             elif "kb4 mid" == msg.text:
-                ki4.sendText(msg.to,ki4mid)
+                ki4.sendText(msg.to,ki2mid)
             elif "kb5 mid" == msg.text:
-                ki5.sendText(msg.to,ki5mid)
+                ki5.sendText(msg.to,kimid)
             elif "kb6 mid" == msg.text:
-                ki6.sendText(msg.to,ki6mid)
+                ki6.sendText(msg.to,ki2mid)
             elif "all mid" == msg.text:
                 ki.sendText(msg.to,kimid)
                 ki2.sendText(msg.to,ki2mid)
                 ki3.sendText(msg.to,ki3mid)
                 ki4.sendText(msg.to,ki4mid)
                 ki5.sendText(msg.to,ki5mid)
-                ki6.sendText(msg.to,ki6mid)
+                ki6.sendText(msg.to,ki5mid)
             elif "TL:" in msg.text:
                 tl_text = msg.text.replace("TL:","")
                 cl.sendText(msg.to,"line://home/post?userMid="+mid+"&postId="+cl.new_post(tl_text)["result"]["post"]["postInfo"]["postId"])
-            elif "Allname:" in msg.text:
+            elif "All:" in msg.text:
                 string = msg.text.replace("All:","")
-                if len(string.decode('utf-8')) <= 60000000:
+                if len(string.decode('utf-8')) <= 20:
                     profile = ki.getProfile()
                     profile.displayName = string
                     ki.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 60000000:
+                if len(string.decode('utf-8')) <= 20:
                     profile = ki2.getProfile()
                     profile.displayName = string
                     ki2.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 60000000:
+                if len(string.decode('utf-8')) <= 20:
                     profile = ki3.getProfile()
                     profile.displayName = string
                     ki3.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 60000000:
+                if len(string.decode('utf-8')) <= 20:
                     profile = ki4.getProfile()
                     profile.displayName = string
                     ki4.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 60000000:
+                if len(string.decode('utf-8')) <= 20:
                     profile = ki5.getProfile()
                     profile.displayName = string
                     ki5.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 60000000:
+                if len(string.decode('utf-8')) <= 20:
                     profile = ki6.getProfile()
                     profile.displayName = string
                     ki6.updateProfile(profile)
             elif "Allbio:" in msg.text:
                 string = msg.text.replace("Allbio:","")
-                if len(string.decode('utf-8')) <= 6000000000:
+                if len(string.decode('utf-8')) <= 500:
                     profile = ki.getProfile()
                     profile.statusMessage = string
                     ki.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 6000000000:
+                if len(string.decode('utf-8')) <= 500:
                     profile = ki2.getProfile()
                     profile.statusMessage = string
                     ki2.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 6000000000:
+                if len(string.decode('utf-8')) <= 500:
                     profile = ki3.getProfile()
                     profile.statusMessage = string
                     ki3.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 6000000000:
+                if len(string.decode('utf-8')) <= 500:
                     profile = ki4.getProfile()
                     profile.statusMessage = string
                     ki4.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 6000000000:
+                if len(string.decode('utf-8')) <= 500:
                     profile = ki5.getProfile()
                     profile.statusMessage = string
                     ki5.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 6000000000:
+                if len(string.decode('utf-8')) <= 500:
                     profile = ki6.getProfile()
                     profile.statusMessage = string
                     ki6.updateProfile(profile)
             elif "Myname:" in msg.text:
                 string = msg.text.replace("Myname:","")
-                if len(string.decode('utf-8')) <= 60000000:
+                if len(string.decode('utf-8')) <= 20:
                     profile = cl.getProfile()
                     profile.displayName = string
                     cl.updateProfile(profile)
@@ -789,7 +586,7 @@ def bot(op):
 #---------------------------------------------------------
             elif "1name:" in msg.text:
                 string = msg.text.replace("1name:","")
-                if len(string.decode('utf-8')) <= 60000000:
+                if len(string.decode('utf-8')) <= 20:
                     profile = ki.getProfile()
                     profile.displayName = string
                     ki.updateProfile(profile)
@@ -797,50 +594,50 @@ def bot(op):
 #--------------------------------------------------------
             elif "2name:" in msg.text:
                 string = msg.text.replace("2name:","")
-                if len(string.decode('utf-8')) <= 60000000:
+                if len(string.decode('utf-8')) <= 20:
                     profile = ki2.getProfile()
                     profile.displayName = string
                     ki2.updateProfile(profile)
-                    ki2.sendText(msg.to,"􀜁􀇔􏿿Update Names👉" + string + "👈")
+                    ki2.sendText(msg.to,"􀜁􀇔􏿿Update Names👉" + string + "â‡‡â‡‡👈")
 #--------------------------------------------------------
             elif "3name:" in msg.text:
                 string = msg.text.replace("3name:","")
-                if len(string.decode('utf-8')) <= 60000000:
+                if len(string.decode('utf-8')) <= 20:
                     profile = ki3.getProfile()
                     profile.displayName = string
                     ki3.updateProfile(profile)
-                    ki3.sendText(msg.to,"􀜁􀇔􏿿Update Names👉" + string + "👈")
+                    ki3.sendText(msg.to,"􀜁􀇔􏿿Update Names👉" + string + "â‡‡â‡‡👈")
 #--------------------------------------------------------
             elif "4name:" in msg.text:
                 string = msg.text.replace("4name:","")
-                if len(string.decode('utf-8')) <= 60000000:
+                if len(string.decode('utf-8')) <= 20:
                     profile = ki4.getProfile()
                     profile.displayName = string
                     ki4.updateProfile(profile)
-                    ki4.sendText(msg.to,"􀜁􀇔􏿿Update Names👉" + string + "👈")
+                    ki4.sendText(msg.to,"􀜁􀇔􏿿Update Names👉" + string + "â‡‡â‡‡👈")
             elif "Mybio:" in msg.text:
                 string = msg.text.replace("Mybio:","")
-                if len(string.decode('utf-8')) <= 60000000000:
+                if len(string.decode('utf-8')) <= 500:
                     profile = cl.getProfile()
                     profile.statusMessage = string
                     cl.updateProfile(profile)
-                    cl.sendText(msg.to,"􀜁􀇔􏿿Update Bio👉" + string + "👈")
+                    cl.sendText(msg.to,"􀜁􀇔􏿿Update Bio👉" + string + "â‡‡â‡‡👈")
 #--------------------------------------------------------
             elif "5name:" in msg.text:
                 string = msg.text.replace("5name:","")
-                if len(string.decode('utf-8')) <= 60000000:
+                if len(string.decode('utf-8')) <= 20:
                     profile = ki5.getProfile()
                     profile.displayName = string
                     ki5.updateProfile(profile)
-                    ki5.sendText(msg.to,"􀜁􀇔􏿿Update Names👉" + string + "👈")
+                    ki5.sendText(msg.to,"􀜁􀇔􏿿Update Names👉" + string + "â‡‡â‡‡👈")
 #--------------------------------------------------------
             elif "6name:" in msg.text:
                 string = msg.text.replace("6name:","")
-                if len(string.decode('utf-8')) <= 60000000:
+                if len(string.decode('utf-8')) <= 20:
                     profile = ki6.getProfile()
                     profile.displayName = string
                     ki6.updateProfile(profile)
-                    ki6.sendText(msg.to,"􀜁􀇔􏿿Update Names👉" + string + "👈")
+                    ki6.sendText(msg.to,"􀜁􀇔􏿿Update Names👉" + string + "â‡‡â‡‡👈")
 #--------------------------------------------------------
             elif "Mid:" in msg.text:
                 mmid = msg.text.replace("Mid:","")
@@ -850,7 +647,7 @@ def bot(op):
             elif msg.text.lower() == 'contact on':
                 if wait["contact"] == True:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Sudah On􀜁􀇔􏿿")
+                        cl.sendText(msg.to,"Sudah On")
                     else:
                         cl.sendText(msg.to,"It is already open")
                 else:
@@ -862,75 +659,75 @@ def bot(op):
             elif msg.text.lower() == 'contact off':
                 if wait["contact"] == False:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"sudah off👈")
+                        cl.sendText(msg.to,"sudah off ô€œô€„‰👈")
                     else:
-                        cl.sendText(msg.to,"It is already off👈")
+                        cl.sendText(msg.to,"It is already off ô€œô€„‰👈")
                 else:
                     wait["contact"] = False
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Already off")
+                        cl.sendText(msg.to,"off ô€œô€„‰already")
                     else:
-                        cl.sendText(msg.to,"already Close👈")
-            elif msg.text.lower() == 'protect on':
+                        cl.sendText(msg.to,"already Close ô€œô€„‰👈")
+            elif msg.text in ['protect on']:
                 if wait["protect"] == True:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Ini sudah on 􀜁􀇔􏿿👈")
+                        cl.sendText(msg.to,"Protection Enable 􀜁􀇔􏿿👈")
                     else:
-                        cl.sendText(msg.to,"Hal ini sudah terbuka👈")
+                        cl.sendText(msg.to,"Hal ini sudah terbuka ô€¨👈")
                 else:
                     wait["protect"] = True
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"already ON􀜁􀇔􏿿")
+                        cl.sendText(msg.to,"Protection Enable􀜁􀇔􏿿")
                     else:
-                        cl.sendText(msg.to,"It is already On👈")                     
-            elif msg.text.lower() == 'qrprotect on':
+                        cl.sendText(msg.to,"It is already On ô€¨")
+            elif msg.text in ['Qr on']:
                 if wait["linkprotect"] == True:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Ini sudah on 􀜁􀇔􏿿👈")
+                        cl.sendText(msg.to,"Link Protection Enable 􀜁􀇔􏿿👈")
                     else:
-                        cl.sendText(msg.to,"Hal ini sudah terbuka👈")
+                        cl.sendText(msg.to,"Hal ini sudah terbuka ô€¨👈")
                 else:
                     wait["linkprotect"] = True
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"already ON􀜁􀇔􏿿")
+                        cl.sendText(msg.to,"Link Protect Enable􀜁􀇔􏿿")
                     else:
-                        cl.sendText(msg.to,"It is already On")
-            elif msg.text.lower() == 'inviteprotect on':
+                        cl.sendText(msg.to,"It is already On ô€¨")
+            elif msg.text in ['invite on']:
                 if wait["inviteprotect"] == True:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Ini sudah on 􀜁􀇔􏿿👈")
+                        cl.sendText(msg.to,"Invite Protect Enable 􀜁􀇔􏿿👈")
                     else:
-                        cl.sendText(msg.to,"Hal ini sudah terbuka👈")
+                        cl.sendText(msg.to,"Hal ini sudah terbuka ô€¨👈")
                 else:
                     wait["inviteprotect"] = True
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"already ON􀜁􀇔􏿿")
+                        cl.sendText(msg.to,"Invite Protect Enable􀜁􀇔􏿿")
                     else:
-                        cl.sendText(msg.to,"It is already On")
-            elif msg.text.lower() == 'cancelprotect on':
+                        cl.sendText(msg.to,"It is already On ô€¨")
+            elif msg.text in ['cancel on']:
                 if wait["cancelprotect"] == True:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Ini sudah on 􀜁􀇔􏿿👈")
+                        cl.sendText(msg.to,"Cancel Protection Enable 􀜁􀇔􏿿👈")
                     else:
-                        cl.sendText(msg.to,"Hal ini sudah terbuka👈")
+                        cl.sendText(msg.to,"Hal ini sudah terbuka ô€¨👈")
                 else:
                     wait["cancelprotect"] = True
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already ON􀜁􀇔􏿿")
                     else:
-                        cl.sendText(msg.to,"It is already On")
+                        cl.sendText(msg.to,"It is already On ô€¨")
             elif msg.text.lower() == 'auto join on':
                 if wait["autoJoin"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Ini sudah off 􀜁􀇔􏿿👈")
                     else:
-                        cl.sendText(msg.to,"Hal ini sudah terbuka👈")
+                        cl.sendText(msg.to,"Hal ini sudah terbuka ô€¨👈")
                 else:
                     wait["autoJoin"] = True
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already ON􀜁􀇔􏿿")
                     else:
-                        cl.sendText(msg.to,"It is already On")
+                        cl.sendText(msg.to,"It is already On ô€¨")
             elif msg.text.lower() == 'blocklist':
                 blockedlist = cl.getBlockedContactIds()
                 cl.sendText(msg.to, "Please wait...")
@@ -953,55 +750,55 @@ def bot(op):
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already close")
                     else:
-                        cl.sendText(msg.to,"It is already open👈")
-            elif msg.text in ["protect off"]:
+                        cl.sendText(msg.to,"It is already open ô€œ👈")
+            elif msg.text in ["Protect off"]:
                 if wait["protect"] == False:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"hall ini sudah off👈")
+                        cl.sendText(msg.to,"Protection Disable ô€œ👈")
                     else:
-                        cl.sendText(msg.to,"sudah dimatikan👈")
+                        cl.sendText(msg.to,"sudah dimatikan ô€œô€„‰👈")
                 else:
                     wait["protect"] = False
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already close")
                     else:
-                        cl.sendText(msg.to,"It is already open👈")
-            elif msg.text in ["Qrprotect off","qrprotect off"]:
+                        cl.sendText(msg.to,"It is already open ô€œ👈")
+            elif msg.text in ["Qr off","qrprotect off"]:
                 if wait["linkprotect"] == False:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"hall ini sudah off👈")
+                        cl.sendText(msg.to,"Link Protection Disable ô€œ👈")
                     else:
-                        cl.sendText(msg.to,"sudah dimatikan👈")
+                        cl.sendText(msg.to,"sudah dimatikan ô€œô€„‰👈")
                 else:
                     wait["linkprotect"] = False
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already close")
                     else:
-                        cl.sendText(msg.to,"It is already open👈")
-            elif msg.text in ["Inviteprotect off"]:
+                        cl.sendText(msg.to,"It is already open ô€œ👈")
+            elif msg.text in ["Invite off"]:
                 if wait["inviteprotect"] == False:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"hall ini sudah off👈")
+                        cl.sendText(msg.to,"Invite Protection Disable ô€œ👈")
                     else:
-                        cl.sendText(msg.to,"sudah dimatikan👈")
+                        cl.sendText(msg.to,"sudah dimatikan ô€œô€„‰👈")
                 else:
                     wait["inviteprotect"] = False
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already close")
                     else:
-                        cl.sendText(msg.to,"It is already open👈")
-            elif msg.text in ["Cancelprotect off"]:
+                        cl.sendText(msg.to,"It is already open ô€œ👈")
+            elif msg.text in ["Cancel off"]:
                 if wait["cancelprotect"] == False:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"hall ini sudah off👈")
+                        cl.sendText(msg.to,"Cancel Protection Disable ô€œ👈")
                     else:
-                        cl.sendText(msg.to,"sudah dimatikan👈")
+                        cl.sendText(msg.to,"sudah dimatikan ô€œô€„‰👈")
                 else:
                     wait["cancelprotect"] = False
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already close")
                     else:
-                        cl.sendText(msg.to,"It is already open👈")
+                        cl.sendText(msg.to,"It is already open ô€œ👈")
             elif "Group cancel:" in msg.text:
                 try:
                     strnum = msg.text.replace("Group cancel:","")
@@ -1081,23 +878,23 @@ def bot(op):
                 else: md+= "􀜁􀇔􏿿 Group cancel:off 􀜁􀄰􏿿\n"
                 if wait["leaveRoom"] == True: md+="􀜁􀇔􏿿 Auto leave:on 􀜁􀄯􏿿\n"
                 else: md+="􀜁􀇔􏿿 Auto leave:off 􀜁􀄰􏿿\n"
-                if wait["timeline"] == True: md+="􀜁􀇔􏿿 Share:on 􀜁􀄯􏿿\n"
+                if wait["timeline"] == True: md+="􀜁􀇔􏿿 Share:on 􀜁��􏿿\n"
                 else:md+="􀜁􀇔􏿿 Share:off 􀜁􀄰􏿿\n"
                 if wait["autoAdd"] == True: md+="􀜁􀇔􏿿 Auto add:on 􀜁􀄯􏿿\n"
                 else:md+="􀜁􀇔􏿿 Auto add:off 􀜁􀄰􏿿\n"
                 if wait["commentOn"] == True: md+="􀜁􀇔􏿿 Auto komentar:on 􀜁􀄯􏿿\n"
                 else:md+="􀜁􀇔􏿿 Auto komentar:off 􀜁􀄰􏿿\n"
-                if wait["protect"] == True: md+="􀜁􀇔􏿿 Protect:on 􀜁􀄯􏿿\n"
-                else:md+="􀜁􀇔􏿿 Protect:off 􀜁􀄰􏿿\n"
-                if wait["linkprotect"] == True: md+="􀜁􀇔􏿿Link Protect:on 􀜁􀄯􏿿\n"
-                else:md+="􀜁􀇔􏿿Link Protect:off 􀜁􀄰􏿿\n"
-                if wait["inviteprotect"] == True: md+="􀜁􀇔􏿿Invitation Protect:on 􀜁􀄯􏿿\n"
-                else:md+="􀜁􀇔􏿿Invitation Protect:off 􀜁􀄰􏿿\n"
-                if wait["cancelprotect"] == True: md+="􀜁􀇔􏿿Cancel Protect:on 􀜁􀄯􏿿\n"
-                else:md+="􀜁􀇔􏿿Cancel Protect:off 􀜁􀄰􏿿\n"
+                if wait["protect"] == True: md+="􀜁􀇔􏿿 Protect:on 🔓\n"
+                else:md+="􀜁􀇔􏿿 Protect:off 🔒\n"
+                if wait["linkprotect"] == True: md+="􀜁􀇔􏿿Link Protect:on 🔓\n"
+                else:md+="􀜁􀇔􏿿 Link Protect:off🔒\n"
+                if wait["inviteprotect"] == True: md+="􀜁􀇔􏿿Invitation Protect:on🔓\n"
+                else:md+="􀜁􀇔􏿿 Invitation Protect:off🔒\n"
+                if wait["cancelprotect"] == True: md+"􀜁􀇔􏿿 CancelProtect:on 🔓\n"
+                else:md+="􀜁􀇔􏿿 Cancel Protect:off 🔒\n"
                 cl.sendText(msg.to,md)
                 msg.contentType = 13
-                msg.contentMetadata = {'mid': admin}
+                msg.contentMetadata = {'mid': admsa}
                 cl.sendMessage(msg)
             elif msg.text.lower() == 'me':
                 msg.contentType = 13
@@ -1105,14 +902,10 @@ def bot(op):
                 cl.sendMessage(msg)
             elif cms(msg.text,["creator","Creator"]):
                 msg.contentType = 13
-                msg.contentMetadata = {'mid': admin}
+                msg.contentMetadata = {'mid': admsa}
                 cl.sendText(msg.to,"􂤁􀆋down􏿿􂤁􀆋down􏿿􂤁􀆋down􏿿􂤁􀆋down􏿿􂤁􀆋down􏿿􂤁􀆋down􏿿􂤁􀆋down􏿿")
                 cl.sendMessage(msg)
                 cl.sendText(msg.to,"􂤁􀆊up􏿿􂤁􀆊up􏿿􂤁􀆊up􏿿􂤁􀆊up􏿿􂤁􀆊up􏿿􂤁􀆊up􏿿􂤁􀆊up􏿿")
-            elif cms(msg.text,["Me","me"]):
-                msg.contentType = 13
-                msg.contentMetadata = {'mid': admin}
-		cl.sendMessage(msg)
             elif "Set album:" in msg.text:
                 gid = msg.text.replace("Set album:","")
                 album = cl.getAlbum(gid)
@@ -1168,7 +961,7 @@ def bot(op):
                 for i in gid:
                     h += "[%s]:%s\n" % (cl.getGroup(i).name,i)
                 cl.sendText(msg.to,h)
-            elif msg.text.lower() == 'bubar':
+            elif msg.text.lower() == 'Bot out':
                 gid = cl.getGroupIdsJoined()
                 gid = ki.getGroupIdsJoined()
                 gid = ki2.getGroupIdsJoined()
@@ -1184,7 +977,7 @@ def bot(op):
                     ki5.leaveGroup(i)
                     ki6.leaveGroup(i)
                 if wait["lang"] == "JP":
-                    cl.sendText(msg.to,"✍T҉̶̘̟̼̉̈́͐͋͌̊Σ̶Δ̶M҉̶̘͈̺̪͓̺ͩ͂̾ͪ̀̋ ̶̶̶D̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎S̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎T̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎O̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎��͎͎Y̶̶���꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶���꙯꙰꙰��͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎Sβ̶��̶T҉̶̘̟̼̉̈́͐͋͌̊✈Sudah Keluar Di semua grup")
+                    cl.sendText(msg.to,"Kitsune Bot Sudah Keluar Di semua grup")
                 else:
                     cl.sendText(msg.to,"He declined all invitations")
             elif msg.text in ["Group cancelall"]:
@@ -1331,27 +1124,21 @@ def bot(op):
                     cl.sendText(msg.to,"line://ti/g/" + gurl)
                 else:
                     cl.sendText(msg.to,"Tidak dapat digunakan untuk kelompok selain")
-            elif msg.text in ["Bl"]:
+            elif msg.text in ["Com Bl"]:
                 wait["wblack"] = True
-                cl.sendText(msg.to,"Kirim Kontak untuk dimasukan Ke Daftar Blacklist☜")
-            elif msg.text in ["hapus Bl"]:
+                cl.sendText(msg.to,"Please send contacts from the person you want to add to the blacklistô€œô€…”👈")
+            elif msg.text in ["Com hapus Bl"]:
                 wait["dblack"] = True
-                cl.sendText(msg.to,"Kirim Kontak untuk dihapus Dari Daftar Blacklist☜")
-            elif msg.text in ["Bl cek"]:
+                cl.sendText(msg.to,"Please send contacts from the person you want to add from the blacklistô€œô€…”👈")
+            elif msg.text in ["Com Bl cek"]:
                 if wait["commentBlack"] == {}:
-                    cl.sendText(msg.to,"Kosong Gblk􀰂􀇉􏿿")
+                    cl.sendText(msg.to,"Nothing in the blacklistô€œ🛡")
                 else:
-                    cl.sendText(msg.to,"Daftar Blacklist☜")
+                    cl.sendText(msg.to,"The following is a blacklistô€œ👈")
                     mc = ""
                     for mi_d in wait["commentBlack"]:
-                        mc += "☞" +cl.getContact(mi_d).displayName + "\n"
+                        mc += "ãƒ»" +cl.getContact(mi_d).displayName + "\n"
                     cl.sendText(msg.to,mc)
-	    elif msg.text in ["Mimic:on","mimic:on"]:
-                wait2["copy"] = True
-                cl.sendText(msg.to,"copy on")
-	    elif msg.text in ["Mimic:off","mimic off"]:
-                wait2["copy"] = False
-                cl.sendText(msg.to,"copy off")
             elif msg.text.lower() == 'jam on':
                 if wait["clock"] == True:
                     cl.sendText(msg.to,"Sudah On")
@@ -1420,50 +1207,20 @@ def bot(op):
                         	    cl.updateGroup(gs)
                                     gs.preventJoinByTicket(gs)
                         	    cl.updateGroup(gs)
-#---------------------------------------------------------
-#----------------------------------------------------------
-	    elif "Mimic target" in msg.text:
-	        if 'MENTION' in msg.contentMetadata.keys() != None:
-	 	    names = re.findall(r'@(\w+)', msg.text)
-		    mention = ast.literal_eval(msg.contentMetadata['MENTION'])
-		    mentionees = mention['MENTIONEES']
-		    wait2["target"] = {}
-		    wait2["midsTarget"] = {}
-		    for x in range(len(mentionees)):
-		        wait2["target"][x] = mentionees[x]['M']
-		        wait2["midsTarget"][mentionees[x]['M']] = True
-		        cl.sendText(msg.to, "Succes add target "+cl.getContact(mentionees[x]['M']).disiplayName)
-		    print wait2["midsTarget"]
-
-	    elif "Mimic del target: " in msg.text and msg.text != helpMessage:
-		no = msg.text.replace("Mimic del target: ","")
-		midsTarget = []
-		for s in range(len(wait2["target"])):
-		    midsTarget.append(str(wait2["target"][s]))
-		    del midsTarget[int(no)]
-		    del wait2["midsTarget"][wait2["target"][int(no)]]
-		    wait2["target"] = {}
-
-		for x in range(len(midsTarget)):
-		    wait2["target"][x] = midsTarget[x]
-		cl.sendText(msg.to, "Succes del target number "+no)
-
-	    elif msg.text in ["Mimic targetlist"]:
-		if wait2["target"] == {}:
-		    cl.sendText(msh.to,"Nothing")
-		else:
-		    mc = "Target copy user\n"
-		    mids = []
-		    for s in range(len(wait2["target"])):
-			mids.append(wait2["target"][s])
-		    cmids = cl.getContact(mids)
-		    for x in range(len(cmids)):
-			mc += "\n["+str(x)+"]"+cmids[x].disiplayName
-		    cl.sendText(msg.to,mc)
-
 #-----------------------------------------------------------
 
-            elif "Hay " in msg.text:
+            elif ("Bunuh " in msg.text):
+                   targets = []
+                   key = eval(msg.contentMetadata["MENTION"])
+                   key["MENTIONEES"][0]["M"]
+                   for x in key["MENTIONEES"]:
+                       targets.append(x["M"])
+                   for target in targets:
+                       try:
+                           cl.kickoutFromGroup(msg.to,[target])
+                       except:
+                           cl.sendText(msg.to,"Error")
+            elif ("Telan " in msg.text):
                    targets = []
                    key = eval(msg.contentMetadata["MENTION"])
                    key["MENTIONEES"][0]["M"]
@@ -1502,123 +1259,42 @@ def bot(op):
                                 except:
                                     cl.sendText(msg.to,"Good Bye")
 #-----------------------------------------------------------
-            elif "Admin add @" in msg.text:
-                if msg.from_ in admin:
-                    print "[Command]Staff add executing"
-                    _name = msg.text.replace("Admin add @","")
-                    _nametarget = _name.rstrip(' ')
-                    gs = cl.getGroup(msg.to)
-                    gs = ki.getGroup(msg.to)
-                    gs = ki2.getGroup(msg.to)
-                    gs = ki3.getGroup(msg.to)
-                    targets = []
-                    for g in gs.members:
-                        if _nametarget == g.displayName:
-                            targets.append(g.mid)
-                    if targets == []:
-                        ki.sendText(msg.to,"Contact not found")
-                    else:
-                        for target in targets:
-                            try:
-                                admin.append(target)
-                                cl.sendText(msg.to,"Admin Ditambahkan")
-                            except:
-                                pass
-                    print "[Command]Staff add executed"
-                else:
-                    cl.sendText(msg.to,"Command denied.")
-                    cl.sendText(msg.to,"Admin permission required.")
+            elif ("Bye " in msg.text):
+                key = eval(msg.contentMetadata["MENTION"])
+                key["MENTIONEES"][0]["M"]
+                targets = []
+                for x in key["MENTIONEES"]:
+                    targets.append(x["M"])
+                for target in targets:
+                   try:
+                      random.choice(KAC).kickoutFromGroup(msg.to,[target])
+                   except:
+                      pass
 
-            elif "Admin remove @" in msg.text:
-                if msg.from_ in admin:
-                    print "[Command]Staff remove executing"
-                    _name = msg.text.replace("Admin remove @","")
-                    _nametarget = _name.rstrip(' ')
-                    gs = cl.getGroup(msg.to)
-                    gs = ki.getGroup(msg.to)
-                    gs = ki2.getGroup(msg.to)
-                    gs = ki3.getGroup(msg.to)
-                    targets = []
-                    for g in gs.members:
-                        if _nametarget == g.displayName:
-                            targets.append(g.mid)
-                    if targets == []:
-                        ki.sendText(msg.to,"Contact not found")
-                    else:
-                        for target in targets:
-                            try:
-                                admin.remove(target)
-                                cl.sendText(msg.to,"Admin Dihapus")
-                            except:
-                                pass
-                    print "[Command]Staff remove executed"
-                else:
-                    cl.sendText(msg.to,"Command denied.")
-                    cl.sendText(msg.to,"Admin permission required.")
 
-            elif msg.text in ["Adminlist","adminlist"]:
-                if admin == []:
-                    cl.sendText(msg.to,"The stafflist is empty")
-                else:
-                    cl.sendText(msg.to,"Tunggu...")
-                    mc = ""
-                    for mi_d in admin:
-                        mc += "->" +cl.getContact(mi_d).displayName + "\n"
-                    cl.sendText(msg.to,mc)
-                    print "[Command]Stafflist executed"
-#----------------------------------------------------------- ------------------------------------------------------------------
-            elif msg.text in ["Ban"]:
-	      if msg.from_ in admin:
-                wait["wblacklist"] = True
-                cl.sendText(msg.to,"send contact")
-                ki.sendText(msg.to,"send contact")
-                ki2.sendText(msg.to,"send contact")
-                ki3.sendText(msg.to,"send contact")
-            elif msg.text in ["Unban"]:
-	      if msg.from_ in admin:
-                wait["dblacklist"] = True
-                cl.sendText(msg.to,"send contact")
-                ki.sendText(msg.to,"send contact")
-                ki2.sendText(msg.to,"send contact")
-                ki3.sendText(msg.to,"send contact")
-            elif msg.text in ["Banlist"]:
-	      if msg.from_ in admin:
-                if wait["blacklist"] == {}:
-                    cl.sendText(msg.to,"nothing")
-                    ki.sendText(msg.to,"nothing")
-                    ki2.sendText(msg.to,"nothing")
-                    ki3.sendText(msg.to,"nothing")
-                else:
-                    cl.sendText(msg.to,"Blacklist user")
-                    mc = ""
-                    for mi_d in wait["blacklist"]:
-                        mc += "->" +cl.getContact(mi_d).displayName + "\n"
-                    cl.sendText(msg.to,mc)
-                    ki.sendText(msg.to,mc)
-                    ki2.sendText(msg.to,mc)
-                    ki3.sendText(msg.to,mc)
-#-----------------------------------------------------------
-            elif "Ban @" in msg.text:
-                if msg.toType == 2:
-                    print "[Ban]ok"
-                    _name = msg.text.replace("Ban @","")
-                    _nametarget = _name.rstrip()
-                    gs = cl.getGroup(msg.to)
-                    targets = []
-                    for g in gs.members:
-                        if _nametarget == g.displayName:
-                            targets.append(g.mid)
-                    if targets == []:
-                        cl.sendText(msg.to,"Not found")
-                    else:
-                        for target in targets:
-                            try:
-                                wait["blacklist"][target] = True
-                                f=codecs.open('st2__b.json','w','utf-8')
-                                json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-                                cl.sendText(msg.to,"Target Locked")
-                            except:
-                                cl.sendText(msg.to,"Error")
+            elif ("Ban " in msg.text):
+                key = eval(msg.contentMetadata["MENTION"])
+                key["MENTIONEES"][0]["M"]
+                targets = []
+                for x in key["MENTIONEES"]:
+                    targets.append(x["M"])
+                for target in targets:
+                   try:
+                      wait["blacklist"][target] = True
+                      f=codecs.open('st2__b.json','w','utf-8')
+                      json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
+                      cl.sendText(msg.to,"Succes Banned")
+                   except:
+                      pass
+
+            elif msg.text in ["List group","Glist"]:
+                 gid = cl.getGroupIdsJoined()
+                 h = ""
+                 for i in gid:
+                  h += "[⭐] %s \n" % (cl.getGroup(i).name + " | Members : " + str(len (cl.getGroup(i).members)))
+                 cl.sendText(msg.to, "☆「Group List」☆\n"+ h +"Total Group : " +str(len(gid)))
+
+#----------------------------------------------------------
             elif "Unban @" in msg.text:
                 if msg.toType == 2:
                     print "[Unban]ok"
@@ -1640,27 +1316,6 @@ def bot(op):
                                 cl.sendText(msg.to,"Target Unlocked")
                             except:
                                 cl.sendText(msg.to,"Error")
-            
-            elif "Unban all" in msg.text:
-		if msg.toType == 2:
-                    print "ok"
-   	            _name = msg.text.replace("Unban all","")
-                    gs = cl.getGroup(msg.to)
-      	            cl.sendText(msg.to,"Semua Telah Di Hapus")
-                    targets = []
-	            for g in gs.members:
-                        if _name in g.displayName:
-			    targets.append(g.mid)
-   	            if targets == []:
-		        cl.sendText(msg.to,"Maaf")
-	            else:
-	                for target in targets:
-		            try:
-			        del wait["blacklist"][target]
-		                f=codecs.open('st2__b.json','w','utf-8')
-			        json.dump(wait["blacklist"],f, sort_keys=True,indent=4,ensure_ascii=False)
-		            except:
-		                cl.sentText(msg.to,"Berhasil Dihapus")
 
             elif "Ban:" in msg.text:                  
                        nk0 = msg.text.replace("Ban:","")
@@ -1678,13 +1333,13 @@ def bot(op):
                            pass
                        else:
                            for target in targets:
-                               try:
-				   wait["blacklist"][target] = True
-			           f=codecs.open('st2__b.json','w','utf-8')
-	           	       	   json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-				   cl.sendText(msg.to,"Target Locked")
-                               except:
-                                   cl.sendText(msg.to,"Error")
+                                try:
+									wait["blacklist"][target] = True
+									f=codecs.open('st2__b.json','w','utf-8')
+									json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
+									cl.sendText(msg.to,"Target Locked")
+                                except:
+                                    cl.sendText(msg.to,"Error")
 
             elif "Unban:" in msg.text:                  
                        nk0 = msg.text.replace("Unban:","")
@@ -1702,40 +1357,42 @@ def bot(op):
                            pass
                        else:
                            for target in targets:
-                               try:
-				   del wait["blacklist"][target]
-		          	   f=codecs.open('st2__b.json','w','utf-8')
-	     	 	           json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-			           cl.sendText(msg.to,"Target Unlocked")
-                               except:
-                                   cl.sendText(msg.to,"Error")
+                                try:
+									del wait["blacklist"][target]
+									f=codecs.open('st2__b.json','w','utf-8')
+									json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
+									cl.sendText(msg.to,"Target Unlocked")
+                                except:
+                                    cl.sendText(msg.to,"Error")
 #-----------------------------------------------------------
-# ----------------- BAN MEMBER BY TAG 2TAG ATAU 10TAG MEMBER
-            elif ("Ban " in msg.text):
-                key = eval(msg.contentMetadata["MENTION"])
-                key["MENTIONEES"][0]["M"]
-                targets = []
-                for x in key["MENTIONEES"]:
-                    targets.append(x["M"])
-                for target in targets:
-                   try:
-                      wait["blacklist"][target] = True
-                      f=codecs.open('st2__b.json','w','utf-8')
-                      json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-                      cl.sendText(msg.to,"Succes Banned")
-                   except:
-                      pass
-#---------------------------------------------------
-	    elif "/SendMessageTo: " in msg.text:
-                    cond = msg.text.split(" ")
-                    target = int(cond[1])
-                    text = msg.text.replace("/SendMessageTo: " + str(target) + "\n/Message: ","")
+            elif msg.text == "Setview":
+                    cl.sendText(msg.to, "Check Yang nyimak")
                     try:
-                        cl.findAndAddContactsByMid(target)
-                        cl.sendText(target,"Saya membawakan pesan dari presiden untuk anda yang berisi: \"" + text + "\"")
-                        cl.sendText(msg.to,"Berhasil mengirim pesan")
+                        del wait2['readPoint'][msg.to]
+                        del wait2['readMember'][msg.to]
                     except:
-                        cl.sendText(msg.to,"Gagal mengirim pesan, mungkin midnya salah")
+                        pass
+                    now2 = datetime.now()
+                    wait2['readPoint'][msg.to] = msg.id
+                    wait2['readMember'][msg.to] = ""
+                    wait2['setTime'][msg.to] = datetime.strftime(now2,"%H:%M")
+                    wait2['ROM'][msg.to] = {}
+                    print wait2
+
+            elif msg.text == "Viewseen":
+                    if msg.to in wait2['readPoint']:
+                        if wait2["ROM"][msg.to].items() == []:
+                            chiya = ""
+                        else:
+                            chiya = ""
+                            for rom in wait2["ROM"][msg.to].items():
+                                print rom
+                                chiya += rom[1] + "\n"
+                        cl.sendText(msg.to,"======Tercyduck====== %s\n=====Tukang Ngintip======\n%s\nReading point creation date n time:\n[%s]" % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
+                    else:
+                         cl.sendText(msg.to,"An already read point has not been set.\n「set」you can send ♪ read point will be created ♪")
+
+
 #-----------------------------------------------------------
             elif "Mban:" in msg.text:
                 midd = msg.text.replace("Mban:","")
@@ -1748,106 +1405,26 @@ def bot(op):
                     sys.exit()
                 except:
                     pass
-                
-#---------------------------------------------------------
-#----------------------------------------------------------
-	    elif "Mid @" in msg.text:
-                _name = msg.text.replace("Mid @","")
-                _nametarget = _name.rstrip(' ')
-                gs = cl.getGroup(msg.to)
-                for g in gs.members:
-                    if _nametarget == g.displayName:
-                        cl.sendText(msg.to, g.mid)
-                    else:
-                        pass
-	    #-----------------------------------------------
-#--------------ListGroup------------------#
-            elif msg.text in ["Glist"]:
-                gid = cl.getGroupIdsJoined()
-                h = ""
-                for i in gid:
-                    h += "[★] %s\n" % (cl.getGroup(i).name +"→["+str(len(cl.getGroup(i).members))+"]")
-                cl.sendText(msg.to,"▒▒▓█[List Group]█▓▒▒\n"+ h +"Total Group =" +"["+str(len(gid))+"]")
-#---------------Cek Sider---------------
-	    elif msg.text == "Cctv":
-                      cl.sendText(msg.to, "Cek CCTV")
-                      try:
-                       del wait2['readPoint'][msg.to]
-                       del wait2['readMember'][msg.to]
-                      except:
-                               pass
-                      now2 = datetime.now()
-                      wait2['readPoint'][msg.to] = msg.id
-                      wait2['readMember'][msg.to] = ""
-                      wait2['setTime'][msg.to] = datetime.strftime(now2,"%H:%M")
-                      wait2['ROM'][msg.to] = {}
-                      print wait2
-
-            elif msg.text == "Ciduk":
-                if msg.to in wait2['readPoint']:
-                   if wait2["ROM"][msg.to].items() == []:
-                      chiya = ""
-                   else:
-                      chiya = ""
-                      for rom in wait2["ROM"][msg.to].items():
-                         print rom
-                         chiya += rom[1] + "\n"
-
-		   cl.sendText(msg.to, "||===== Di Read Oleh =====||%s\n||=======✍T҉̶̘̟̼̉̈́͐͋͌̊Σ̶Δ̶M҉̶̘͈̺̪͓̺ͩ͂̾ͪ̀̋ ̶̶̶D̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎S̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎T̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎O̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎Y̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎Sβ̶Ω̶T҉̶̘̟̼̉̈́͐͋͌̊✈=======||\n\n||Pelaku CCTV /👇👇👇||\n%sOrang Ini Gak Normal Plak\n\nBuang Aja Ke Laut\n[%s]"  % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
-       	        else:
-		   cl.sendText(msg.to, "CCTV Blom Di Ketik Koplak\n\nDASAR PIKUN ♪")
-#-----------------Cek Sider---------------------
-#-----------------------------------------------
-            elif "Copy @" in msg.text:
-                print "[Copy] OK"
-                _name = msg.text.replace("Copy @","")
-                _nametarget = _name.rstrip(' ')
-                gs = cl.getGroup(msg.to)
-                targets = []
-                for g in gs.members:
-                    if _nametarget == g.displayName:
-                        targets.append(g.mid)
-                if targets == []:
-                    sendMessage(msg.to, "Not Found...")
-                else:
-                    for target in targets:
-                        try:
-                            cl.CloneContactProfile(target)
-                            cl.sendText(msg.to, "Success Copy profile ~")
-                        except Exception as e:
-                            print e
-
-            elif msg.text in ["Backup","backup"]:
-                try:
-                    cl.updateDisplayPicture(backup.pictureStatus)
-                    cl.updateProfile(backup)
-                    cl.sendMessage(msg.to, "Backup done")
-                except Exception as e:
-                    cl.sendMessage(msg.to, str(e))
-#----------------------------------------------------
-#------------------------------------------------------
-            elif "Steal dp @" in msg.text:            
-                   print "[Command]dp executing"
-                   _name = msg.text.replace("Steal dp @","")
-                   _nametarget = _name.rstrip('  ')
-                   gs = cl.getGroup(msg.to)
-                   targets = []
-                   for g in gs.members:
-                       if _nametarget == g.displayName:
-                           targets.append(g.mid)
-                   if targets == []:
-                       ki.sendText(msg.to,"Contact not found")
-                   else:
-                       for target in targets:
-                           try:
-                               contact = cl.getContact(target)
-                               path = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
-                               cl.sendImageWithURL(msg.to, path)
-                           except:
-                               pass
-                   print "[Command]dp executed"
 #-----------------------------------------------------------
-            elif msg.text.lower() == 'respons':
+            elif "Spam " in msg.text:
+                txt = msg.text.split(" ")
+                jmlh = int(txt[2])
+                text = msg.text.replace("Spam "+str(txt[1])+" "+str(jmlh)+" ","")
+                tulisan = jmlh * (text+"\n")
+                if txt[1] == "on":
+                    if jmlh <= 1000:
+                        for x in range(jmlh):
+                            cl.sendText(msg.to, text)
+                    else:
+                        cl.sendText(msg.to, "Out Of Range!")
+                elif txt[1] == "off":
+                    if jmlh <= 1000:
+                        cl.sendText(msg.to, tulisan)
+                    else:
+                        cl.sendText(msg.to, "Out Of Range!")
+
+#-----------------------------------------------------------
+            elif msg.text.lower() == 'respon':
                 profile = ki.getProfile()
                 text = profile.displayName + "􀜁􀅔􏿿"
                 ki.sendText(msg.to, text)
@@ -1868,17 +1445,21 @@ def bot(op):
                 ki6.sendText(msg.to, text)
 
 #-----------------------------------------------------------speed
-            elif ("Bye " in msg.text):
-                key = eval(msg.contentMetadata["MENTION"])
-                key["MENTIONEES"][0]["M"]
-                targets = []
-                for x in key["MENTIONEES"]:
-                    targets.append(x["M"])
-                for target in targets:
-                   try:
-                      cl.kickoutFromGroup(msg.to,[target])
-                   except:
-                      pass
+            elif msg.text in ["Bans:on"]:
+                wait["wblacklist"] = True
+                cl.sendText(msg.to,"Send Contact")
+            elif msg.text in ["Unbans:on"]:
+                wait["dblacklist"] = True
+                cl.sendText(msg.to,"Send Contact")
+            elif msg.text.lower() == 'mcheck':
+                if wait["blacklist"] == {}:
+                    cl.sendText(msg.to,"􀜁􀇔􏿿 Nothing in the blacklist")
+                else:
+                    cl.sendText(msg.to,"􀜁􀇔􏿿 following is a blacklist")
+                    mc = ""
+                    for mi_d in wait["blacklist"]:
+                        mc += "�" +cl.getContact(mi_d).displayName + "\n"
+                    cl.sendText(msg.to,mc)
             elif msg.text.lower() == 'banlist':
                 if msg.toType == 2:
                     group = cl.getGroup(msg.to)
@@ -1888,7 +1469,7 @@ def bot(op):
                         matched_list+=filter(lambda str: str == tag, gMembMids)
                     cocoa = ""
                     for mm in matched_list:
-                        cocoa += "→" +cl.getContact(mm).displayName + "\n"
+                        cocoa += "�" +cl.getContact(mm).displayName + "\n"
                     cl.sendText(msg.to,cocoa + "Daftar Hitam")
             elif msg.text.lower() == 'kill':
                 if msg.toType == 2:
@@ -1912,61 +1493,7 @@ def bot(op):
                             print (msg.to,[jj])
                         except:
                             pass
-            elif msg.text.lower() == 'cancel':
-                if msg.toType == 2:
-                    group = cl.getGroup(msg.to)
-                    gMembMids = [contact.mid for contact in group.invitee]
-                    for _mid in gMembMids:
-                        cl.cancelGroupInvitation(msg.to,[_mid])
-                    cl.sendText(msg.to,"I pretended to cancel and canceled👈")
-            elif "Album" in msg.text:
-                try:
-                    albumtags = msg.text.replace("Album","")
-                    gid = albumtags[:33]
-                    name = albumtags.replace(albumtags[:34],"")
-                    cl.createAlbum(gid,name)
-                    cl.sendText(msg.to,name + "We created an album👈")
-                except:
-                    cl.sendText(msg.to,"Error")
-            elif "fakecat’" in msg.text:
-                try:
-                    source_str = 'aWbcdefghijklmnopqrstuvwxyz1234567890@:;./_][!&%$#)(=~^|'
-                    name = "".join([random.choice(source_str) for x in xrange(10)])
-                    kimid = msg.text.replace("fakecâ†’","")
-                    cl.sendText(msg.to,str(cl.channel.createAlbumF(msg.to,name,kimid)))
-                except Exception as e:
-                    try:
-                        cl.sendText(msg.to,str(e))
-                    except:
-                        pass
-
-#----------------------------------------------- 
-	    elif "Contact bc " in msg.text:
-                  bctxt = msg.text.replace("Contact bc ", "")
-                  t = cl.getAllContactIds()
-                  t = 100
-                  while(t):
-                    cl.sendText(msg.to, (bctxt))
-                    t-=1
-#-------------------Fungsi Spam Start----------------------#
-            elif "Spam " in msg.text:
-                   txt = msg.text.split(" ")
-                   jmlh = int(txt[2])
-                   teks = msg.text.replace("Spam "+str(txt[1])+" "+str(jmlh)+ " ","")
-                   tulisan = jmlh * (teks+"\n")
-                  #Keke cantik <3
-                   if txt[1] == "on":
-                        if jmlh <= 100:
-                             for x in range(jmlh):
-                                   cl.sendText(msg.to, teks)
-                        else:
-                               cl.sendText(msg.to, "Out of range! ")
-                   elif txt[1] == "off":
-                         if jmlh <= 150:
-                               cl.sendText(msg.to, tulisan)
-                         else:
-                               cl.sendText(msg.to, "Out of range! ")
-
+#---------------------------------------------------                        
             elif msg.text == "sayang":
                     cl.sendText(msg.to,"3")
                     cl.sendText(msg.to,"2")
@@ -2098,54 +1625,173 @@ def bot(op):
                     cl.sendText(msg.to,"Cinta bukanlah penuntutan, penguasaan, pemaksaan, dan pengintimidasian. Tak lain itu hanyalah cara manusia mendefinisikannya. Karena cinta adalah perjuangan, pengorbanan, tanggungjawab, kejujuran, dan keikhlasan.")
                     cl.sendText(msg.to,"Derajat cinta hanya bisa diukur dengan seberapa besar “Pemberian” yang kita korbankan.")
                     
-                    
-            elif msg.text == "link dong":
-                    cl.sendText(msg.to,"nekopoi.host")
-                    cl.sendText(msg.to,"sexvideobokep.com")
-                    cl.sendText(msg.to,"memek.com")
-                    cl.sendText(msg.to,"pornktube.com")
-                    cl.sendText(msg.to,"faketaxi.com")
-                    cl.sendText(msg.to,"videojorok.com")
-                    cl.sendText(msg.to,"watchmygf.mobi")
-                    cl.sendText(msg.to,"xnxx.com")
-                    cl.sendText(msg.to,"pornhd.com")
-                    cl.sendText(msg.to,"xvideos.com")
-                    cl.sendText(msg.to,"vidz7.com")
-                    cl.sendText(msg.to,"m.xhamster.com")
-                    cl.sendText(msg.to,"xxmovies.pro")
-                    cl.sendText(msg.to,"youporn.com")
-                    cl.sendText(msg.to,"pornhub.com")
-                    cl.sendText(msg.to,"anyporn.com")
-                    cl.sendText(msg.to,"hdsexdino.com")
-                    cl.sendText(msg.to,"rubyourdick.com")
-                    cl.sendText(msg.to,"anybunny.mobi")
-                    cl.sendText(msg.to,"cliphunter.com")
-                    cl.sendText(msg.to,"sexloving.net")
-                    cl.sendText(msg.to,"free.goshow.tv")
-                    cl.sendText(msg.to,"eporner.com")
-                    cl.sendText(msg.to,"Pornhd.josex.net")
-                    cl.sendText(msg.to,"m.hqporner.com")
-                    cl.sendText(msg.to,"m.spankbang.com")
-                    cl.sendText(msg.to,"m.4tube.com")
-                    cl.sendText(msg.to,"brazzers.com")
-     #----------------------Fungsi Spam Finish-------------------------------#
-	    elif msg.text in ["Sp","Speed","speed"]:
-                start = time.time()
-                cl.sendText(msg.to, "Bentar Ler")
-                elapsed_time = time.time() - start
-                cl.sendText(msg.to, "%sseconds" % (elapsed_time))
-                elapsed_time = time.time() - start
-                ki.sendText(msg.to, "%sseconds" % (elapsed_time))
-                elapsed_time = time.time() - start
-                ki2.sendText(msg.to, "%sseconds" % (elapsed_time))
-                elapsed_time = time.time() - start
-                ki3.sendText(msg.to, "%sseconds" % (elapsed_time)) 
-                elapsed_time = time.time() - start
-                ki4.sendText(msg.to, "%sseconds" % (elapsed_time))   
-                elapsed_time = time.time() - start
-                ki5.sendText(msg.to, "%sseconds" % (elapsed_time))
-                elapsed_time = time.time() - start
-                ki6.sendText(msg.to, "%sseconds" % (elapsed_time))      
+            elif "Unban all" in msg.text:
+		if msg.toType == 2:
+                    print "ok"
+   	            _name = msg.text.replace("Unban all","")
+                    gs = cl.getGroup(msg.to)
+      	            cl.sendText(msg.to,"Semua Telah Di Hapus")
+                    targets = []
+	            for g in gs.members:
+                        if _name in g.displayName:
+			    targets.append(g.mid)
+   	            if targets == []:
+		        cl.sendText(msg.to,"Maaf")
+	            else:
+	                for target in targets:
+		            try:
+			        del wait["blacklist"][target]
+		                f=codecs.open('st2__b.json','w','utf-8')
+			        json.dump(wait["blacklist"],f, sort_keys=True,indent=4,ensure_ascii=False)
+		            except:
+		                cl.sentText(msg.to,"Berhasil Dihapus")
+		                
+#----------------------------------------------------------
+            elif "Allname:" in msg.text:
+                string = msg.text.replace("All:","")
+                if len(string.decode('utf-8')) <= 60000000:
+                    profile = ki.getProfile()
+                    profile.displayName = string
+                    ki.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 60000000:
+                    profile = ki2.getProfile()
+                    profile.displayName = string
+                    ki2.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 60000000:
+                    profile = ki3.getProfile()
+                    profile.displayName = string
+                    ki3.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 60000000:
+                    profile = ki4.getProfile()
+                    profile.displayName = string
+                    ki4.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 60000000:
+                    profile = ki5.getProfile()
+                    profile.displayName = string
+                    ki5.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 60000000:
+                    profile = ki6.getProfile()
+                    profile.displayName = string
+                    ki6.updateProfile(profile)
+            elif "Allbio:" in msg.text:
+                string = msg.text.replace("Allbio:","")
+                if len(string.decode('utf-8')) <= 6000000000:
+                    profile = ki.getProfile()
+                    profile.statusMessage = string
+                    ki.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 6000000000:
+                    profile = ki2.getProfile()
+                    profile.statusMessage = string
+                    ki2.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 6000000000:
+                    profile = ki3.getProfile()
+                    profile.statusMessage = string
+                    ki3.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 6000000000:
+                    profile = ki4.getProfile()
+                    profile.statusMessage = string
+                    ki4.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 6000000000:
+                    profile = ki5.getProfile()
+                    profile.statusMessage = string
+                    ki5.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 6000000000:
+                    profile = ki6.getProfile()
+                    profile.statusMessage = string
+                    ki6.updateProfile(profile)
+#----------------------------------------------------------
+# ----------------- BAN MEMBER BY TAG 2TAG ATAU 10TAG MEMBER
+            elif ("Ban " in msg.text):
+                key = eval(msg.contentMetadata["MENTION"])
+                key["MENTIONEES"][0]["M"]
+                targets = []
+                for x in key["MENTIONEES"]:
+                    targets.append(x["M"])
+                for target in targets:
+                   try:
+                      wait["blacklist"][target] = True
+                      f=codecs.open('st2__b.json','w','utf-8')
+                      json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
+                      cl.sendText(msg.to,"Succes Banned")
+                   except:
+                      pass
+#---------------------------------------------------
+#----------------------------------------------------------
+	    elif "Mid @" in msg.text:
+                _name = msg.text.replace("Mid @","")
+                _nametarget = _name.rstrip(' ')
+                gs = cl.getGroup(msg.to)
+                for g in gs.members:
+                    if _nametarget == g.displayName:
+                        cl.sendText(msg.to, g.mid)
+                    else:
+                        pass
+	    #-----------------------------------------------                    
+#---------------------------------------------------
+            elif msg.text in ["Kembali","backup"]:
+                    try:
+                       cl.updateDisplayPicture(backup.pictureStatus)
+                       cl.updateProfile(backup)
+                       cl.sendText(msg.to, "Telah kembali semula")
+                    except Exception as e:
+                       cl.sendText(msg.to, str(e))
+#------------------------------------------------
+            elif "Copy @" in msg.text:
+                if msg.toType == 2:
+                    print "[COPY] Ok"
+                    _name = msg.text.replace("Copy @","")
+                    _nametarget = _name.rstrip(' ')
+                    gs = cl.getGroup(msg.to)
+                targets = []
+                for g in gs.members:
+                    if _nametarget == g.displayName:
+                        targets.append(g.mid)
+                if targets == []:
+                    sendMessage(msg.to, "Not Found...")
+                else:
+                     for target in targets:
+                         try:
+                              cl.cloneContactProfile(target)
+                         except Exception as e:
+                             print e
+#---------------------------------------------- 
+#---------------------- = NUKE = ------------------
+            elif "Nuke" in msg.text:
+                if msg.toType == 2:
+                    print "Nuke ok"
+                    _name = msg.text.replace("Nuke","")
+                    gs = ki.getGroup(msg.to)
+                    gs = ki2.getGroup(msg.to)
+                    gs = ki3.getGroup(msg.to)
+                    gs = ki4.getGroup(msg.to)
+                    gs = ki5.getGroup(msg.to)
+                    gs = ki6.getGroup(msg.to)
+                    start = time.time()
+                    ki.sendText(msg.to, "Nuke Speed")
+                    elapsed_time = time.time() - start
+                    ki2.sendText(msg.to, "%sseconds" % (elapsed_time))
+                    ki3.sendText(msg.to, "Nuke Start")
+                    ki4.sendText(msg.to, "Nuke Proses")
+                    ki5.sendText(msg.to,"􀜁􀇔􏿿 See You Bitch 􀜁􀇔􏿿")
+                    targets = []
+                    for g in gs.members:
+                        if _name in g.displayName:
+                            targets.append(g.mid)
+                    if targets == []:
+                        cl.sendText(msg.to,"Not found.")
+                        ki6.sendText(msg.to,"Not found.")
+                    else:
+                        for target in targets:
+                          if not target in Bots:
+                            try:
+                                klist=[ki,ki2,ki3,ki4,ki5,ki6]
+                                kicker=random.choice(klist)
+                                kicker.kickoutFromGroup(msg.to,[target])
+                                print (msg.to,[g.mid])
+                            except:
+                                ki.sendText(msg,to,"Nuke Finish")
+                                ki1.sendText(msg,to,"Nuke Succes Bos")
+#-------------------- = NUKE FINISH = ----------------------------- 
 #-------------Fungsi Tagall User Start---------------#
             elif msg.text in ["Dor","dor","Ngntd","ngntd","Cum","cum"]:
                 group = cl.getGroup(msg.to)
@@ -2168,9 +1814,50 @@ def bot(op):
                     cl.sendMessage(msg)
                 except Exception as error:
                     print error
+#-------------------------------------------------------------
+            elif msg.text.lower() == 'cancel':
+                if msg.toType == 2:
+                    group = cl.getGroup(msg.to)
+                    gMembMids = [contact.mid for contact in group.invitee]
+                    for _mid in gMembMids:
+                        cl.cancelGroupInvitation(msg.to,[_mid])
+                    cl.sendText(msg.to,"I pretended to cancel and canceled👈")
+            elif "Album" in msg.text:
+                try:
+                    albumtags = msg.text.replace("Album","")
+                    gid = albumtags[:33]
+                    name = albumtags.replace(albumtags[:34],"")
+                    cl.createAlbum(gid,name)
+                    cl.sendText(msg.to,name + "We created an album👈")
+                except:
+                    cl.sendText(msg.to,"Error")
+            elif "fakecâ†’" in msg.text:
+                try:
+                    source_str = 'abcdefghijklmnopqrstuvwxyz1234567890@:;./_][!&%$#)(=~^|'
+                    name = "".join([random.choice(source_str) for x in xrange(10)])
+                    amid = msg.text.replace("fakecâ†’","")
+                    cl.sendText(msg.to,str(cl.channel.createAlbumF(msg.to,name,amid)))
+                except Exception as e:
+                    try:
+                        cl.sendText(msg.to,str(e))
+                    except:
+                        pass
+
 #-----------------------------------------------
-    #-------------Fungsi Tagall User Finish By :MR.J -------------#           
-            elif msg.text.lower() == 'kuy sini':
+            elif msg.text in ["Sp","Speed","speed"]:
+                start = time.time()
+                cl.sendText(msg.to, "Bot 1 Processing Request")
+                elapsed_time = time.time() - start
+                cl.sendText(msg.to, "%sseconds" % (elapsed_time))
+                ki.sendText(msg.to, "%sseconds" % (elapsed_time))
+                ki2.sendText(msg.to, "%sseconds" % (elapsed_time))
+                ki3.sendText(msg.to, "%sseconds" % (elapsed_time))
+                ki4.sendText(msg.to, "%sseconds" % (elapsed_time))
+                ki5.sendText(msg.to, "%sseconds" % (elapsed_time))
+                ki6.sendText(msg.to, "%sseconds" % (elapsed_time))
+
+#-----------------------------------------------
+            elif msg.text.lower() == 'sakit sayang':
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -2198,7 +1885,7 @@ def bot(op):
                         random.choice(KAC).updateGroup(G)
                        
 #-----------------------------------------------
-            elif msg.text.lower() == 'protect':
+            elif msg.text.lower() == 'backup':
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -2215,7 +1902,7 @@ def bot(op):
                         print "kicker ok"
                         G.preventJoinByTicket(G)
                         ki.updateGroup(G)
-            elif msg.text.lower() == 'sini beb':
+            elif msg.text.lower() == 'kb come':
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -2236,7 +1923,7 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         ki.updateGroup(G)
 #-----------------------------------------------
-            elif "Kb1 in" in msg.text:
+            elif "Bot1 in" in msg.text:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -2252,7 +1939,7 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         ki.updateGroup(G)
 #-----------------------------------------------
-            elif "Kb2 in" in msg.text:
+            elif "Bot2 in" in msg.text:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -2268,7 +1955,7 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         ki2.updateGroup(G)
 #-----------------------------------------------
-            elif "Kb3 in" in msg.text:
+            elif "Bot3 in" in msg.text:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -2284,7 +1971,7 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         ki2.updateGroup(G)
 #-----------------------------------------------
-            elif "Kb4 in" in msg.text:
+            elif "Bot4 in" in msg.text:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -2300,7 +1987,7 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         ki3.updateGroup(G)
 #-----------------------------------------------
-            elif "Kb5 in" in msg.text:
+            elif "Bot5 in" in msg.text:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -2316,7 +2003,7 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         ki5.updateGroup(G)
 #-----------------------------------------------
-            elif "Kb6 in" in msg.text:
+            elif "Bot6 in" in msg.text:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -2332,11 +2019,11 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         ki6.updateGroup(G)
 #-----------------------------------------------
-            elif msg.text.lower() == 'pulang beb':
+            elif msg.text.lower() == 'enak sayang':
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
-                        cl.sendText(msg.to,"􀜁􀇔􏿿Bye Bye 􀄃􀈡􏿿 "  +  str(ginfo.name)  + "")
+                        cl.sendText(msg.to,"􀜁􀇔􏿿Bye Bye😘 "  +  str(ginfo.name)  + "")
                         ki.leaveGroup(msg.to)
                         ki2.leaveGroup(msg.to)
                         ki3.leaveGroup(msg.to)
@@ -2346,7 +2033,7 @@ def bot(op):
                     except:
                         pass
 #-----------------------------------------------
-            elif "Kb1 bye" in msg.text:
+            elif "Bot1 bye" in msg.text:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -2354,7 +2041,7 @@ def bot(op):
                     except:
                         pass
 #-----------------------------------------------
-            elif "Kb2 bye" in msg.text:
+            elif "Bot2 bye" in msg.text:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -2362,7 +2049,7 @@ def bot(op):
                     except:
                         pass
 #-----------------------------------------------
-            elif "Kb3 bye" in msg.text:
+            elif "Bot3 bye" in msg.text:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -2370,7 +2057,7 @@ def bot(op):
                     except:
                         pass
 #-----------------------------------------------
-            elif "Kb4 bye" in msg.text:
+            elif "Bot4 bye" in msg.text:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -2378,7 +2065,7 @@ def bot(op):
                     except:
                         pass
 #-----------------------------------------------
-            elif "Kb5 bye" in msg.text:
+            elif "Bot5 bye" in msg.text:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -2386,7 +2073,7 @@ def bot(op):
                     except:
                         pass
 #-----------------------------------------------
-            elif "Kb6 bye" in msg.text:
+            elif "Bot6 bye" in msg.text:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -2395,72 +2082,63 @@ def bot(op):
                         pass
 #-----------------------------------------------
             elif "Kb Key" in msg.text:
-                ki.sendText(msg.to,"""      􀜁􀇔􏿿􀜁􀇔􏿿 KEPIN BOT [KB] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[Kb1 in]\n􀜁􀇔􏿿[1name:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[Kb1 Gift]\n􀜁􀇔􏿿[Kb1 bye]\n\n   
+                ki.sendText(msg.to,"""      􀜁􀇔􏿿􀜁􀇔􏿿 KITSUNE BOT [KB] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[Kb1 in]\n􀜁􀇔􏿿[1Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁??􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[Kb1 Gift]\n􀜁􀇔􏿿[Kb1 bye]\n\n   
   
         
   
-☆ K̴̹̳̺̟̃̂͑̿͑̔͌͡ͅĕ̸̡̞͙̲̙̥̥͐̉̆̀v̨̧̛̛͎̺̭̬͈̠̙̉̾̀́͐̍͊̚͜į͉̹͕̳̹̙̙̽̽́̀̐̌̏̊̇n̨̗̥̼̒̀̐͊͐̕͜͠ B̵̺̦̦̫̦͉̳̜͋̃̅̎͒̇̚͞͠ǫ͈̮̼͍̙̰̜̔̀͛̀̐͌͟͡͝t̶̨͓̰̩̎͐̀͑̋̋͢͠
-
-
-""")
-                ki2.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿 KEPIN BOT [KB] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[Kb2 in]\n􀜁􀇔􏿿[2name:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[Kb2 Gift]\n􀜁􀇔􏿿[Kb2 bye]\n\n     
-        
-  
-☆K̴̹̳̺̟̃̂͑̿͑̔͌͡ͅĕ̸̡̞͙̲̙̥̥͐̉̆̀v̨̧̛̛͎̺̭̬͈̠̙̉̾̀́͐̍͊̚͜į͉̹͕̳̹̙̙̽̽́̀̐̌̏̊̇n̨̗̥̼̒̀̐͊͐̕͜͠ B̵̺̦̦̫̦͉̳̜͋̃̅̎͒̇̚͞͠ǫ͈̮̼͍̙̰̜̔̀͛̀̐͌͟͡͝t̶̨͓̰̩̎͐̀͑̋̋͢͠☆
+☆ Ķ͈̤̱͎̱̤̞̭͂̐͒́̀͗͞Ị̵̻̝̘͍͛̏̃͊̉͠ T̩͖͎̹̫͈̿̆̏́̑́S̤̲̯̤̹̲̲̘̏̋̈́̿͒ͅŲ̶̼̲̺̣̬̔̿͐̾̾͘Ṇ̶̨̛̲̭̝̲̝̪̎̾̈́͘͢͜͞É͎̱̺̜̐̀̿͘̕̕͢  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅT Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆
 
 
 
 """)
-                ki3.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿 KEPIN BOT [KB] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[Kb3 in]\n􀜁􀇔􏿿[3name:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔��[Kb3 Gift]\n��􀇔􏿿[Kb3 bye]\n\n     
+                ki2.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿 KITSUNE BOT [KB] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n ??􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[Kb2 in]\n􀜁􀇔􏿿[2Aditname:]\n??􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[Kb2 Gift]\n􀜁􀇔􏿿[Kb2 bye]\n\n     
         
   
-☆K̴̹̳̺̟̃̂͑̿͑̔͌͡ͅĕ̸̡̞͙̲̙̥̥͐̉̆̀v̨̧̛̛͎̺̭̬͈̠̙̉̾̀́͐̍͊̚͜į͉̹͕̳̹̙̙̽̽́̀̐̌̏̊̇n̨̗̥̼̒̀̐͊͐̕͜͠ B̵̺̦̦̫̦͉̳̜͋̃̅̎͒̇̚͞͠ǫ͈̮̼͍̙̰̜̔̀͛̀̐͌͟͡͝t̶̴̨̡͓̰̩͈̖̺͖̙̝̩̞̎͐̀͑̋̋͂̏͢͟͠͠☆
+☆ Ķ͈̤̱͎̱̤̞̭͂̐͒́̀͗͞Ị̵̻̝̘͍͛̏̃͊̉͠ T̩͖͎̹̫͈̿̆̏́̑́S̤̲̯̤̹̲̲̘̏̋̈́̿͒ͅŲ̶̼̲̺̣̬̔̿͐̾̾͘Ṇ̶̨̛̲̭̝̲̝̪̎̾̈́͘͢͜͞É͎̱̺̜̐̀̿͘̕̕͢  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅT Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆
 
 
 
 """)
-                ki4.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿 KEPIN BOT [KB] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[Kb4 in]\n􀜁􀇔􏿿[4name:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[Kb4 Gift]\n􀜁􀇔􏿿[Kb4 bye]\n\n     
+                ki3.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿 KITSUNE BOT [KB] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[Kb3 in]\n􀜁􀇔􏿿[3Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[Kb3 Gift]\n􀜁􀇔􏿿[Kb3 bye]\n\n     
         
   
-☆K̴̹̳̺̟̃̂͑̿͑̔͌͡ͅĕ̸̡̞͙̲̙̥̥͐̉̆̀v̨̧̛̛͎̺̭̬͈̠̙̉̾̀́͐̍͊̚͜į͉̹͕̳̹̙̙̽̽́̀̐̌̏̊̇n̨̗̥̼̒̀̐͊͐̕͜͠ B̵̺̦̦̫̦͉̳̜͋̃̅̎͒̇̚͞͠ǫ͈̮̼͍̙̰̜̔̀͛̀̐͌͟͡͝t̶̨͓̰̩̎͐̀͑̋̋͢͠☆
+☆ Ķ͈̤̱͎̱̤̞̭͂̐͒́̀͗͞Ị̵̻̝̘͍͛̏̃͊̉͠ T̩͖͎̹̫͈̿̆̏́̑́S̤̲̯̤̹̲̲̘̏̋̈́̿͒ͅŲ̶̼̲̺̣̬̔̿͐̾̾͘Ṇ̶̨̛̲̭̝̲̝̪̎̾̈́͘͢͜͞É͎̱̺̜̐̀̿͘̕̕͢  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅT Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆
 
 
 
 """)
-                ki5.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿 KEPIN BOT [KB] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[Kb5 in]\n􀜁􀇔􏿿[5name:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[Kb5 Gift]\n􀜁􀇔􏿿[Kb5 bye]\n\n     
+                ki4.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿 KITSUNE BOT [KB] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[Kb4 in]\n􀜁􀇔􏿿[4Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[Kb4 Gift]\n􀜁􀇔􏿿[Kb4 bye]\n\n     
         
   
-☆K̴̹̳̺̟̃̂͑̿͑̔͌͡ͅĕ̸̡̞͙̲̙̥̥͐̉̆̀v̨̧̛̛͎̺̭̬͈̠̙̉̾̀́͐̍͊̚͜į͉̹͕̳̹̙̙̽̽́̀̐̌̏̊̇n̨̗̥̼̒̀̐͊͐̕͜͠ B̵̺̦̦̫̦͉̳̜͋̃̅̎͒̇̚͞͠ǫ͈̮̼͍̙̰̜̔̀͛̀̐͌͟͡͝t̶̨͓̰̩̎͐̀͑̋̋͢͠☆
+☆ Ķ͈̤̱͎̱̤̞̭͂̐͒́̀͗͞Ị̵̻̝̘͍͛̏̃͊̉͠ T̩͖͎̹̫͈̿̆̏́̑́S̤̲̯̤̹̲̲̘̏̋̈́̿͒ͅŲ̶̼̲̺̣̬̔̿͐̾̾͘Ṇ̶̨̛̲̭̝̲̝̪̎̾̈́͘͢͜͞É͎̱̺̜̐̀̿͘̕̕͢  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅT Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆
+
 
 
 """)
-                ki6.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿 KEPIN BOT [KB] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[Kb6 in]\n􀜁􀇔􏿿[6name:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[Kb6 Gift]\n􀜁􀇔􏿿[Kb6 bye]\n\n     
+                ki5.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿 KITSUNE BOT [KB] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[Kb5 in]\n􀜁􀇔􏿿[5Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[Kb5 Gift]\n􀜁􀇔􏿿[Kb5 bye]\n\n     
         
   
-☆K̴̹̳̺̟̃̂͑̿͑̔͌͡ͅĕ̸̡̞͙̲̙̥̥͐̉̆̀v̨̧̛̛͎̺̭̬͈̠̙̉̾̀́͐̍͊̚͜į͉̹͕̳̹̙̙̽̽́̀̐̌̏̊̇n̨̗̥̼̒̀̐͊͐̕͜͠ B̵̺̦̦̫̦͉̳̜͋̃̅̎͒̇̚͞͠ǫ͈̮̼͍̙̰̜̔̀͛̀̐͌͟͡͝t̶̨͓̰̩̎͐̀͑̋̋͢͠
+☆ Ķ͈̤̱͎̱̤̞̭͂̐͒́̀͗͞Ị̵̻̝̘͍͛̏̃͊̉͠ T̩͖͎̹̫͈̿̆̏́̑́S̤̲̯̤̹̲̲̘̏̋̈́̿͒ͅŲ̶̼̲̺̣̬̔̿͐̾̾͘Ṇ̶̨̛̲̭̝̲̝̪̎̾̈́͘͢͜͞É͎̱̺̜̐̀̿͘̕̕͢  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅT Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆
+
+
+
+""")
+                ki6.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿 KITSUNE BOT [KB] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[Kb6 in]\n􀜁􀇔􏿿[6Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[Kb6 Gift]\n􀜁􀇔􏿿[Kb6 bye]\n\n     
+        
+  
+☆ Ķ͈̤̱͎̱̤̞̭͂̐͒́̀͗͞Ị̵̻̝̘͍͛̏̃͊̉͠ T̩͖͎̹̫͈̿̆̏́̑́S̤̲̯̤̹̲̲̘̏̋̈́̿͒ͅŲ̶̼̲̺̣̬̔̿͐̾̾͘Ṇ̶̨̛̲̭̝̲̝̪̎̾̈́͘͢͜͞É͎̱̺̜̐̀̿͘̕̕͢  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅT Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆
 
 
 
 """)
 #-----------------------------------------------
-            elif msg.text in ["Kam","kam"]:
+            elif msg.text in ["Welcome","wc","welcome","Wc"]:
                 ginfo = cl.getGroup(msg.to)
                 cl.sendText(msg.to,"Selamat Datang Di Grup " + str(ginfo.name))
                 cl.sendText(msg.to,"Owner Grup " + str(ginfo.name) + " :\n" + ginfo.creator.displayName )
-            elif "Gbc " in msg.text:
-	        print "[Group Broadcast Excuted]"
-	        bctxt = msg.text.replace("Gbc ","")
-		n = cl.getGroupIdsJoined()
-		for people in n:
-		    cl.sendText(people, (bctxt))
-
-	    elif "Fbc " in msg.text:
-	        print "[Friend Broadcast Excuted]"
-	        bctxt = msg.text.replace("Fbc ","")
-		n = cl.getAllContactIds()
-	        for people in n:
-	    	    cl.sendText(people, (bctxt))
-
+            elif "Sayang say " in msg.text:
+				bctxt = msg.text.replace("Sayang say ","")
+				ki12.sendText(msg.to,(bctxt))
             elif "Say " in msg.text:
 				bctxt = msg.text.replace("Say ","")
 				ki.sendText(msg.to,(bctxt))
@@ -2470,15 +2148,15 @@ def bot(op):
 				ki5.sendText(msg.to,(bctxt))
 				ki6.sendText(msg.to,(bctxt))
             elif msg.text.lower() == 'ping':
-                ki.sendText(msg.to,"Ping  􀄃􀈡􏿿")
-                ki2.sendText(msg.to,"Ping 􀄃􀈡􏿿")
-                ki3.sendText(msg.to,"Ping 􀄃􀈡􏿿")
-                ki4.sendText(msg.to,"Ping 􀄃􀈡􏿿")
-                ki5.sendText(msg.to,"Ping 􀄃􀈡􏿿")
-                ki6.sendText(msg.to,"Ping 􀄃��􏿿")
+                ki.sendText(msg.to,"Ping 􀜁􀇔􏿿")
+                ki2.sendText(msg.to,"Ping 􀜁􀇔􏿿")
+                ki3.sendText(msg.to,"Ping 􀜁􀇔􏿿")
+                ki4.sendText(msg.to,"Ping 􀜁􀇔􏿿")
+                ki5.sendText(msg.to,"Ping 􀜁􀇔􏿿")
+                ki6.sendText(msg.to,"Ping 􀜁􀇔􏿿")
+#----------------------------------------------- 
 #-----------------------------------------------
-#-----------------------------------------------
-        if op.type == 13:
+        if op.type == 19:
             try:
                 if op.param3 in mid:
                     if op.param2 in kimid:
@@ -2778,7 +2456,7 @@ def bot(op):
 		    pass
 		elif wait["inviteprotect"] == True:
 		    wait ["blacklist"][op.param2] = True
-		    cl.cancelGroupInvitation(op.param1,[op.param3])
+		    cl.cancelGroupInvitation(op.param1,[contact.mid for contact in cl.getGroup(op.param1).invitee])
 		else:
 		    cl.sendText(op.param1,"")
 	    else:
@@ -2788,7 +2466,7 @@ def bot(op):
 		    pass
 		elif wait["cancelprotect"] == True:
 		    wait ["blacklist"][op.param2] = True
-		    cl.cancelGroupInvitation(op.param1,[op.param3])
+		    cl.cancelGroupInvitation(op.param1,[contact.mid for contact in cl.getGroup(op.param1).invitee])
 		else:
 		    cl.sendText(op.param1,"")
 	    else:
@@ -2814,21 +2492,18 @@ def bot(op):
                 else:
                     cl.sendText(op.param1,str(wait["message"]))
 #------------------------------------------------------------------------------------
-#-----------------------------------------------------------------------------------
-        if op.type == 55:
-            try:
-                if op.param1 in wait2['readPoint']:
-                    Name = cl.getContact(op.param2).displayName
-                    if Name in wait2['readMember'][op.param1]:
-                        pass
-                    else:
-                        wait2['readMember'][op.param1] += "\n・" + Name
-                        wait2['ROM'][op.param1][op.param2] = "・" + Name
-                else:
-                    cl.sendText
-            except:
-                pass
 
+#------------------------------------------------------------------------------------
+        if op.type == 55:
+            if op.param1 in wait2['readPoint']:
+                Name = cl.getContact(op.param2).displayName
+                if Name in wait2['readMember'][op.param1]:
+                    pass
+                else:
+                    wait2['readMember'][op.param1] += "\n・" + Name
+                    wait2['ROM'][op.param1][op.param2] = "・" + Name
+            else:
+                cl.sendText
 
         if op.type == 59:
             print op
@@ -2868,20 +2543,22 @@ def autolike():
         hasil = cl.activity(limit=1000)
         if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
           try:    
-	    cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by ✍T҉̶̘̟̼̉̈́͐͋͌̊Σ̶Δ̶M҉̶̘͈̺̪͓̺ͩ͂̾ͪ̀̋ ̶̶̶D̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎S̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎T̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎O̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎Y̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎Sβ̶Ω/̶T҉̶̘̟̼̉̈́͐͋͌̊✈\n\nhttp://line.me/ti/p/~")
-	    ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by ✍T҉̶̘̟̼̉̈́͐͋͌̊Σ̶Δ̶M҉̶̘͈̺̪͓̺ͩ͂̾ͪ̀̋ ̶̶̶D̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎S̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎T̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎O̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎Y̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎Sβ̶Ω̶T҉̶̘̟̼̉̈́͐͋͌̊✈\n\nhttp://line.me/ti/p/~")
-	    ki2.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki2.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by ✍T҉̶̘̟̼̉̈́͐͋͌̊Σ̶Δ̶M҉̶̘͈̺̪͓̺ͩ͂̾ͪ̀̋ ̶̶̶D̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎S̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎T̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎O̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎Y̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎Sβ̶Ω̶T҉̶̘̟̼̉̈́͐͋͌̊✈\n\nhttp://line.me/ti/p/~")
-	    ki3.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki3.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by ✍T҉̶̘̟̼̉̈́͐͋͌̊Σ̶Δ̶M҉̶̘͈̺̪͓̺ͩ͂̾ͪ̀̋ ̶̶̶D̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎S̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎T̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎O̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎Y̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎Sβ̶Ω̶T҉̶̘̟̼̉̈́͐͋͌̊✈\n\nhttp://line.me/ti/p/~")
-	    ki4.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki4.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by ✍T҉̶̘̟̼̉̈́͐͋͌̊Σ̶Δ̶M҉̶̘͈̺̪͓̺ͩ͂̾ͪ̀̋ ̶̶̶D̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎S̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎T̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎O̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎Y̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎Sβ̶Ω̶T҉̶̘̟̼̉̈́͐͋͌̊✈\n\nhttp://line.me/ti/p/~")
-	    ki5.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki5.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by ✍T҉̶̘̟̼̉̈́͐͋͌̊Σ̶Δ̶M҉̶̘͈̺̪͓̺ͩ͂̾ͪ̀̋ ̶̶̶D̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎S̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎T̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎O̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎Y̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎Sβ̶Ω̶T҉̶̘̟̼̉̈́͐͋͌̊✈\n\nhttp://line.me/ti/p/~")
-	    ki6.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki6.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by ✍T҉̶̘̟̼̉̈́͐͋͌̊Σ̶Δ̶M҉̶̘͈̺̪͓̺ͩ͂̾ͪ̀̋ ̶̶̶D̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎S̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎T̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎O̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎Y̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎E̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎R̶̶꙯꙯꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎Sβ̶Ω̶T҉̶̘̟̼̉̈́͐͋͌̊✈\n\nhttp://line.me/ti/p/~")
+            cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+            cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar")
+            ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+            ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
+            ki1.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+            ki1.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
+            ki2.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+            ki2.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
+            ki3.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+            ki3.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
+            ki4.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+            ki4.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
+            ki5.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+            ki5.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~joshuasiregaar ")
+            ki6.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+            ki6.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/")
             print "Like"
           except:
             pass
