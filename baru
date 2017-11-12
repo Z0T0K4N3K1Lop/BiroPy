@@ -221,7 +221,6 @@ backup.displayName = contact.displayName
 backup.statusMessage = contact.statusMessage
 backup.pictureStatus = contact.pictureStatus
 
-
 contact = ki5.getProfile()
 backup = ki5.getProfile()
 backup.displayName = contact.displayName
@@ -299,8 +298,7 @@ def bot(op):
                     cl.leaveRoom(msg.to)
             if msg.contentType == 16:
                 url = msg.contentMetadata["postEndUrl"]
-                cl.like(url[25:58], url[66:], likeType=1001)		    
-#---------------------------------------------------------	
+                cl.like(url[25:58], url[66:], likeType=1001)	
         if op.type == 25:
             msg = op.message
             if msg.contentType == 13:
@@ -1370,10 +1368,6 @@ def bot(op):
                             except:
                                 cl.sendText(msg.to,"Error")
 
-		 elif msg.text in ["Clear ban"]:
-				wait["blacklist"] = {}
-				cl.sendText(msg.to,"clear")
-
             elif "Ban:" in msg.text:                  
                        nk0 = msg.text.replace("Ban:","")
                        nk1 = nk0.lstrip()
@@ -1454,7 +1448,7 @@ def bot(op):
             elif "Mban:" in msg.text:
                 midd = msg.text.replace("Mban:","")
                 wait["blacklist"][midd] = True
-		            cl.sendText(msg.to,"Target Lock")
+		cl.sendText(msg.to,"Target Lock")
 #-----------------------------------------------------------
             elif "#leave" in msg.text:
                 try:
@@ -1683,7 +1677,7 @@ def bot(op):
                     cl.sendText(msg.to,"Derajat cinta hanya bisa diukur dengan seberapa besar “Pemberian” yang kita korbankan.")
                     
             elif "Unban all" in msg.text:
-		            if msg.toType == 2:
+		if msg.toType == 2:
                     print "ok"
    	            _name = msg.text.replace("Unban all","")
                     gs = cl.getGroup(msg.to)
@@ -1774,7 +1768,7 @@ def bot(op):
                       pass
 #---------------------------------------------------
 #----------------------------------------------------------
-	          elif "Mid @" in msg.text:
+	    elif "Mid @" in msg.text:
                 _name = msg.text.replace("Mid @","")
                 _nametarget = _name.rstrip(' ')
                 gs = cl.getGroup(msg.to)
@@ -1789,19 +1783,19 @@ def bot(op):
                     try:
                        cl.updateDisplayPicture(backup.pictureStatus)
                        cl.updateProfile(backup)
-				               ki.updateDisplayPicture(backup.pictureStatus)
+		       ki.updateDisplayPicture(backup.pictureStatus)
                        ki.updateProfile(backup)
-				               ki2.updateDisplayPicture(backup.pictureStatus)
+		       ki2.updateDisplayPicture(backup.pictureStatus)
                        ki2.updateProfile(backup)
-				               ki3.updateDisplayPicture(backup.pictureStatus)
+		       ki3.updateDisplayPicture(backup.pictureStatus)
                        ki3.updateProfile(backup)
-				               ki4.updateDisplayPicture(backup.pictureStatus)
+		       ki4.updateDisplayPicture(backup.pictureStatus)
                        ki4.updateProfile(backup)
-				               ki5.updateDisplayPicture(backup.pictureStatus)
+		       ki5.updateDisplayPicture(backup.pictureStatus)
                        ki5.updateProfile(backup)
-				               ki6.updateDisplayPicture(backup.pictureStatus)
+		       ki6.updateDisplayPicture(backup.pictureStatus)
                        ki6.updateProfile(backup)
-                       ki.sendText(msg.to, "Sukses backup")
+                       ki.sendText(msg.to, "Sukses Backup")
                     except Exception as e:
                        cl.sendText(msg.to, str(e))
 #------------------------------------------------
@@ -1821,13 +1815,12 @@ def bot(op):
                      for target in targets:
                          try:
                               cl.cloneContactProfile(target)
-                              ki.cloneContactProfile(target)
-                              ki2.cloneContactProfile(target)
-                              ki3.cloneContactProfile(target)
-                              ki4.cloneContactProfile(target)
-                              ki5.cloneContactProfile(target)
-                              ki6.cloneContactProfile(target)
-                              ki.sendText(msg.to, “Sukses”)
+			      ki.cloneContactProfile(target)
+			      ki2.cloneContactProfile(target)
+			      ki3.cloneContactProfile(target)
+			      ki4.cloneContactProfile(target)
+			      ki5.cloneContactProfile(target)
+			      ki6.cloneContactProfile(target)
                          except Exception as e:
                              print e
 #---------------------------------------------- 
@@ -1866,7 +1859,7 @@ def bot(op):
                                 print (msg.to,[g.mid])
                             except:
                                 ki.sendText(msg,to,"Nuke Finish")
-                                ki.sendText(msg,to,"Nuke Succes Bos")
+                                ki1.sendText(msg,to,"Nuke Succes Bos")
 #-------------------- = NUKE FINISH = ----------------------------- 
 #-------------Fungsi Tagall User Start---------------#
             elif msg.text in ["Dor","dor","Ngntd","ngntd","Cum","cum"]:
@@ -2632,9 +2625,9 @@ def autolike():
             ki4.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
             ki4.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~mrkalilinux")
             ki5.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki5.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~mrkalinux")
+            ki5.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~mrkalilinux")
             ki6.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki6.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/mrkalinux")
+            ki6.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by Joshua\n\nhttp://line.me/ti/p/~mrkalilinux")
             print "Like"
           except:
             pass
@@ -2655,7 +2648,3 @@ while True:
         if (Op.type != OpType.END_OF_OPERATION):
             cl.Poll.rev = max(cl.Poll.rev, Op.revision)
             bot(Op)
-
-
-
-
