@@ -6,31 +6,31 @@ from datetime import datetime
 import time,random,sys,re,os,json,subprocess,codecs,threading,glob
 
 cl = LINETCR.LINE() 
-cl.login(token="EmRCHGUI7zEodcFmjOj8.j/tQ76jJZHnlfQ7X17DHYa.BUBvYBIsQlgbNi+/D2Mt/KrXsghyFH7KHcn6zWk7Sp8=")
+cl.login(token="EmiBWQXR3uMXBJ9Tnyx8.EDSH+gbkczpUhFmNG/BNIa.plvovgB6HVTneyoC7lzfXRxBMiVZL6Z+YLP3UBDrq/M=")
 cl.loginResult()
 
 ki = LINETCR.LINE() 
-ki.login(token="EmeyjMMmt2FgJz7r4q9e.gdzWaL6Mh7ukXn2az2mk+G.Lul9ZEaQCqY2PyvvzkQ5hjJtFgqfsdkWslf+l/7IPoA=")
+ki.login(token="EmpkvuOCfASSeGvSOTI3.21N2QcNJmTfnzS2ErmTcGW.4MQhdHEF1ZKnW6hI0JhL8AcYATf6W64XMxZOOWsGhCM=")
 ki.loginResult()
 
 ki2 = LINETCR.LINE() 
-ki2.login(token="EmnaJ0gQVczR5OoCg0N6.Ytky3JCAp31nDp7TEYkOvG.MH0x+QwWaF7w/sbIM4AnXWlTpwJ0Q3W7ddOgHcVNmW0=")
+ki2.login(token="EmVlfaIBH07BRJ4YC3a0.2J1s/zcIyN0xEgVodxkf8a.mxMkEgEw/ATXLAOctoPKtMMYk3m/nJUl0RNEB1d9FRE=")
 ki2.loginResult()
 
 ki3 = LINETCR.LINE() 
-ki3.login(token="Emg8vDKeYvGnburuDFw9.Chn7BXSLDamclGbfk0l2Mq.CsjfPiuZ7DjrGL5qN9jiSeWjPcE99OB8u9ZS90UUIp4=")
+ki3.login(token="EmvGEZGggHReP0ATtKC1.y5NRJlfSivprjr5yoU9puq.yQZiD7nWmpWfDmXaPiKmH7/tIfiK35ncZix8dqFkehI=")
 ki3.loginResult()
 
 ki4 = LINETCR.LINE() 
-ki4.login(token="Emndbyopo9hcbCP97Jz9.tdhcBEtA9LhmCODKr2rboq.nxfsfouca4XFjfbw129tExO4z7pw9Tru5GpOAgmMjr8=")
+ki4.login(token="EmTU1UTwt0x58w3k9346.ql56U229PeJxI6asIwtTPG.ZfPKa0jDdGLPmgm1lIfqhtDZEC1HGFc/F7Bj0fiWn18=")
 ki4.loginResult()
 
 ki5 = LINETCR.LINE() 
-ki5.login(token="EmPOqID7fRgxkOxiffS4.L/HP6OhWMLOA36k9kEd6Da.hBidj7hzZbGdWJApwj7XOzaRKcyLypflCYJpaGeARtQ=")
+ki5.login(token="Emy6nsRULtr2csLUOT71.XW9I98X/5rdryXU2QboQSq.hJaVhlavvCw4QYYwUhJIH/JxhDHWvRRnZZw5U/AqyfM=")
 ki5.loginResult()
 
 ki6 = LINETCR.LINE() 
-ki6.login(token="Emq8m0WbSw7LcmnSE6l5.JVncbCl0SN5M0+EZNi/Yzq.k0qCjP1/5TIsnnnSd0RN/HHskKibXUkARrX7FTyiCSk=")
+ki6.login(token="EmFWwkA6FLijOyRaHu72.V/fxNnw8sCcwOwdRlBaHKG.qwqygu7ydiOokvt9mGSL0/jwKrpGwBrhirhHLs/mJdM=")
 ki6.loginResult()
 
 
@@ -148,7 +148,7 @@ ki5mid = ki5.getProfile().mid
 ki5mid = ki5.getProfile().mid
 ki6mid = ki6.getProfile().mid
 Bots=[mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,ki6mid]
-admsa = "u27e4eaefa263ce134b16aef1d7b761c8"
+admsa = "u2b457b1ef8391ee451c9a22c835e1e33"
 
 wait = {
     'contact':False,
@@ -284,7 +284,7 @@ def bot(op):
             msg = op.message
             if msg.toType == 0:
                 msg.to = msg.from_
-                if msg.from_ == "u27e4eaefa263ce134b16aef1d7b761c8":
+                if msg.from_ == "u2b457b1ef8391ee451c9a22c835e1e33":
                     if "join:" in msg.text:
                         list_ = msg.text.split(":")
                         try:
@@ -1478,23 +1478,24 @@ def bot(op):
 #-----------------------------------------------------------
             elif msg.text.lower() == 'respon':
                 profile = ki.getProfile()
-                text = profile.displayName + "􀜁􀅔􏿿"
+                text = profile.displayName
                 ki.sendText(msg.to, text)
                 profile = ki2.getProfile()
-                text = profile.displayName + "􀜁􀅔􏿿"
+                text = profile.displayName
                 ki2.sendText(msg.to, text)
                 profile = ki3.getProfile()
-                text = profile.displayName + "􀜁􀅔􏿿"
+                text = profile.displayName
                 ki3.sendText(msg.to, text)
                 profile = ki4.getProfile()
-                text = profile.displayName + "􀜁􀅔􏿿"
+                text = profile.displayName
                 ki4.sendText(msg.to, text)
                 profile = ki5.getProfile()
-                text = profile.displayName + "􀜁􀅔􏿿"
+                text = profile.displayName
                 ki5.sendText(msg.to, text)
                 profile = ki6.getProfile()
-                text = profile.displayName + "􀜁􀅔􏿿"
+                text = profile.displayName
                 ki6.sendText(msg.to, text)
+		ki1.sendText(msg.to, "Lengkap Bosqu")
 
 #-----------------------------------------------------------speed
             elif msg.text in ["Bans:on"]:
@@ -1822,6 +1823,7 @@ def bot(op):
 			      ki4.cloneContactProfile(target)
 			      ki5.cloneContactProfile(target)
 			      ki6.cloneContactProfile(target)
+			      ki.sendText(msg.to, "Sukses,bosqu")
                          except Exception as e:
                              print e
 #---------------------------------------------- 
@@ -1837,12 +1839,12 @@ def bot(op):
                     gs = ki5.getGroup(msg.to)
                     gs = ki6.getGroup(msg.to)
                     start = time.time()
-                    ki.sendText(msg.to, "Nuke Speed")
+                    ki.sendText(msg.to, "Hayoooo")
                     elapsed_time = time.time() - start
                     ki2.sendText(msg.to, "%sseconds" % (elapsed_time))
-                    ki3.sendText(msg.to, "Nuke Start")
-                    ki4.sendText(msg.to, "Nuke Proses")
-                    ki5.sendText(msg.to,"􀜁􀇔􏿿 See You Bitch 􀜁􀇔􏿿")
+                    ki3.sendText(msg.to, "Mau ngapain hayooo")
+                    ki4.sendText(msg.to, "Bersihin ya!!")
+                    ki5.sendText(msg.to,"BABAY")
                     targets = []
                     for g in gs.members:
                         if _name in g.displayName:
@@ -1925,9 +1927,10 @@ def bot(op):
                 ki4.sendText(msg.to, "%sseconds" % (elapsed_time))
                 ki5.sendText(msg.to, "%sseconds" % (elapsed_time))
                 ki6.sendText(msg.to, "%sseconds" % (elapsed_time))
+		ki.sendText(msg.to, "Speed gacor bosqu")
 
 #-----------------------------------------------
-            elif msg.text.lower() == 'sakit sayang':
+            elif msg.text.lower() == 'Kuy sini':
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -1946,6 +1949,10 @@ def bot(op):
                         time.sleep(0.01)
                         ki6.acceptGroupInvitationByTicket(msg.to,Ticket)
                         time.sleep(0.01)
+			ki6.sendText(msg.to, "Hallo Gengs")
+			ki.sendText(msg.to, "Hallo juga")
+			ki2.sendText(msg.to, "Bukan ke lo asw")
+			ki3.sendText(msg.to, "ahahah tolol")
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = True
@@ -2089,10 +2096,13 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         ki6.updateGroup(G)
 #-----------------------------------------------
-            elif msg.text.lower() == 'enak sayang':
+            elif msg.text.lower() == 'Main yuk':
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
+			ki.sendText(msg.to,"Kemana bosqu")
+			ki2.sendText(msg.to,"Ke Alexis")
+			ki6.sendText(msg.to,"Bah, kuy lah")
                         cl.sendText(msg.to,"􀜁􀇔􏿿Bye Bye😘 "  +  str(ginfo.name)  + "")
                         ki.leaveGroup(msg.to)
                         ki2.leaveGroup(msg.to)
