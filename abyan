@@ -6,31 +6,31 @@ from datetime import datetime
 import time,random,sys,re,os,json,subprocess,codecs,threading,glob
 
 cl = LINETCR.LINE() 
-cl.login(token="EmiBWQXR3uMXBJ9Tnyx8.EDSH+gbkczpUhFmNG/BNIa.plvovgB6HVTneyoC7lzfXRxBMiVZL6Z+YLP3UBDrq/M=")
+cl.login(qr=True)
 cl.loginResult()
 
 ki = LINETCR.LINE() 
-ki.login(token="EmpkvuOCfASSeGvSOTI3.21N2QcNJmTfnzS2ErmTcGW.4MQhdHEF1ZKnW6hI0JhL8AcYATf6W64XMxZOOWsGhCM=")
+ki.login(qr=True)
 ki.loginResult()
 
 ki2 = LINETCR.LINE() 
-ki2.login(token="EmVlfaIBH07BRJ4YC3a0.2J1s/zcIyN0xEgVodxkf8a.mxMkEgEw/ATXLAOctoPKtMMYk3m/nJUl0RNEB1d9FRE=")
+ki2.login(qr=True)
 ki2.loginResult()
 
 ki3 = LINETCR.LINE() 
-ki3.login(token="EmvGEZGggHReP0ATtKC1.y5NRJlfSivprjr5yoU9puq.yQZiD7nWmpWfDmXaPiKmH7/tIfiK35ncZix8dqFkehI=")
+ki3.login(qr=True)
 ki3.loginResult()
 
 ki4 = LINETCR.LINE() 
-ki4.login(token="EmTU1UTwt0x58w3k9346.ql56U229PeJxI6asIwtTPG.ZfPKa0jDdGLPmgm1lIfqhtDZEC1HGFc/F7Bj0fiWn18=")
+ki4.login(qr=True)
 ki4.loginResult()
 
 ki5 = LINETCR.LINE() 
-ki5.login(token="Emy6nsRULtr2csLUOT71.XW9I98X/5rdryXU2QboQSq.hJaVhlavvCw4QYYwUhJIH/JxhDHWvRRnZZw5U/AqyfM=")
+ki5.login(qr=True)
 ki5.loginResult()
 
 ki6 = LINETCR.LINE() 
-ki6.login(token="EmFWwkA6FLijOyRaHu72.V/fxNnw8sCcwOwdRlBaHKG.qwqygu7ydiOokvt9mGSL0/jwKrpGwBrhirhHLs/mJdM=")
+ki6.login(qr=True)
 ki6.loginResult()
 
 
@@ -149,7 +149,7 @@ ki5mid = ki5.getProfile().mid
 ki5mid = ki5.getProfile().mid
 ki6mid = ki6.getProfile().mid
 Bots=[mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,ki6mid]
-admsa = "u79db21fc604a0993ee1df32783e6e788"
+admsa = "u0bb27f0cdf6da5cfe85248b48b4d5089"
 
 wait = {
     'contact':False,
@@ -285,7 +285,7 @@ def bot(op):
             msg = op.message
             if msg.toType == 0:
                 msg.to = msg.from_
-                if msg.from_ == "u79db21fc604a0993ee1df32783e6e788":
+                if msg.from_ == "u0bb27f0cdf6da5cfe85248b48b4d5089":
                     if "join:" in msg.text:
                         list_ = msg.text.split(":")
                         try:
