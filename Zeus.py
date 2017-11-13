@@ -2273,15 +2273,23 @@ def bot(op):
 
        #-------------Fungsi Respon Start---------------------#
             elif msg.text in ["Respon","respon","Respon Dong","respon dong"]:
-                cl.sendText(msg.to,"Online, Ngakak onlen")
-                ki.sendText(msg.to,"Yg penting gk lemot")
-                kk.sendText(msg.to,"Sama dong....")
-                kc.sendText(msg.to,".............")
+                profile = cl.getProfile()
+                text = profile.displayName
+                cl.sendText(msg.to, text)
+                profile = ki.getProfile()
+                text = profile.displayName
+                ki.sendText(msg.to, text)
+                profile = kk.getProfile()
+                text = profile.displayName	
+                kk.sendText(msg.to, text)
+                profile = kc.getProfile()
+                text = profile.displayName
+                kc.sendText(msg.to, text)
       #-------------Fungsi Respon Finish---------------------#
 
       #-------------Fungsi Balesan Respon Start---------------------#
             elif msg.text in ["ini Apa","ini apa","apaan Ini","apaan ini"]:
-                ki.sendText(msg.to,"Ya gitu deh intinya mah 􀨁􀅴questioning􏿿")
+                ki.sendText(msg.to, "Ya gitu deh intinya mah 􀨁􀅴questioning􏿿")
 
       #-------------Fungsi Balesan Respon Finish---------------------#
 
@@ -2289,6 +2297,8 @@ def bot(op):
             elif msg.text in ["Sp","Speedbot","speedbot","Speed"]:
                 start = time.time()
                 cl.sendText(msg.to, "Waiting...")
+                elapsed_time = time.time() - start
+		cl.sendText(msg.to, "%sseconds" % (elapsed_time))
                 elapsed_time = time.time() - start
       #-------------Fungsi Speedbot Finish---------------------#
 #---------------------------------------------------
