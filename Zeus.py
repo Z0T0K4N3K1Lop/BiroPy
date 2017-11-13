@@ -2290,13 +2290,6 @@ def bot(op):
                 start = time.time()
                 cl.sendText(msg.to, "Waiting...")
                 elapsed_time = time.time() - start
-                cl.sendText(msg.to, "%sseconds" % (elapsed_time))
-                elapsed_time = time.time() - start
-                ki.sendText(msg.to, "%sseconds" % (elapsed_time))
-                elapsed_time = time.time() - start
-                kk.sendText(msg.to, "%sseconds" % (elapsed_time))
-                elapsed_time = time.time() - start
-                kc.sendText(msg.to, "%sseconds" % (elapsed_time))
       #-------------Fungsi Speedbot Finish---------------------#
 #---------------------------------------------------
             elif msg.text in ["Kembali","backup"]:
