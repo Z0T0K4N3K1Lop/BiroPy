@@ -6,32 +6,33 @@ from datetime import datetime
 import time,random,sys,re,os,json,subprocess,codecs,threading,glob
 
 cl = LINETCR.LINE() 
-cl.login(token="Emvr3bBZD6Ay559CY9u0.tlH3lU7rpqNrhn2HEmj6Sa.P6f1st2z4RX+PSlYP7NRF3AxHHl3xQ1HT/8D9vn1hOw=")
+cl.login(token="EmiBWQXR3uMXBJ9Tnyx8.EDSH+gbkczpUhFmNG/BNIa.plvovgB6HVTneyoC7lzfXRxBMiVZL6Z+YLP3UBDrq/M=")
 cl.loginResult()
 
 ki = LINETCR.LINE() 
-ki.login(token="Em032rHRMXj2SfWXbif8.3gtUEhTS+FL6Y+WHdgClga.Vc130+hGZ/kDzNeK+V8txW8CYaSQbKnj3+shn6tpdkE=")
+ki.login(token="EmpkvuOCfASSeGvSOTI3.21N2QcNJmTfnzS2ErmTcGW.4MQhdHEF1ZKnW6hI0JhL8AcYATf6W64XMxZOOWsGhCM=")
 ki.loginResult()
 
 ki2 = LINETCR.LINE() 
-ki2.login(token="EmjOwaBJsPSGCy6nl5v2.tXTTeS0sdlrZqMJwSZlZ8G.o0i94RM9s7jjb3h/q5IoQtMCs5N3IqK9xlVui1r5UUM=")
+ki2.login(token="EmVlfaIBH07BRJ4YC3a0.2J1s/zcIyN0xEgVodxkf8a.mxMkEgEw/ATXLAOctoPKtMMYk3m/nJUl0RNEB1d9FRE=")
 ki2.loginResult()
 
 ki3 = LINETCR.LINE() 
-ki3.login(token="EmhdrFOvbxOW3UOZTRH6.aEtYbKJavesm7BI2vN3P9G.njvAFG3X09zyRM+TBFGem7pepMFr+8cx2Ru1Nul3Foo=")
+ki3.login(token="EmvGEZGggHReP0ATtKC1.y5NRJlfSivprjr5yoU9puq.yQZiD7nWmpWfDmXaPiKmH7/tIfiK35ncZix8dqFkehI=")
 ki3.loginResult()
 
 ki4 = LINETCR.LINE() 
-ki4.login(token="EmE3IE9QKNhTpx17t1X7.TxriJavL89TxcHdXhy7NPW.8b2Z6hfP5F3kK8Fj5fT0Al5Nw/LuYPY5oWH05GC5EXc=")
+ki4.login(token="EmTU1UTwt0x58w3k9346.ql56U229PeJxI6asIwtTPG.ZfPKa0jDdGLPmgm1lIfqhtDZEC1HGFc/F7Bj0fiWn18=")
 ki4.loginResult()
 
 ki5 = LINETCR.LINE() 
-ki5.login(token="Emj2PLb9Vdg7uYaDgVE0.QHPMz1x1UMHq4yo/eNEHGa.6o4/Aw9V8BUn3LBgQhZttyQv8DTDxRRHVosPTZkD1xA=")
+ki5.login(token="Emy6nsRULtr2csLUOT71.XW9I98X/5rdryXU2QboQSq.hJaVhlavvCw4QYYwUhJIH/JxhDHWvRRnZZw5U/AqyfM=")
 ki5.loginResult()
 
 ki6 = LINETCR.LINE() 
-ki6.login(token="EmxwhSz4M3roBTP7xzC4.nI7Uw0doSaPH1SQTXAPw9a.2xe0A6qxtyl3RrEG+BiZWWgBfXgPLg/UNtyYXOQVITs=")
+ki6.login(token="EmFWwkA6FLijOyRaHu72.V/fxNnw8sCcwOwdRlBaHKG.qwqygu7ydiOokvt9mGSL0/jwKrpGwBrhirhHLs/mJdM=")
 ki6.loginResult()
+
 
 
 
@@ -148,7 +149,7 @@ ki5mid = ki5.getProfile().mid
 ki5mid = ki5.getProfile().mid
 ki6mid = ki6.getProfile().mid
 Bots=[mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,ki6mid]
-admsa = "u4cb8772eeed13d09d11cdda178c27ab0"
+admsa = "u79db21fc604a0993ee1df32783e6e788"
 
 wait = {
     'contact':False,
@@ -284,7 +285,7 @@ def bot(op):
             msg = op.message
             if msg.toType == 0:
                 msg.to = msg.from_
-                if msg.from_ == "u4cb8772eeed13d09d11cdda178c27ab0":
+                if msg.from_ == "u79db21fc604a0993ee1df32783e6e788":
                     if "join:" in msg.text:
                         list_ = msg.text.split(":")
                         try:
