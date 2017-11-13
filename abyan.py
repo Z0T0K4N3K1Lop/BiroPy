@@ -6,31 +6,31 @@ from datetime import datetime
 import time,random,sys,re,os,json,subprocess,codecs,threading,glob
 
 cl = LINETCR.LINE() 
-cl.login(qr=True)
+cl.login(token="Em7CPvGrbTFee6FeoOO9.c7j+dn9TPC+OuKI0I01qIq.vcnb27DBIwtVcyjz41GpLKLMu2ldafcVWFXx68+8Zyw=")
 cl.loginResult()
 
 ki = LINETCR.LINE() 
-ki.login(qr=True)
+ki.login(token="EmeA1VnqebKnmxieEqf7.DE6qBW/w6cDQSwJviR0d5W.YqIIna1t9VeCy3fHPBWD2W3KnJmh/NCkpN9GPcYxa4Q=")
 ki.loginResult()
 
 ki2 = LINETCR.LINE() 
-ki2.login(qr=True)
+ki2.login(token="EmgcA0z98xcHeSGyviGa.DTD1J7lzbQMd7zFqT1JtYG.hDB2QIqCQL0ShHKUl1PLiyksEIGDv6wOeggIuIAvan0=")
 ki2.loginResult()
 
 ki3 = LINETCR.LINE() 
-ki3.login(qr=True)
+ki3.login(token="EmLQWZJXGxFE7EBbDthc.7E3coBMcEzPCr8urg966pa.InwBtrnZzDaPRugrd6JD8Vo1IbvsPZAszBTFdUBSaYc=")
 ki3.loginResult()
 
 ki4 = LINETCR.LINE() 
-ki4.login(qr=True)
+ki4.login(token="EmnVILYzyAkO5rsLt7t4.0ZztupTeagqno9h4R6Lrfa.EDc5mWxtc6Pj/4+2SuoNhu34Jk8yL1y8PpFfZEoEEp0=")
 ki4.loginResult()
 
 ki5 = LINETCR.LINE() 
-ki5.login(qr=True)
+ki5.login(token="EmPhUuCIsvqnYVNisZUc.I82haTDN4r0StUusD8NFla.DrLLJ7QFnR5A6OLKSMxIrBkfjU5NaC8316pjPd/yH9E=")
 ki5.loginResult()
 
 ki6 = LINETCR.LINE() 
-ki6.login(qr=True)
+ki6.login(token="EmzLcfdyMhiBLhcmi8yb.qTu36Dj9PPUY7g9D276ygW.1vwfqJMrFYP/hKJuRduWCznTiv2C1cxg9EnSQEYQ1Oc=")
 ki6.loginResult()
 
 
