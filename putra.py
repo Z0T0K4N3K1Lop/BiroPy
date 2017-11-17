@@ -4,14 +4,6 @@ import LINETCR
 from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
 import time,random,sys,re,os,json,subprocess,codecs,threading,glob
-import ssl
-
-try:
-    _create_unverified_https_context = ssl._create_unverified_context
-except AttributeError:
-    pass
-else:
-    ssl._create_deafult_https_context = _create_unverified_https_context
 
 cl = LINETCR.LINE() 
 cl.login(qr=True)
