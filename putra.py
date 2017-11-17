@@ -30,9 +30,37 @@ ki5.login(qr=True)
 ki5.loginResult()
 
 ki6 = LINETCR.LINE() 
-ki6.login(qr=True)
+ki6.loginqr=True)
 ki6.loginResult()
 
+
+
+
+#ki4 = KITSUNEBOT.LINE()
+#ki4.login(token="Ekp9DIn7ZOF68PRT6NE2.ptORzz3sLbeG01QeTJsgeG.+43NBwiGAyx/HLhTUjf5hfcefo/pRN+IPs89ptqCQxQ=")
+#ki4.loginResult()
+
+#ki5 = KITSUNEBOT.LINE()
+#ki5.login(token="EkZI8XiCp5ZTkYU29tC5.zNVivIokyd1dCo0dpANHvq.0LNZCi0tmVpGnI+hRRRA5P0wfU4xDv+PpBNcGYD0sY4=")
+#ki5.loginResult()
+
+#ki6 = KITSUNEBOT.LINE()
+#ki6.login(token="EkJ5l49Apx6J60DHyfU4.tWI+bgToteDmanSLf3rEza.HEEAt8Hc5NEThS7g7tKGBL89uHYdJGZSOIc6N5deibQ=")
+#ki6.loginResult()
+
+
+
+#ki4 = KITSUNEBOT.LINE()
+#ki4.login(token="Ekp9DIn7ZOF68PRT6NE2.ptORzz3sLbeG01QeTJsgeG.+43NBwiGAyx/HLhTUjf5hfcefo/pRN+IPs89ptqCQxQ=")
+#ki4.loginResult()
+
+#ki5 = KITSUNEBOT.LINE()
+#ki5.login(token="EkZI8XiCp5ZTkYU29tC5.zNVivIokyd1dCo0dpANHvq.0LNZCi0tmVpGnI+hRRRA5P0wfU4xDv+PpBNcGYD0sY4=")
+#ki5.loginResult()
+
+#ki6 = KITSUNEBOT.LINE()
+#ki6.login(token="EkJ5l49Apx6J60DHyfU4.tWI+bgToteDmanSLf3rEza.HEEAt8Hc5NEThS7g7tKGBL89uHYdJGZSOIc6N5deibQ=")
+#ki6.loginResult()
 
 print "login success"
 reload(sys)
@@ -2632,4 +2660,5 @@ while True:
         if (Op.type != OpType.END_OF_OPERATION):
             cl.Poll.rev = max(cl.Poll.rev, Op.revision)
             bot(Op)
+
 
