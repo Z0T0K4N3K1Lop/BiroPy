@@ -41,49 +41,48 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" ZeusBot  􀔃􀄆red check mark􏿿
+helpMessage =""" NTB BOT
 
-􀔃􀅕red arrow right􏿿 Command Public
-[Jam Update] Update jam Bot
-[Id Group] Cek Id Group
-[Ginfo]    Group Info
-[Bot?]   Cek All mid Bot
-[Bot 1/2/3/4/5] Cek Mid Bot
-[Respon]   Cek Respon Bot
-[Speed] Cek Kecepatan Bot
-[Up]       Fungsi Spam Chat
-[Banlist]  Cek List Akun Banned
-[Gn namagroup] Ganti Nama Group
-[Bot 2/3/4/5 Gn] Ganti Nama Group
-[Cancel] Cancel User Masuk Group
-[Tag All]      Mention Semua User
-[Set View] Cek Privasi Group
-[Setpoint] Command untuk Sider
-[Viewseen] Command untuk Sider
-[Kembali]Command untuk mengembalikan
-[Glist]Command Melihat Group Bot
-[InviteMeTo: (Groupid)]Mengundang Kita ke Group yang Dituju
-[Myid] Mengecek Mid
-
-
-􀔃􀅕red arrow right􏿿 Command Private
-[Ourl]  Membuka Url Group
-[Curl] Menutup Url Group
-[SetGroup] Menggatur Privasi Grup
-[Ban @] Bann Target
-[Unban @]  Unbann Target
-[Kill] Kick Target Ban
-[Nk @]   Kick Target User
-[Join] Invite Semua Bot
-[Join Bot 1/2/3/4/5)] Invite Bot
-[Bot 1/2/3/4/5 @bye]  Leave Bot
-[Admin add @]Menambah Admin
-[Admin remove @]Mengeluarkan Admin
-[Copy @]Command untuk copy contact
-[Kembali]Mengembalikan Menjadi Default
-[Bot 1/2/3/4/5):] Merename nama bot
-BOT BY mr.J line.me/ti/p/~joshuasiregaar
-SSH BY mr.Z line.me/ti/p/~jimmyking10
+===[ᴄᴏᴍᴍᴀɴᴅ ғᴏʀ ᴘᴜʙʟɪᴄ]===
+[*]Jam update  "Jam Update Bot"
+[*]Id Group    "Cek Id Group"
+[*]Ginfo       "Group Info"
+[*]Bot?        "Cek All mid Bot"
+[*]Bot 1/2/3   "Cek Mid Bot"
+[*]Respon      "Cek Respon Bot"
+[*]Speed       "Cek Kecepatan Bot"
+[*]Up          "Fungsi Spam Chat"
+[*]Banlist     "Cek Banlist"
+[*]Gn          "Ganti Nama Group"
+[*]Bot1/2/3 Gn "Ganti Nama Group"
+[*]Cancel      "Cancel User Masuk Group"
+[*]Tag All     "Mention Semua User"
+[*]Set View    "Cek Privasi Group"
+[*]Setpoint    "Command untuk Sider"
+[*]Viewseen    "Command untuk Sider"
+[*]Kembali     "Command untuk mengembalikan"
+[*]Glist       "Command Melihat Group Bot"
+[*]Invitetome  "(Groupid)]Mengundang Kita ke Group yang Dituju"
+[*]Myid        "Mengecek Mid"
+[*]Ourl        "Membuka Url Group"
+[*]Curl        "Menutup Url Group"
+===[ᴄᴏᴍᴍᴀɴᴅ ғᴏʀ ᴏᴡɴᴇʀ]===
+[*]Ourl        "Membuka Url Group"
+[*]Curl        "Menutup Url Group"
+[*]SetGroup    "Menggatur Privasi Grup"
+[*]Ban @       "Bann Target"
+[*]Unban @     "Unbann Target"
+[*]Kill        "Kick Target Ban"
+[*]Nk @        "Kick Target User"
+[*]Join        "Invite Semua Bot"
+[*]Join Bot1/2 "Invite Bot"
+[*]Bye 1/2/Bye@"Leave Bot"
+[*]Admin add@ "Menambah Admin"
+[*]Admin remove@ "Mengeluarkan Admin"
+[*]Copy @     "Command untuk copy contact"
+[*]Kembali    "Mengembalikan Menjadi Default"
+[*]Bot 1/2/3  "Merename nama bot"
+Creator Bot line.me/ti/p/~ebisuindo
 """
 
 Setgroup =""" ZeusBot Privasi 􀔃􀄆red check mark􏿿
@@ -94,8 +93,7 @@ Setgroup =""" ZeusBot Privasi 􀔃􀄆red check mark􏿿
 [Share Timeline -- Share On / Off]
 [Leave -- Leave On / off]
 [Mengcancel Group Invitation -- Gcancel: (angka)]
-BOT BY MR.J line.me/ti/p/~joshuasiregaar
-SSH BY MR.Z line.me/ti/p/~jimmyking10
+Creator Bot line.me/ti/p/~ebisuindo
 """
 KAC=[cl,ki,kk,kc,ka]
 mid = cl.getProfile().mid
@@ -115,7 +113,7 @@ wait = {
     'leaveRoom':True,
     'timeline':True,
     'autoAdd':False,
-    'message':"Thanks for add me \n" + "untuk pemesanan hubungi \n" + "\n • line.me/ti/p/~zeuscs \n • line.me/ti/p/~joshuasiregaar \n" + "\n Terimakasih" ,
+    'message':"Thanks for add me \n" + "untuk pemesanan hubungi \n" + "\n • line.me/ti/p/~@enr7503k \n • line.me/ti/p/~ebisuindo \n" + "\n Terimakasih" ,
     "lang":"JP",
     "comment":"Thanks for add me",
     "commentOn":False,
