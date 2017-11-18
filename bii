@@ -76,7 +76,7 @@ helpMessage =""" NTB BOT
 ► Nk @          "Kick Target User"
 ► Join          "Invite Semua Bot"
 ► Join Bot1/2   "Invite Bot"
-► Bye 1/2/Bye@  "Leave Bot"
+► Bye 1/2/      "Leave Bot"
 ► Admin add@    "Menambah Admin"
 ► Admin remove@ "Mengeluarkan Admin"
 ► Copy @        "Command untuk copy contact"
@@ -84,6 +84,7 @@ helpMessage =""" NTB BOT
 ► Bot 1/2/3     "Merename nama bot"
 ► Adminlist     "Lihat admin"
 ► Stafflist     "Liat Staff"
+► bye           "Leave all bot"
 Creator Bot line.me/ti/p/~ebisuindo
 """
 
