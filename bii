@@ -44,55 +44,57 @@ sys.setdefaultencoding('utf-8')
 helpMessage =""" NTB BOT
 
 ===[ᴄᴏᴍᴍᴀɴᴅ ғᴏʀ ᴘᴜʙʟɪᴄ]===
-[*]Jam update  "Jam Update Bot"
-[*]Id Group    "Cek Id Group"
-[*]Ginfo       "Group Info"
-[*]Bot?        "Cek All mid Bot"
-[*]Bot 1/2/3   "Cek Mid Bot"
-[*]Respon      "Cek Respon Bot"
-[*]Speed       "Cek Kecepatan Bot"
-[*]Up          "Fungsi Spam Chat"
-[*]Banlist     "Cek Banlist"
-[*]Gn          "Ganti Nama Group"
-[*]Bot1/2/3 Gn "Ganti Nama Group"
-[*]Cancel      "Cancel User Masuk Group"
-[*]Tag All     "Mention Semua User"
-[*]Set View    "Cek Privasi Group"
-[*]Setpoint    "Command untuk Sider"
-[*]Viewseen    "Command untuk Sider"
-[*]Kembali     "Command untuk mengembalikan"
-[*]Glist       "Command Melihat Group Bot"
-[*]Invitetome  "(Groupid)]Mengundang Kita ke Group yang Dituju"
-[*]Myid        "Mengecek Mid"
-[*]Ourl        "Membuka Url Group"
-[*]Curl        "Menutup Url Group"
+► Jam update    "Jam Update Bot"
+► Id Group      "Cek Id Group"
+► Ginfo         "Group Info"
+► Bot?          "Cek All mid Bot"
+► Bot 1/2/3     "Cek Mid Bot"
+► Respon        "Cek Respon Bot"
+► Speed         "Cek Kecepatan Bot"
+► Up            "Fungsi Spam Chat"
+► Banlist       "Cek Banlist"
+► Gn            "Ganti Nama Group"
+► Bot1/2/3 Gn   "Ganti Nama Group"
+► Cancel        "Cancel User Masuk Group"
+► Cum           "Mention Semua User"
+► Set View      "Cek Privasi Group"
+► Setpoint      "Command untuk Sider"
+► Viewseen      "Command untuk Sider"
+► Kembali       "Command untuk mengembalikan"
+► Glist         "Command Melihat Group Bot"
+► Invitetome    "(Groupid)]Mengundang Kita ke Group yang Dituju"
+► Myid          "Mengecek Mid"
+► Ourl          "Membuka Url Group"
+► Curl          "Menutup Url Group"
 ===[ᴄᴏᴍᴍᴀɴᴅ ғᴏʀ ᴏᴡɴᴇʀ]===
-[*]Ourl        "Membuka Url Group"
-[*]Curl        "Menutup Url Group"
-[*]SetGroup    "Menggatur Privasi Grup"
-[*]Ban @       "Bann Target"
-[*]Unban @     "Unbann Target"
-[*]Kill        "Kick Target Ban"
-[*]Nk @        "Kick Target User"
-[*]Join        "Invite Semua Bot"
-[*]Join Bot1/2 "Invite Bot"
-[*]Bye 1/2/Bye@"Leave Bot"
-[*]Admin add@ "Menambah Admin"
-[*]Admin remove@ "Mengeluarkan Admin"
-[*]Copy @     "Command untuk copy contact"
-[*]Kembali    "Mengembalikan Menjadi Default"
-[*]Bot 1/2/3  "Merename nama bot"
+► Ourl          "Membuka Url Group"
+► Curl          "Menutup Url Group"
+► SetGroup      "Menggatur Privasi Grup"
+► Ban @         "Bann Target"
+► Unban @       "Unbann Target"
+► Kill          "Kick Target Ban"
+► Nk @          "Kick Target User"
+► Join          "Invite Semua Bot"
+► Join Bot1/2   "Invite Bot"
+► Bye 1/2/Bye@  "Leave Bot"
+► Admin add@    "Menambah Admin"
+► Admin remove@ "Mengeluarkan Admin"
+► Copy @        "Command untuk copy contact"
+► Kembali       "Mengembalikan Menjadi Default"
+► Bot 1/2/3     "Merename nama bot"
+► Adminlist     "Lihat admin"
+► Stafflist     "Liat Staff"
 Creator Bot line.me/ti/p/~ebisuindo
 """
 
-Setgroup =""" ZeusBot Privasi 􀔃􀄆red check mark􏿿
+Setgroup =""" NTB BOT
 
-[Protect QR -- Qr on / off]
-[Mid Via Contact -- Contact On / Off]
-[Reject Invite -- Guest On / Off]
-[Share Timeline -- Share On / Off]
-[Leave -- Leave On / off]
-[Mengcancel Group Invitation -- Gcancel: (angka)]
+► Protect QR -- Qr on / off
+► Mid Via Contact -- Contact On / Off
+► Reject Invite -- Guest On / Off
+► Share Timeline -- Share On / Off
+► Leave -- Leave On / off]
+► Mengcancel Group Invitation -- Gcancel: (angka)
 Creator Bot line.me/ti/p/~ebisuindo
 """
 KAC=[cl,ki,kk,kc,ka]
